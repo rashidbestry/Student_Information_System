@@ -1,0 +1,33 @@
+%%Lecture code*Lecture name*necessary(True)/optional(False)*theoretical*application*credit*AKTS*classYear*language*type*teacher
+BİLM201-2021*Veri Yapilari*True*5*2*4*6*2*Türkçe*Yüz Yüze*34554334555
+BİLM203-2022*Nesne Tabanlı Programlama*True*5*2*4*6*2*Türkçe*Yüz Yüze*24234364355
+BİLM205-2019*Biçimsel Diller ve Özdevinirler*True*3*0*3*5*2*Türkçe*Yüz Yüze*54332423423
+BİLM223-2022*Mantık Devreleri Tasarımı*True*5*2*4*5*2*Türkçe*Yüz Yüze*88237684283
+BİLM289-2022*Veri Organizasyonu*True*3*0*3*5*2*Türkçe*Yüz Yüze*34554334555
+
+---------------------------------------------------------------------------------------------------------------
+
+##stuNum*firstName*lastName*age*classYear*faculty*gpa
+2240200001*Rashid*Yuldashov*25*2*Bilgisayar Mühendisligi*80
+2240200002*Ali*Karakurt*21*2*Bilgisayar Mühendisligi*79
+2240200003*Ali*Osman*19*2*Bilgisayar Mühendisligi*78
+2240200004*Burak*Özkan*21*1*İnşaat Mühendisligi*80
+2240200005*Deniz*Arslan*19*1*İşletme*87
+2240200006*Elif*Çelik*20*2*İktisat*91
+2240200007*Kerem*Şahin*21*3*Hukuk*89
+2240200008*Merve*Aydın*22*4*Psikoloji*84
+2240200009*Gamze*Polat*25*4*İşletme*85
+22402000010*Pelin*Doğan*21*1*İnşaat Mühendisligi*62
+
+
+---------------------------------------------------------------------------------------------------------------
+
+&&perNum*firstName*lastName*title*email
+34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr
+24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr
+54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr
+88237684283*Bariş Baykant*Alagöz*baykant.alagoz@inonu.edu.tr
+66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr
+
+
+

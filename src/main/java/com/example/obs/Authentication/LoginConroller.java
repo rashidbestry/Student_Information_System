@@ -1,6 +1,6 @@
 package com.example.obs.Authentication;
 
-public class SifreConroller {
+public class LoginConroller {
 
     public String DataBase_File_ogrenci(String ogr_no ){ // burda txt dosyasına gidip gerekli bilgiyi getirecek
         return "1234" ; // şifreyi return edecek
