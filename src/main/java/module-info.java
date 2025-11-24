@@ -10,6 +10,8 @@ module com.example.obs {
 
     opens com.example.obs to javafx.fxml;
     exports com.example.obs;
-    exports com.example.obs.controllers;
-    opens com.example.obs.controllers to javafx.fxml;
+    exports com.example.obs.PageControllers;
+    opens com.example.obs.PageControllers to javafx.fxml;
+    exports com.example.obs.Authentication;
+    opens com.example.obs.Authentication to javafx.fxml;
 }

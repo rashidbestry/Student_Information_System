@@ -1,5 +1,6 @@
-package com.example.obs.controllers;
+package com.example.obs.PageControllers;
 
+import com.example.obs.Authentication.SifreConroller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

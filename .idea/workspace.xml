@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4392cad0-74c9-4bea-9076-ad852a72f9e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Student_Information_System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_17_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Backend/Data/da.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Backend/Temp/beda.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/CSS/sdsda.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/Controllers/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/Controllers/SifreConroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/AkademisyenGiris.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/GirisAnaSayfa.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/OgrenciAnaSayfa.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Frontend/FXML/OgrenciGiris.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/obs/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/obs/PageControllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/obs/controllers/SifreConroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/obs/Authentication/SifreConroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/obs/dataControllers/userData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/obs/DataControllers/userData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/obs/services/FileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/obs/DataControllers/FileDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/obs/fxml/GirisAnaSayfa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/obs/fxml/GirisAnaSayfa.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/obs/fxml/OgrenciGiris.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/obs/fxml/OgrenciGiris.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +38,12 @@
     &quot;assignee&quot;: &quot;KayliAli&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/KayliAli/Student_Information_System.git",
-    "accountId": "e20f9c40-1a9b-4998-a0ee-450ddb401660"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KayliAli/Student_Information_System.git&quot;,
+    &quot;accountId&quot;: &quot;39fb0505-84dc-49a9-ae6d-3cbfac3792e8&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -67,33 +59,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Launcher.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.OBSApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OBSApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\fxml" />
@@ -102,6 +94,19 @@
       <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\DataBase\KullaniciBilgileri" />
       <recent name="D:\Java_Programs\IntelliJ_Projects\student_information_system\src\main\resources\com\example\obs\DataBase" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Student_Information_System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Student_Information_System" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -140,6 +145,13 @@
       <workItem from="1762421294191" duration="1999000" />
       <workItem from="1762425316586" duration="536000" />
       <workItem from="1762444375850" duration="213000" />
+      <workItem from="1762447532795" duration="909000" />
+      <workItem from="1762778351721" duration="24000" />
+      <workItem from="1763484016788" duration="77000" />
+      <workItem from="1763638128161" duration="451000" />
+      <workItem from="1763638904385" duration="10000" />
+      <workItem from="1763638927012" duration="74000" />
+      <workItem from="1763987239695" duration="766000" />
     </task>
     <servers />
   </component>
