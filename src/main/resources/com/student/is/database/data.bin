@@ -1,4 +1,4 @@
-%%Lecture code*Lecture name*necessary(True)/optional(False)*theoretical*application*credit*AKTS*classYear*language*type*teacher
+%%lecture code*lecture name*mandatory(True)/optional(False)*theoretical*application*credit*AKTS*classYear*language*type*teacher
 BİLM201-2021*Veri Yapilari*True*5*2*4*6*2*Türkçe*Yüz Yüze*34554334555
 BİLM203-2022*Nesne Tabanlı Programlama*True*5*2*4*6*2*Türkçe*Yüz Yüze*24234364355
 BİLM205-2019*Biçimsel Diller ve Özdevinirler*True*3*0*3*5*2*Türkçe*Yüz Yüze*54332423423
@@ -27,5 +27,3 @@ BİLM289-2022*Veri Organizasyonu*True*3*0*3*5*2*Türkçe*Yüz Yüze*34554334555
 54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr
 88237684283*Bariş Baykant*Alagöz*baykant.alagoz@inonu.edu.tr
 66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr
-
-

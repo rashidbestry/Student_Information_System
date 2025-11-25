@@ -6,10 +6,6 @@ public class Authentication {
     public static String currentUser;
     public static boolean authenticated;
 
-//    public void main(String[] args){
-//        System.out.println(checkStudentAuth("02240200002@ogr.inonu.edu.tr","12345"));
-//    }
-
     public boolean checkStudentAuth(String login , String password) {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));

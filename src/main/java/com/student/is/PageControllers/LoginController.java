@@ -1,5 +1,6 @@
 package com.student.is.PageControllers;
 import com.student.is.Authentication.Authentication;
+import com.student.is.DataManagement.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -18,7 +19,7 @@ public class LoginController {
     @FXML
     public void studentButton(ActionEvent event)throws IOException {
         System.out.println("Öğrenci giriş butonuna tıklandı!");
-        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/LoginStudent.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -26,7 +27,7 @@ public class LoginController {
     }
     public void personnelButton(ActionEvent event)throws IOException {
         System.out.println("Akademisyen giris butonuna basıldı");
-        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/PersonelLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/LoginPersonel.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -48,5 +49,6 @@ public class LoginController {
         }
         this.login.clear();
         this.password.clear();
+        Database.createTemp();
     }
 }
