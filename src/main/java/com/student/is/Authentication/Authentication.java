@@ -1,6 +1,8 @@
 package com.student.is.Authentication;
 
 public class Authentication {
+    public static String currentUser;
+    public static boolean authenticated;
 
     public String DataBase_File_ogrenci(String ogr_no ){ // burda txt dosyasına gidip gerekli bilgiyi getirecek
         return "1234" ; // şifreyi return edecek
