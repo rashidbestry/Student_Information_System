@@ -1,25 +1,24 @@
 package com.student.is.ClassStructure;
 
 public class Student {
-    static int stuNumCounter=224000000;
+    public long stuNum;
+    public String firstName;
+    public String lastName;
+    public int age;
+    public int classNo;
+    public String faculty;
+    public double gpa;
 
-    int stuNum;
-    String firstName;
-    String lastName;
-    byte age;
-    byte classNo;
-    String faculty;
-    float gpa;
+    public Student(){
+    }
 
-    public Student(String firstName, String lastName, byte age, byte classNo, String faculty, float gpa) {
-        stuNum = stuNumCounter+1;stuNumCounter++;
+    public Student(long stuNum,String firstName, String lastName, byte age, byte classNo, String faculty, float gpa) {
+        this.stuNum = stuNum;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.classNo = classNo;
         this.faculty = faculty;
         this.gpa = gpa;
-
-
     }
 }
