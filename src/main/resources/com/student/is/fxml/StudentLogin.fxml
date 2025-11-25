@@ -31,17 +31,17 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="ogrenci_numarasi" prefWidth="100.0" promptText="Öğrenci Numarası" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="login" prefWidth="100.0" promptText="Öğrenci Numarası" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="ogrenci_sifre" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField fx:id="password" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </PasswordField>
-            <Button mnemonicParsing="false" onAction="#ogrenci_anasayfa" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#studentMainPage" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
