@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class LoginController {
+public class  LoginController {
     public TextField login;
     public TextField password;
 

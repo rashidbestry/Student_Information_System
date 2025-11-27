@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #ebebeb;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.LoginController">
    <children>
-      <GridPane layoutX="340.0" layoutY="234.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #580519; -fx-background-radius: 50;">
+      <GridPane layoutX="240.0" layoutY="234.0" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #122a61; -fx-background-radius: 50;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.20001220703125" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.7999755859375" minWidth="10.0" prefWidth="400.7999755859375" />
@@ -31,12 +31,12 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField focusTraversable="false" prefWidth="100.0" promptText="E-Posta" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField prefWidth="100.0" promptText="Kullanıcı Adı" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField focusTraversable="false" prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <PasswordField prefHeight="26.0" prefWidth="257.0" promptText="Şifre" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -57,8 +57,23 @@
                   <Insets />
                </GridPane.margin>
             </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </GridPane>
-      <Button layoutX="52.0" layoutY="62.0" mnemonicParsing="false" onAction="#backButtonAction" text="GERİ" />
+      <Button layoutX="30.0" layoutY="41.0" mnemonicParsing="false" onAction="#backButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Seçim Ekranına Dön" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
