@@ -1,11 +1,11 @@
 package com.student.is.ClassStructure;
 
 public class Student {
-    public long stuId;
+    public String stuId;
     public String firstName;
     public String lastName;
-    public int age;
-    public int classNo;
+    public String bornDate;
+    public int classYear;
     public String faculty;
     public double gpa;
 

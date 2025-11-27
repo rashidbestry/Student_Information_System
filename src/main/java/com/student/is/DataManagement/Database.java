@@ -81,11 +81,11 @@ public class Database {
                 }
                 String[] temp = line.split("[*]");
                 Student stu = new Student();
-                stu.stuId = Long.parseLong(temp[0]);
+                stu.stuId = temp[0];
                 stu.firstName = temp[1];
                 stu.lastName = temp[2];
-                stu.age = Integer.parseInt(temp[3]);
-                stu.classNo = Integer.parseInt(temp[4]);
+                stu.bornDate = temp[3];
+                stu.classYear = Integer.parseInt(temp[4]);
                 stu.faculty = temp[5];
                 stu.gpa = Double.parseDouble(temp[6]);
                 Database.studentList.add(stu);
@@ -152,6 +152,7 @@ public class Database {
                 per.title = temp[3];
                 per.email = temp[4];
                 per.web = temp[5];
+                per.officehours = temp[6];
                 personalList.add(per);
             }
             br.close();

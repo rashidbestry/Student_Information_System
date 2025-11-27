@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 
 public class Mail {
     public static void forgotPasswordMail(String login) throws MessagingException {
+        String newpassword = new Random().ints(10, 33, 122).mapToObj(i -> String.valueOf((char)i)).collect(Collectors.joining());
         final String mailServerUsername = "incomservicetm@gmail.com";
         final String mailServerPassword = "nneq byst lpdz tfhx";
         final String mailServer = "smtp.gmail.com";
-        String newpassword = new Random().ints(10, 33, 122).mapToObj(i -> String.valueOf((char)i)).collect(Collectors.joining());
 
         Properties properties = new Properties();
         properties.put("mail.smtp.auth","true");

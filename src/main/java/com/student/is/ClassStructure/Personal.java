@@ -7,6 +7,7 @@ public class Personal {
     public String title;
     public String email;
     public String web;
+    public String officehours;
 
     public Personal(){
     }

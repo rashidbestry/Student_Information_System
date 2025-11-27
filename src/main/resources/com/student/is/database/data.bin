@@ -45,46 +45,41 @@ BİLM008-2023*Teknik Secmeli Dersler(5)*false*15*25*4*Türkçe*Yüz Yüze*3*0*64
 BİLM088-2023*Zorunlu Dersler(2)*false*3*5*4*Türkçe*Yüz Yüze*0*0*75464563454
 BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283
 
-
-
-
-
-
-
----------------------------------------------------------------------------------------------------------------
-##stuId*firstName*lastName*age*classYear*faculty*gpa
-22400001*Rashid*Yuldashov*25*2*Bilgisayar Mühendisligi*80
-22400002*Ali*Karakurt*21*2*Bilgisayar Mühendisligi*79
-22400003*Ali*Osman*19*2*Bilgisayar Mühendisligi*78
-
-
-
-
 ---------------------------------------------------------------------------------------------------------------
 
-&&perId*firstName*lastName*title*email*web
-34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.kocamaz
-24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr*http://inonu.edu.tr/akademik/cengiz.hark
-54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr*http://inonu.edu.tr/akademik/abdullah.ates
-88237684283*Bariş Baykant*Alagöz*Prof*baykant.alagoz@inonu.edu.tr*http://inonu.edu.tr/akademik/baykant.alagoz
-66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr*http://inonu.edu.tr/akademik/arif.aydin
-34234613423*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://inonu.edu.tr/akademik/davut.hanbay
-56343534534*Fatih*Talu*Prof*fatih.talu@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.talu
-74565464545*Ali*Ari*Doç*ali.ari@inonu.edu.tr*http://inonu.edu.tr/akademik/ali.ari
-64234234234*Abdullah Erhan*Akkaya*Dr*erhan.akkaya@inonu.edu.tr*http://inonu.edu.tr/akademik/erhan.akkaya
-75464563454*Mustafa*Nurmuhammed*Dr*mustafa.nurmuhammed@inonu.edu.tr*http://inonu.edu.tr/akademik/mustafa.nurmuhammed
-63454354232*Edanur Özdemir*Yıldırım*ARGE*edanur.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/edanur.ozdemir
-31123123413*Begüm*Yetişkin*ARGE*begum.yetiskin@inonu.edu.tr*http://inonu.edu.tr/akademik/begum.yetiskin
-87678675657*Büşra*Özcan*ARGE*busra.ozcan@inonu.edu.tr*http://inonu.edu.tr/akademik/busra.ozcan
-65371276537*Taha Burak*Özdemir*ARGE*tahaburak.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/tahaburak.ozdemir
-75363454522*Mehmet*Kodaz*Ögr*mehmet.kodaz@inonu.edu.tr*http://www.inonu.edu.tr/akademik/mehmet.kodaz
-64352432323*Hayrettin Aykut*Dönmez*Ögr*aykut.donmez@inonu.edu.tr*http://avesis.inonu.edu.tr/hayrettinaykut.donmez
-77533453422*Ali Selami*Başoglu*PhD*selami.basoglu@inonu.edu.tr*https://avesis.inonu.edu.tr/selami.basoglu
-75345574534*Ümit*Çakan*Prof*umit.cakan@inonu.edu.tr*http://avesis.inonu.edu.tr/1410
-53453572452*Ahmet*Iskender*PhD*ahmet.iskender@inonu.edu.tr*http://avesis.inonu.edu.tr/ahmet.iskender
-66435463455*Cemal*Keleş*Dr*cemal.keles@inonu.edu.tr*http://www.inonu.edu.tr/akademik/cemal.keles
-66128324276*Mehmet*Temur*PhD*mehmet.temur@inonu.edu.tr*http://avesis.inonu.edu.tr/mehmet.temur
-88657567343*Bilal*Şenol*Prof*bilal.senol@inonu.edu.tr*http://avesis.inonu.edu.tr/bilal.senol
-44432352343*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://avesis.inonu.edu.tr/davut.hanbay
-85678745655*Kenan*Ince*Prof*kenan.ince@inonu.edu.tr*http://www.inonu.edu.tr/akademik/kenan.ince
-77776735467*Celaleddin*Yeroğlu*Prof*c.yeroglu@inonu.edu.tr*http://avesis.inonu.edu.tr/c.yeroglu
+&&perId*firstName*lastName*title*email*web*office-hours
+34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.kocamaz*Salı, 13.30 - 15.00
+24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr*http://inonu.edu.tr/akademik/cengiz.hark*Salı, 16.00 - 17.00
+54332423423*Abdullah*Ateş*Doç*abdullah.ates@inonu.edu.tr*http://inonu.edu.tr/akademik/abdullah.ates*Pazartesi, 10:00 - 12:00
+88237684283*Bariş Baykant*Alagöz*Prof*baykant.alagoz@inonu.edu.tr*http://inonu.edu.tr/akademik/baykant.alagoz*Çarsamba, 10:00 - 12:00
+66575765576*Ahmet Arif*Aydin*Doç*arif.aydin@inonu.edu.tr*http://inonu.edu.tr/akademik/arif.aydin*Salı, 13.30 - 15.00
+34234613423*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://inonu.edu.tr/akademik/davut.hanbay*Cuma, 10.00 - 12.00
+56343534534*Fatih*Talu*Prof*fatih.talu@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.talu*Pazartesi, 13.30 - 14.30
+74565464545*Ali*Ari*Doç*ali.ari@inonu.edu.tr*http://inonu.edu.tr/akademik/ali.ari*Cuma, 10.00 - 12.00
+64234234234*Abdullah Erhan*Akkaya*Dr*erhan.akkaya@inonu.edu.tr*http://inonu.edu.tr/akademik/erhan.akkaya*Salı, 13:30 - 15:10
+75464563454*Mustafa*Nurmuhammed*Dr*mustafa.nurmuhammed@inonu.edu.tr*http://inonu.edu.tr/akademik/mustafa.nurmuhammed*Çarşamba, 16.00 - 18.00
+63454354232*Edanur Özdemir*Yıldırım*ARGE*edanur.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/edanur.ozdemir*Çarşamba, 16.00 - 18.00
+31123123413*Begüm*Yetişkin*ARGE*begum.yetiskin@inonu.edu.tr*http://inonu.edu.tr/akademik/begum.yetiskin*Pazartesi, 10:00 - 12:00
+87678675657*Büşra*Özcan*ARGE*busra.ozcan@inonu.edu.tr*http://inonu.edu.tr/akademik/busra.ozcan*Salı, 13.30 - 15.00
+65371276537*Taha Burak*Özdemir*ARGE*tahaburak.ozdemir@inonu.edu.tr*http://inonu.edu.tr/akademik/tahaburak.ozdemir*Pazartesi, 10:00 - 12:00
+75363454522*Mehmet*Kodaz*Ögr*mehmet.kodaz@inonu.edu.tr*http://www.inonu.edu.tr/akademik/mehmet.kodaz*Çarşamba, 16.00 - 18.00
+64352432323*Hayrettin Aykut*Dönmez*Ögr*aykut.donmez@inonu.edu.tr*http://avesis.inonu.edu.tr/hayrettinaykut.donmez*Pazartesi, 10:00 - 12:00
+77533453422*Ali Selami*Başoglu*PhD*selami.basoglu@inonu.edu.tr*https://avesis.inonu.edu.tr/selami.basoglu*Salı, 13.30 - 15.00
+75345574534*Ümit*Çakan*Prof*umit.cakan@inonu.edu.tr*http://avesis.inonu.edu.tr/1410*Pazartesi, 10:00 - 12:00
+53453572452*Ahmet*Iskender*PhD*ahmet.iskender@inonu.edu.tr*http://avesis.inonu.edu.tr/ahmet.iskender*Çarşamba, 16.00 - 18.00
+66435463455*Cemal*Keleş*Dr*cemal.keles@inonu.edu.tr*http://www.inonu.edu.tr/akademik/cemal.keles*Cuma, 10.00 - 12.00
+66128324276*Mehmet*Temur*PhD*mehmet.temur@inonu.edu.tr*http://avesis.inonu.edu.tr/mehmet.temur*Salı, 13.30 - 15.00
+88657567343*Bilal*Şenol*Prof*bilal.senol@inonu.edu.tr*http://avesis.inonu.edu.tr/bilal.senol*Cuma, 10.00 - 12.00
+44432352343*Davut*Hanbay*Prof*davut.hanbay@inonu.edu.tr*http://avesis.inonu.edu.tr/davut.hanbay*Çarşamba, 16.00 - 18.00
+85678745655*Kenan*Ince*Prof*kenan.ince@inonu.edu.tr*http://www.inonu.edu.tr/akademik/kenan.ince*Salı, 13.30 - 15.00
+77776735467*Celaleddin*Yeroğlu*Prof*c.yeroglu@inonu.edu.tr*http://avesis.inonu.edu.tr/c.yeroglu*Pazartesi, 10:00 - 12:00
+
+---------------------------------------------------------------------------------------------------------------
+
+##stuId*firstName*lastName*borndate*classYear*faculty*gpa
+02240201111*Rashid*Yuldashov*01.11.1993*2*Bilgisayar Mühendisligi*80
+02240000222*Ali*Karakurt*21*25.13.2005*Bilgisayar Mühendisligi*79
+02240000333*Ali*Osman*19*32.09.2006*Bilgisayar Mühendisligi*78
+
+
+
