@@ -12,6 +12,7 @@ public class Lecture {
     public int lectureTheory;
     public int lectureApplication;
     public long lectureTeacher;
+    public String lectureSeason;
 
     public Lecture(){
     }
