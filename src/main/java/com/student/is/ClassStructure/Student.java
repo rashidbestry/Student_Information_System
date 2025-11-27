@@ -7,7 +7,7 @@ public class Student {
     public String bornDate;
     public int classYear;
     public String faculty;
-    public double gpa;
+    public int gpa;
 
     public Student(){
     }

@@ -1,49 +1,49 @@
-%%lecture code*lecture name*mandatory(true)/optional(false)*credit*AKTS*classYear*language*type*theoretical*application*teacher
-BİLM101-2019*Bilgisayar Muhendisligine Giris*true*2*4*1*Türkçe*Yüz Yüze*2*0*64234234234
-BİLM103-2022*Ayrik Matematik*true*3*4*1*Türkçe*Yüz Yüze*3*0*74565464545
-BİLM105-2021*Programlama I*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454
-BİLM111-2021*Genel Fizik*true*2*2*1*Türkçe*Yüz Yüze*2*0*53453572452
-BİLM181-2009*Genel Matematik I*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534
-BİLM191-2009*Turk Dili-I*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422
-BİLM193-2019*Ataturk Ilkeleri ve Inkilap Tarihi-I*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323
-BİLM197-2009*Ingilizce-I*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522
-BİLM104-2022*Lineer Cebir*true*3*6*1*Türkçe*Yüz Yüze*3*0*34554334555
-BİLM106-2022*Programlama II*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454
-BİLM182-2009*Genel Matematik II*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534
-BİLM186-2022*Elektrik Devreleri*true*2*4*1*Türkçe*Yüz Yüze*2*0*66435463455
-BİLM192-2009*Turk Dili-II*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422
-BİLM194-2019*Ataturk Ilkeleri ve Inkilap Tarihi-II*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323
-BİLM198-2009*Ingilizce-II*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522
-BİLM201-2021*Veri Yapilari*true*4*6*2*Türkçe*Yüz Yüze*3*2*34554334555
-BİLM203-2022*Nesne Tabanli Programlama*true*4*6*2*Türkçe*Yüz Yüze*3*2*24234364355
-BİLM205-2019*Bicimsel Diller ve Ozdevinirler*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423
-BİLM223-2022*Mantik Devreleri Tasarimi*true*4*5*2*Türkçe*Yüz Yüze*3*2*88237684283
-BİLM289-2022*Veri Organizasyonu*true*3*5*2*Türkçe*Yüz Yüze*3*0*66575765576
-USD502-2025*Ingilizce Konusma*false*2*3*2*Inlizce*Yüz Yüze*2*0*66128324276
-BİLM202-2021*Programlama Dilleri*true*4*7*2*Türkçe*Yüz Yüze*3*2*66575765576
-BİLM224-2022*Olasilik ve Istatistik*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423
-BİLM232-2019*Bilgisayar Mimarileri*true*3*5*2*Türkçe*Yüz Yüze*3*0*34554334555
-BİLM252-2019*Mikrobilgisayar Sistemleri*true*4*6*2*Türkçe*Yüz Yüze*3*2*75464563454
-BİLM288-2022*Sayisal Yontemler*true*3*5*2*Türkçe*Yüz Yüze*2*2*54332423423
-BİLM004-2021*Teknik Olmayan Secmeli I*false*2*2*2*Türkçe*Yüz Yüze*2*0*88237684283
-BİLM301-2019*Bilgisayar Ağları*true*4*6*3*Türkçe*Yüz Yüze*3*2*64234234234
-BİLM311-2019*Mobil Cihazlar Icin Uygulama Gelistirme*true*3*5*3*Türkçe*Yüz Yüze*3*0*88657567343
-BİLM335-2019*Veri Tabanı Yonetim Sistemleri*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576
-BİLM337-2019*Isletim Sistemleri*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423
-BİLM365-2022*Goruntu Isleme*true*4*6*3*Türkçe*Yüz Yüze*3*2*56343534534
-BİLM005-2021*Teknik Olmayan Secmeli II*false*2*2*3*Türkçe*Yüz Yüze*2*0*44432352343
-BİLM302-2011*Algoritma Analizi*true*3*5*3*Türkçe*Yüz Yüze*3*0*64234234234
-BİLM306-2019*Internet Programciligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*85678745655
-BİLM374-2022*Yapay Zeka*true*4*6*3*Türkçe*Yüz Yüze*3*2*24234364355
-BİLM376-2022*Nesneye Yonelik Yazilim Muhendisligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576
-BİLM378-2022*Sinyaller ve Sistemler*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423
-BİLM006-2021*Teknik Olmayan Secmeli III*false*2*2*3*Türkçe*Yüz Yüze*2*0*77776735467
-BİLM007-2021*Teknik Secmeli Dersler(5)*false*3*25*4*Türkçe*Yüz Yüze*3*0*64234234234
-BİLM077-2023*Zorunlu Dersler(2)*true*3*5*4*Türkçe*Yüz Yüze*0*0*44432352343
-BİLM099-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283
-BİLM008-2023*Teknik Secmeli Dersler(5)*false*15*25*4*Türkçe*Yüz Yüze*3*0*64234234234
-BİLM088-2023*Zorunlu Dersler(2)*false*3*5*4*Türkçe*Yüz Yüze*0*0*75464563454
-BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283
+%%lecture code*lecture name*mandatory(true)/optional(false)*credit*AKTS*classYear*language*type*theoretical*application*teacher*season
+BİLM101-2019*Bilgisayar Muhendisligine Giris*true*2*4*1*Türkçe*Yüz Yüze*2*0*64234234234*Güz
+BİLM103-2022*Ayrik Matematik*true*3*4*1*Türkçe*Yüz Yüze*3*0*74565464545*Güz
+BİLM105-2021*Programlama I*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454*Güz
+BİLM111-2021*Genel Fizik*true*2*2*1*Türkçe*Yüz Yüze*2*0*53453572452*Güz
+BİLM181-2009*Genel Matematik I*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534*Güz
+BİLM191-2009*Turk Dili-I*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422*Güz
+BİLM193-2019*Ataturk Ilkeleri ve Inkilap Tarihi-I*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323*Güz
+BİLM197-2009*Ingilizce-I*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522*Güz
+BİLM104-2022*Lineer Cebir*true*3*6*1*Türkçe*Yüz Yüze*3*0*34554334555*Bahar
+BİLM106-2022*Programlama II*true*4*7*1*Türkçe*Yüz Yüze*3*2*75464563454*Bahar
+BİLM182-2009*Genel Matematik II*true*4*6*1*Türkçe*Yüz Yüze*4*0*75345574534*Bahar
+BİLM186-2022*Elektrik Devreleri*true*2*4*1*Türkçe*Yüz Yüze*2*0*66435463455*Bahar
+BİLM192-2009*Turk Dili-II*true*2*2*1*Türkçe*Uzaktan*2*0*77533453422*Bahar
+BİLM194-2019*Ataturk Ilkeleri ve Inkilap Tarihi-II*true*2*2*1*Türkçe*Uzaktan*2*0*64352432323*Bahar
+BİLM198-2009*Ingilizce-II*true*3*3*1*Inlizce*Uzaktan*3*0*75363454522*Bahar
+BİLM201-2021*Veri Yapilari*true*4*6*2*Türkçe*Yüz Yüze*3*2*34554334555*Güz
+BİLM203-2022*Nesne Tabanli Programlama*true*4*6*2*Türkçe*Yüz Yüze*3*2*24234364355*Güz
+BİLM205-2019*Bicimsel Diller ve Ozdevinirler*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423*Güz
+BİLM223-2022*Mantik Devreleri Tasarimi*true*4*5*2*Türkçe*Yüz Yüze*3*2*88237684283*Güz
+BİLM289-2022*Veri Organizasyonu*true*3*5*2*Türkçe*Yüz Yüze*3*0*66575765576*Güz
+USD502-2025*Ingilizce Konusma*false*2*3*2*Inlizce*Yüz Yüze*2*0*66128324276*Güz
+BİLM202-2021*Programlama Dilleri*true*4*7*2*Türkçe*Yüz Yüze*3*2*66575765576*Bahar
+BİLM224-2022*Olasilik ve Istatistik*true*3*5*2*Türkçe*Yüz Yüze*3*0*54332423423*Bahar
+BİLM232-2019*Bilgisayar Mimarileri*true*3*5*2*Türkçe*Yüz Yüze*3*0*34554334555*Bahar
+BİLM252-2019*Mikrobilgisayar Sistemleri*true*4*6*2*Türkçe*Yüz Yüze*3*2*75464563454*Bahar
+BİLM288-2022*Sayisal Yontemler*true*3*5*2*Türkçe*Yüz Yüze*2*2*54332423423*Bahar
+BİLM004-2021*Teknik Olmayan Secmeli I*false*2*2*2*Türkçe*Yüz Yüze*2*0*88237684283*Bahar
+BİLM301-2019*Bilgisayar Ağları*true*4*6*3*Türkçe*Yüz Yüze*3*2*64234234234*Güz
+BİLM311-2019*Mobil Cihazlar Icin Uygulama Gelistirme*true*3*5*3*Türkçe*Yüz Yüze*3*0*88657567343*Güz
+BİLM335-2019*Veri Tabanı Yonetim Sistemleri*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576*Güz
+BİLM337-2019*Isletim Sistemleri*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423*Güz
+BİLM365-2022*Goruntu Isleme*true*4*6*3*Türkçe*Yüz Yüze*3*2*56343534534*Güz
+BİLM005-2021*Teknik Olmayan Secmeli II*false*2*2*3*Türkçe*Yüz Yüze*2*0*44432352343*Güz
+BİLM302-2011*Algoritma Analizi*true*3*5*3*Türkçe*Yüz Yüze*3*0*64234234234*Bahar
+BİLM306-2019*Internet Programciligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*85678745655*Bahar
+BİLM374-2022*Yapay Zeka*true*4*6*3*Türkçe*Yüz Yüze*3*2*24234364355*Bahar
+BİLM376-2022*Nesneye Yonelik Yazilim Muhendisligi*true*4*6*3*Türkçe*Yüz Yüze*3*2*66575765576*Bahar
+BİLM378-2022*Sinyaller ve Sistemler*true*3*5*3*Türkçe*Yüz Yüze*3*0*54332423423*Bahar
+BİLM006-2021*Teknik Olmayan Secmeli III*false*2*2*3*Türkçe*Yüz Yüze*2*0*77776735467*Bahar
+BİLM007-2021*Teknik Secmeli Dersler(5)*false*3*25*4*Türkçe*Yüz Yüze*3*0*64234234234*Güz
+BİLM077-2023*Zorunlu Dersler(2)*true*3*5*4*Türkçe*Yüz Yüze*0*0*44432352343*Güz
+BİLM099-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283*Güz
+BİLM008-2023*Teknik Secmeli Dersler(5)*false*15*25*4*Türkçe*Yüz Yüze*3*0*64234234234*Bahar
+BİLM088-2023*Zorunlu Dersler(2)*false*3*5*4*Türkçe*Yüz Yüze*0*0*75464563454*Bahar
+BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283*Bahar
 
 ---------------------------------------------------------------------------------------------------------------
 
