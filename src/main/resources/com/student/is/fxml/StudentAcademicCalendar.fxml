@@ -824,7 +824,7 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="250.0" onAction="#ListOfGradesButtonAction" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -832,7 +832,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#AbsenteeismButtonAction" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -848,7 +848,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #fff3f2;" text="Akademik Takvim" textFill="#580519" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#AcademicCalendarButtonAction" style="-fx-background-color: #fff3f2;" text="Akademik Takvim" textFill="#580519" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -856,7 +856,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" onAction="#exitButtonAction" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>

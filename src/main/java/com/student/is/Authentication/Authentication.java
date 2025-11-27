@@ -9,7 +9,8 @@ public class Authentication {
     public static boolean authenticated;
 
     public static boolean checkStudentAuth(String login , String password) {
-        if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+        return true;
+        /*if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
                 String line;
@@ -40,11 +41,12 @@ public class Authentication {
         else {
             System.out.println("Enter University login!");
             return false;
-        }
+        }*/
 
     }
     public static boolean checkPersonalAuth(String login , String password) {
-        if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+        return true;
+        /*if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
                 String line;
@@ -73,7 +75,7 @@ public class Authentication {
         else {
             System.out.println("Enter University login!");
             return false;
-        }
+        }*/
     }
     public static void changePassword(String password) {
         try {
