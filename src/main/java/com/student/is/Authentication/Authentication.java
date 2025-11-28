@@ -12,8 +12,9 @@ public class Authentication {
         if (login.isEmpty()) {
             currentUser = new Admin();
             return true;
-        }
-        else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+        } else if (!login.contains("[@]")) {
+            return false;
+        } else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
                 String line;
@@ -50,6 +51,8 @@ public class Authentication {
         if (login.isEmpty()) {
             currentUser = new Admin();
             return true;
+        } else if (!login.contains("[@]")) {
+            return false;
         }
         else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
@@ -112,11 +115,11 @@ public class Authentication {
         }return status;
     }
     public static boolean forgotPassword(String login){
-        if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
-            return Mail.forgotPasswordMail(login);
+        if (!login.contains("[@]")) {
+            return false;
         }
-        else {
-            System.out.println("Enter University login!");
+        else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+            return Mail.forgotPasswordMail(login);
         }
         return false;
     }

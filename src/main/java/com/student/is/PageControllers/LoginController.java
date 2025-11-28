@@ -1,22 +1,19 @@
 package com.student.is.PageControllers;
+
 import com.student.is.Authentication.Authentication;
 import com.student.is.DataManagement.Database;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import javafx.scene.media.AudioClip;
 import java.io.IOException;
-import java.net.URL;
 
 public class  LoginController {
     public TextField studentLogin;
@@ -114,10 +111,8 @@ public class  LoginController {
             ScholarShowErorPopup();
             //playErrorSound();
         }
-
         this.personelLogin.clear();
         this.personelPassword.clear();
-        Database.createTemp();
     }
 
     @FXML

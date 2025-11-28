@@ -1,14 +1,14 @@
 package com.student.is.PageControllers;
 
 import com.student.is.Authentication.Authentication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.event.ActionEvent;
 import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
@@ -30,7 +30,6 @@ public class ForgotPasswordController {
 
         } catch (IOException e) {
             System.err.println("FXML dosyası yüklenirken bir hata oluştu:");
-            e.printStackTrace();
         }
 
     }
@@ -61,8 +60,8 @@ public class ForgotPasswordController {
     public TextField mailAdress;
     public void SendEmailButtonAction(ActionEvent actionEvent) throws IOException {
         String mail = this.mailAdress.getText();
-        boolean status = false; // Authentication.forgotPassword(mail) "mail adresi kontrol edilecek ve mail gönderilecek"
-        if(status){
+        // Authentication.forgotPassword(mail) "mail adresi kontrol edilecek ve mail gönderilecek"
+        if(Authentication.forgotPassword(mail)){
             SendMailShowSuccessfulPopup();
         }
         else{
