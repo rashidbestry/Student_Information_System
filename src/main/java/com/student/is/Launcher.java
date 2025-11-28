@@ -5,6 +5,10 @@ import javafx.application.Application;
 
 public class Launcher {
     static void main(String[] args) {
+        Database.createStudentList();
+        Database.createLectureList();
+        Database.createPersonalList();
+        Database.createTemp();
         Application.launch(StartController.class, args);
         Database.saveTempToData();
         Database.deleteTemp();
