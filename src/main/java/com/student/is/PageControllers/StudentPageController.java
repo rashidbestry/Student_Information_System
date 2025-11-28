@@ -1,24 +1,11 @@
 package com.student.is.PageControllers;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.student.is.Authentication.Authentication;
-import com.student.is.DataManagement.Database;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import java.io.IOException;
-
-import java.io.IOException;
-
 public class StudentPageController {
 
     public  void exitButtonAction(ActionEvent event) throws IOException,IOException{

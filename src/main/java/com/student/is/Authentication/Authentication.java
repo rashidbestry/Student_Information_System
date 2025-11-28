@@ -1,14 +1,19 @@
 package com.student.is.Authentication;
+import com.student.is.ClassStructure.Admin;
+import com.student.is.DataManagement.Database;
+
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
 public class Authentication {
-    public static String currentUser;
-    public static boolean authenticated;
+    public static Object currentUser;
 
     public static boolean checkStudentAuth(String login , String password) {
-        return true;
-        /*if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+        if (login.isEmpty()) {
+            currentUser = new Admin();
+            return true;
+        }
+        else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
                 String line;
@@ -20,8 +25,7 @@ public class Authentication {
                     String loginTemp = line.split(" ")[0];
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
-                            currentUser = loginTemp;
-                            authenticated = true;
+                            currentUser = Database.createStudentUser(login);
                             return true;
                         }
                         return false;
@@ -39,12 +43,15 @@ public class Authentication {
         else {
             System.out.println("Enter University login!");
             return false;
-        }*/
+        }
 
     }
     public static boolean checkPersonalAuth(String login , String password) {
-        return true;
-        /*if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
+        if (login.isEmpty()) {
+            currentUser = new Admin();
+            return true;
+        }
+        else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
                 String line;
@@ -54,8 +61,7 @@ public class Authentication {
                     String loginTemp = line.split(" ")[0];
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
-                            currentUser = loginTemp;
-                            authenticated = true;
+                            currentUser = Database.createPersonalUser(login);
                             return true;
                         }
                         return false;
@@ -73,7 +79,9 @@ public class Authentication {
         else {
             System.out.println("Enter University login!");
             return false;
-        }*/
+        }
+
+
     }
     public static boolean changePassword(String login,String password) {
         boolean status=false;

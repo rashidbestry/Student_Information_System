@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 
 public class Database {
-    public static  ArrayList<Personal> personalList = new ArrayList<>();
+    public static ArrayList<Personal> personalList = new ArrayList<>();
     public static ArrayList<Lecture> lectureList = new ArrayList<>();
     public static ArrayList<Student> studentList = new ArrayList<>();
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
@@ -97,6 +97,49 @@ public class Database {
             System.out.println("Error reading file!" + e);
         }
     }
+    public static Object createStudentUser(String login){
+        for (int i = 0; i < studentList.size();i++){
+            if (studentList.get(i).stuId.equals(login.split("@")[0]))
+                return studentList.get(i);
+        } return null;
+    }
+    public static void createPersonalList(){
+        try  {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.split("[*]")[0].equals("&&perId"))
+                    break;
+            }
+
+            while ((line = br.readLine()) != null){
+                if (line.equals("")){
+                    break;
+                }
+                String[] temp = line.split("[*]");
+                Personal per = new Personal();
+                per.perId = temp[0];
+                per.name = temp[1];
+                per.surname = temp[2];
+                per.title = temp[3];
+                per.email = temp[4];
+                per.web = temp[5];
+                per.officehours = temp[6];
+                personalList.add(per);
+            }
+            br.close();
+        }
+        catch (IOException e){
+            System.out.println("Error reading file!" + e);
+        }
+
+    }
+    public static Object createPersonalUser(String login){
+        for (int i = 0; i < personalList.size();i++){
+            if (personalList.get(i).email.equals(login))
+                return personalList.get(i);
+        } return null;
+    }
     public static void createLectureList(){
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
@@ -125,37 +168,6 @@ public class Database {
                 lec.lectureTeacher = Long.parseLong(temp[10]);
                 lec.lectureSeason = temp[11];
                 lectureList.add(lec);
-            }
-            br.close();
-        }
-        catch (IOException e){
-            System.out.println("Error reading file!" + e);
-        }
-
-    }
-    public static void createPersonalList(){
-        try  {
-            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
-            String line;
-            while ((line = br.readLine()) != null) {
-                if (line.split("[*]")[0].equals("&&perId"))
-                    break;
-            }
-
-            while ((line = br.readLine()) != null){
-                if (line.equals("")){
-                    break;
-                }
-                String[] temp = line.split("[*]");
-                Personal per = new Personal();
-                per.perId = temp[0];
-                per.name = temp[1];
-                per.surname = temp[2];
-                per.title = temp[3];
-                per.email = temp[4];
-                per.web = temp[5];
-                per.officehours = temp[6];
-                personalList.add(per);
             }
             br.close();
         }
