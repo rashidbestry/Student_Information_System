@@ -80,7 +80,7 @@ public class  LoginController {
         String password = this.studentPassword.getText();
         Boolean status = Authentication.checkStudentAuth(login, password);
         if (status) {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentMainPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentBase.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -96,12 +96,14 @@ public class  LoginController {
         Database.createTemp();
     }
 
+
+
     public void personelMainPage(ActionEvent event) throws IOException {
         String login = this.personelLogin.getText();
         String password = this.personelPassword.getText();
         Boolean status = Authentication.checkPersonalAuth(login, password);
         if (status) {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/ScholarMainPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/ScholarBase.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

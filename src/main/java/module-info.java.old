@@ -8,6 +8,7 @@ module com.student.is {
     requires javafx.graphics;
     requires jakarta.mail;
     requires javafx.media;
+    requires com.student.is;
 
     opens com.student.is to javafx.fxml;
     exports com.student.is;

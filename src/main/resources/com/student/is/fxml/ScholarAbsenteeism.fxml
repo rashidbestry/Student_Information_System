@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.AbsenteeismOperationController">
    <children>
       <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="18.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="238.0" text="Ders Seçiniz">
         <items>
@@ -28,7 +28,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </MenuButton>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#ScholarMainBackButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
