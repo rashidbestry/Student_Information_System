@@ -1,7 +1,6 @@
 package com.student.is.DataManagement;
-import com.student.is.ClassStructure.Lecture;
-import com.student.is.ClassStructure.Personal;
-import com.student.is.ClassStructure.Student;
+import com.student.is.ClassStructure.*;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,8 +15,8 @@ public class Database {
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
 
     public static void main(String[] args){
-        createStudentList();
         createLectureList();
+        createStudentList();
         createPersonalList();
         createTemp();
         studentList.get(0).firstName = "Mehriban";
@@ -88,7 +87,11 @@ public class Database {
                 stu.bornDate = temp[3];
                 stu.classYear = Integer.parseInt(temp[4]);
                 stu.faculty = temp[5];
-                stu.gpa = Integer.parseInt(temp[6]);
+                stu.notes = new Notes(temp[6]);
+                stu.LectureAbsence(temp[7]);
+                stu.LectureNotes(temp[7]);
+                stu.phoneNo = temp[8];
+                stu.calculateGpa();
                 Database.studentList.add(stu);
             }
             br.close();
@@ -125,6 +128,7 @@ public class Database {
                 per.email = temp[4];
                 per.web = temp[5];
                 per.officehours = temp[6];
+                per.createLectures();
                 personalList.add(per);
             }
             br.close();
@@ -165,7 +169,7 @@ public class Database {
                 lec.lectureType = temp[7];
                 lec.lectureTheory = Integer.parseInt(temp[8]);
                 lec.lectureApplication = Integer.parseInt(temp[9]);
-                lec.lectureTeacher = Long.parseLong(temp[10]);
+                lec.lectureTeacher = temp[10];
                 lec.lectureSeason = temp[11];
                 lectureList.add(lec);
             }

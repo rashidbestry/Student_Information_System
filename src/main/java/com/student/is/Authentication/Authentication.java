@@ -1,8 +1,6 @@
 package com.student.is.Authentication;
-
 import com.student.is.ClassStructure.Admin;
 import com.student.is.DataManagement.Database;
-
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 

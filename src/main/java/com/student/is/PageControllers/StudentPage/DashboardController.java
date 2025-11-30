@@ -23,7 +23,7 @@ public class DashboardController {
         if(sessionUser instanceof Student){
             Student student = (Student) sessionUser;
 
-            nameLabel.setText(student.getName());
+            nameLabel.setText(student.getFirstName());
             lastNameLabel.setText(student.getLastName());
             bornDateLabel.setText(student.getBornDate());
             facultyLabel.setText(student.getFaculty());

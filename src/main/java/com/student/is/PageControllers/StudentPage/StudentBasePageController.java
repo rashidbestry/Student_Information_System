@@ -2,16 +2,17 @@ package com.student.is.PageControllers.StudentPage;
 
 import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
+
 import java.io.IOException;
-import javafx.scene.control.Label;
 public class StudentBasePageController {
 
 
@@ -27,7 +28,7 @@ public class StudentBasePageController {
         Object sessionUser = ContentLoader.getCurrentUserSession();
         if (sessionUser instanceof Student) {
             Student currentStudent = (Student) sessionUser;
-            studentNameLabel.setText(currentStudent.getName() + " " + currentStudent.getLastName());
+            studentNameLabel.setText(currentStudent.getFirstName() + " " + currentStudent.getLastName());
         }
 
     }
