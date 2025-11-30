@@ -1,7 +1,6 @@
 package com.student.is.PageControllers;
 
 import com.student.is.Authentication.Authentication;
-import com.student.is.DataManagement.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -79,12 +78,9 @@ public class  LoginController {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
 
-        Object loginUser = Authentication.checkStudentAuth(login,password);
-
-        if (loginUser != null) {
-
+        if (Authentication.checkStudentAuth(login,password)) {
             //Object loggedInUser = Authentication.currentUser;
-            ContentLoader.setCurrentUserSession(loginUser); // kullanıcıyı oturuma kaydet
+            ContentLoader.setCurrentUserSession(Authentication.currentUser); // kullanıcıyı oturuma kaydet
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/StudentBase.fxml"));
             Parent root = loader.load();
@@ -100,7 +96,6 @@ public class  LoginController {
 
         this.studentLogin.clear();
         this.studentPassword.clear();
-        // Database.createTemp(); //
     }
 
 

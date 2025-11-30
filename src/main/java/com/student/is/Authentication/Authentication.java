@@ -1,7 +1,6 @@
 package com.student.is.Authentication;
+
 import com.student.is.ClassStructure.Admin;
-import com.student.is.ClassStructure.Personal;
-import com.student.is.ClassStructure.Student;
 import com.student.is.DataManagement.Database;
 
 import java.io.*;
@@ -10,16 +9,11 @@ import java.security.NoSuchAlgorithmException;
 public class Authentication {
     public static Object currentUser;
 
-    public static Object checkStudentAuth(String login , String password) {
-
-        Student Teststudent = new Student();
-        return Teststudent;
-
-        /*
+    public static boolean checkStudentAuth(String login , String password) {
         if (login.isEmpty()) {
             currentUser = new Admin();
             return true;
-        } else if (!login.contains("[@]")) {
+        } else if (!login.contains("@")) {
             return false;
         } else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
@@ -47,18 +41,15 @@ public class Authentication {
                 throw new RuntimeException(e);
             }
             return false;
-        }
-        else {
-            System.out.println("Enter University login!");
-            return false;
-        }*/
+        }return false;
+
 
     }
     public static boolean checkPersonalAuth(String login , String password) {
         if (login.isEmpty()) {
             currentUser = new Admin();
             return true;
-        } else if (!login.contains("[@]")) {
+        } else if (!login.contains("@")) {
             return false;
         }
         else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
@@ -86,10 +77,7 @@ public class Authentication {
             }
             return false;
         }
-        else {
-            System.out.println("Enter University login!");
-            return false;
-        }
+        return false;
 
 
     }
