@@ -1,5 +1,6 @@
 package com.student.is.PageControllers.StudentPage;
 
+import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,18 +11,27 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import java.io.IOException;
-
+import javafx.scene.control.Label;
 public class StudentBasePageController {
 
-    @FXML
-    public AnchorPane studentMainPageAnchorPane;
+
+    @FXML public AnchorPane studentMainPageAnchorPane;
+    @FXML private Label studentNameLabel;
 
     @FXML
     public void initialize() {
         ContentLoader.setMainContentPane(studentMainPageAnchorPane);
         // varsayılan ekran
         ContentLoader.loadPage("/com/student/is/fxml/StudentDashboard.fxml");
+
+        Object sessionUser = ContentLoader.getCurrentUserSession();
+        if (sessionUser instanceof Student) {
+            Student currentStudent = (Student) sessionUser;
+            studentNameLabel.setText(currentStudent.getName() + " " + currentStudent.getLastName());
+        }
+
     }
+
     public void StudentInformationButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/StudentInformation.fxml");
     }

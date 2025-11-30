@@ -78,22 +78,29 @@ public class  LoginController {
     public void studentMainPage(ActionEvent event) throws IOException {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
-        Boolean status = Authentication.checkStudentAuth(login, password);
-        if (status) {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/StudentBase.fxml"));
+
+        Object loginUser = Authentication.checkStudentAuth(login,password);
+
+        if (loginUser != null) {
+
+            //Object loggedInUser = Authentication.currentUser;
+            ContentLoader.setCurrentUserSession(loginUser); // kullanıcıyı oturuma kaydet
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/StudentBase.fxml"));
+            Parent root = loader.load();
+
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
+            stage.setScene(new Scene(root));
             stage.show();
+
         } else {
-            System.out.println("Hatalı kullanıcı adı veya şifre!!");
+            System.out.println("Hatalı öğrenci kullanıcı adı veya şifre!");
             StudentShowErorPopup();
-            //playErrorSound();
         }
 
         this.studentLogin.clear();
         this.studentPassword.clear();
-        Database.createTemp();
+        // Database.createTemp(); //
     }
 
 
@@ -139,3 +146,4 @@ public class  LoginController {
     }
 
 }
+

@@ -1,5 +1,7 @@
 package com.student.is.Authentication;
 import com.student.is.ClassStructure.Admin;
+import com.student.is.ClassStructure.Personal;
+import com.student.is.ClassStructure.Student;
 import com.student.is.DataManagement.Database;
 
 import java.io.*;
@@ -8,7 +10,12 @@ import java.security.NoSuchAlgorithmException;
 public class Authentication {
     public static Object currentUser;
 
-    public static boolean checkStudentAuth(String login , String password) {
+    public static Object checkStudentAuth(String login , String password) {
+
+        Student Teststudent = new Student();
+        return Teststudent;
+
+        /*
         if (login.isEmpty()) {
             currentUser = new Admin();
             return true;
@@ -44,7 +51,7 @@ public class Authentication {
         else {
             System.out.println("Enter University login!");
             return false;
-        }
+        }*/
 
     }
     public static boolean checkPersonalAuth(String login , String password) {

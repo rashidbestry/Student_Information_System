@@ -13,6 +13,31 @@ public class Personal {
 
     public Personal(){
     }
+
+    public String getPerId() {
+        return perId;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public String getWeb() {
+        return web;
+    }
+    public String getOfficehours() {
+        return officehours;
+    }
+
+
+
     public boolean deleteStudent(Student object){
         return Database.deleteObject(object);
     }

@@ -39,27 +39,27 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="69.0" text="Ali">
+            <Label fx:id="nameLabel" layoutX="62.0" layoutY="69.0" text="Ali">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="96.0" layoutY="109.0" text="Karakurt">
+            <Label fx:id="lastNameLabel" layoutX="96.0" layoutY="109.0" text="Karakurt">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="162.0" layoutY="149.0" text="18.01.2006">
+            <Label fx:id="bornDateLabel" layoutX="162.0" layoutY="149.0" text="18.01.2006">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="105.0" layoutY="189.0" text="Mühendislik Fakültesi">
+            <Label fx:id="facultyLabel" layoutX="105.0" layoutY="189.0" text="Mühendislik Fakültesi">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="96.0" layoutY="229.0" text="Bilgisayar Mühendisliği">
+            <Label fx:id="sectionLabel" layoutX="96.0" layoutY="229.0" text="Bilgisayar Mühendisliği">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
@@ -98,17 +98,17 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="83.0" layoutY="69.0" text="2">
+            <Label fx:id="classLabel" layoutX="83.0" layoutY="69.0" text="2">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="108.0" layoutY="109.0" text="2025-2026 Güz">
+            <Label fx:id="termLabel" layoutX="108.0" layoutY="109.0" text="2025-2026 Güz">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="94.0" layoutY="149.0" text="2.98">
+            <Label fx:id="agnoLabel" layoutX="94.0" layoutY="149.0" text="2.98">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>

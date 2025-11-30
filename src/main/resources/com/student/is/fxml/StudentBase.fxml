@@ -74,7 +74,7 @@
                         <Font name="Arial Bold" size="22.0" />
                     </font>
                 </Label>
-                <Label text="Ali KARAKURT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <Label fx:id="studentNameLabel" text="Ali KARAKURT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                     <font>
                         <Font name="Arial" size="22.0" />
                     </font>
