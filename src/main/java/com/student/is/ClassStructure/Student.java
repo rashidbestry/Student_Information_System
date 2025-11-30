@@ -114,12 +114,12 @@ public class Student {
                 }
             }
         }
-
-        notes.fall1 = (int) fallvize / fallvizeCount;
-        notes.fall2 = (int) fallfinal / fallfinalCount;
-        notes.spring1 = (int) springvize / springvizeCount;
-        notes.spring1 = (int) springfinal / springfinalCount;
-
+        if (fallvizeCount != 0 && fallfinalCount != 0 && springvizeCount != 0 && springfinalCount != 0) {
+            notes.fall1 = (int) fallvize / fallvizeCount;
+            notes.fall2 = (int) fallfinal / fallfinalCount;
+            notes.spring1 = (int) springvize / springvizeCount;
+            notes.spring1 = (int) springfinal / springfinalCount;
+        }
         int end = 0;
     }
 
