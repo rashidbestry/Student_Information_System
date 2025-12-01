@@ -16,11 +16,11 @@
          <content>
             <TableView fx:id="scholarTable" prefHeight="718.0" prefWidth="1030.0">
               <columns>
+                  <TableColumn fx:id="titleColumn" editable="false" prefWidth="92.800048828125" sortable="false" text="Ünvan" />
                 <TableColumn fx:id="nameColumn" editable="false" prefWidth="162.40002137422562" sortable="false" text="Ad" />
                 <TableColumn fx:id="surnameColumn" editable="false" prefWidth="148.80003356933594" sortable="false" text="Soyad" />
-                  <TableColumn fx:id="titleColumn" editable="false" prefWidth="92.800048828125" sortable="false" text="Ünvan" />
                   <TableColumn fx:id="emailColumn" editable="false" prefWidth="192.79998779296875" sortable="false" text="E-Posta" />
-                  <TableColumn fx:id="webColumn" editable="false" minWidth="0.0" prefWidth="228.79998779296875" sortable="false" text="Web Sitesi" />
+                  <TableColumn fx:id="webColumn" minWidth="0.0" prefWidth="228.79998779296875" sortable="false" text="Web Sitesi" />
                   <TableColumn fx:id="officehoursColumn" editable="false" prefWidth="201.60001220703134" sortable="false" text="Ofis Saatleri" />
               </columns>
             </TableView>
