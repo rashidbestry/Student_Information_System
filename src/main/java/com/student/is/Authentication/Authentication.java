@@ -26,6 +26,7 @@ public class Authentication {
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
                             currentUser = Database.createStudentUser(login);
+                            br.close();
                             return true;
                         }
                         return false;
@@ -108,11 +109,31 @@ public class Authentication {
         }return status;
     }
     public static boolean forgotPassword(String login){
-        if (!login.contains("[@]")) {
+        if (!login.contains("@")) {
             return false;
         }
         else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
-            return Mail.forgotPasswordMail(login);
+
+            try  {
+                BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/auth.bin"));
+                String line;
+                while ((line = br.readLine()) != null){
+                    if (line.equals("personnelend"))
+                        break;
+                }
+                while ((line = br.readLine()) != null){
+                    String loginTemp = line.split(" ")[0];
+                    if (loginTemp.equals(login)) {
+                        br.close();
+                        return Mail.forgotPasswordMail(login);
+                    }
+
+                }
+                br.close();
+            }
+            catch (IOException e){
+            }
+            return false;
         }
         return false;
     }
