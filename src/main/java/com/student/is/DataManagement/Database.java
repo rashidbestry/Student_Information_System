@@ -19,6 +19,9 @@ public class Database {
         createStudentList();
         createPersonalList();
         createTemp();
+        for (Lecture lec : lectureList)
+            lec.createStudentListForLecture();
+
         byte end=0;
 
     }
@@ -90,6 +93,8 @@ public class Database {
                 stu.LectureAbsence(temp[7]);
                 stu.LectureNotes(temp[7]);
                 stu.phoneNo = temp[8];
+                stu.email = temp[9];
+                stu.address = temp[10];
                 stu.calculateGpa();
                 stu.createLectures();
                 Database.studentList.add(stu);
@@ -263,7 +268,7 @@ public class Database {
                 String line;
                 while ((line = br.readLine()) != null) {
                     if (line.split("[*]")[0].equals(((Student) object).stuId))
-                        wr.write(((Student) object).stuId +"*"+((Student) object).firstName+"*"+((Student) object).lastName+"*"+((Student) object).bornDate+"*"+((Student) object).classYear+"*"+((Student) object).faculty+"*"+((Student) object).gpa+"\n");
+                        wr.write(((Student) object).stuId +"*"+((Student) object).firstName+"*"+((Student) object).lastName+"*"+((Student) object).bornDate+"*"+((Student) object).classYear+"*"+((Student) object).faculty+"*"+((Student) object).getStringNotes()+"*"+((Student) object).getLecturesToString()+"*"+((Student) object).phoneNo+"*"+((Student) object).email+"*"+((Student) object).address+"\n");
                     wr.write(line + "\n");
                 }
                 br.close();
@@ -325,6 +330,9 @@ public class Database {
             }
         }
         return false;
+    }
+    public static void searchInStudentData(String input){
+
     }
 }
 

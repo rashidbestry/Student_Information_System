@@ -17,6 +17,8 @@ public class Student {
     public String phoneNo;
     public double gpa;
     public String section;
+    public String email;
+    public String address;
 
     public Student(){
         this.section = "Mühendislik Fakültesi";
@@ -117,6 +119,14 @@ public class Student {
     public ArrayList<Lecture> getLectures() {
         return lectures;
     }
+    public String getLecturesToString() {
+        String str="/";
+        for (Lecture lec : lectures){
+            str = str+lec.lectureCode+"("+stuAbsence.get(lec.lectureCode)+")("+stuNotes.get(lec.lectureCode).replace(",",")(")+")"+"/";
+        }
+
+        return str.substring(1,str.length()-1);
+    }
 
     public String getStuId() {
         return stuId;
@@ -144,6 +154,9 @@ public class Student {
 
     public Notes getNotes() {
         return notes;
+    }
+    public String getStringNotes(){
+        return "("+String.valueOf(notes.fall1) +","+ String.valueOf(notes.fall2)+")("+String.valueOf(notes.fall1)+","+String.valueOf(notes.fall2)+")";
     }
 
     public String getPhoneNo() {

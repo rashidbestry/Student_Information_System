@@ -1,4 +1,6 @@
 package com.student.is.ClassStructure;
+import com.student.is.DataManagement.Database;
+
 import java.util.ArrayList;
 
 public class Lecture {
@@ -16,7 +18,12 @@ public class Lecture {
     public String lectureSeason;
     public ArrayList<Student> lectureStudentList = new ArrayList<>();
 
-    public Lecture(){
+    public void createStudentListForLecture(){
+        for (Student student : Database.studentList){
+            if (student.stuAbsence.containsKey(this.lectureCode)){
+                lectureStudentList.add(student);
+            }
+        }
     }
 
 
