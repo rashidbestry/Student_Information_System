@@ -97,8 +97,40 @@ public class Student {
             notes.fall2 = (int) fallfinal / fallfinalCount;
             notes.spring1 = (int) springvize / springvizeCount;
             notes.spring1 = (int) springfinal / springfinalCount;
+            double gpa_4 = (double)(((notes.fall1+notes.fall2+notes.spring1+notes.spring1)/4)*4.0)/100;
+            this.gpa = gpa_4;
         }
-        int end = 0;
+    }
+
+
+//  GETTERS /////////////////////////////////////////////////////////
+
+    public HashMap<String, String> getStuAbsence() {
+        return stuAbsence;
+    }
+
+    public HashMap<String, String> getStuNotes() {
+        return stuNotes;
+    }
+
+    public ArrayList<Lecture> getLectures() {
+        return lectures;
+    }
+
+    public String getStuId() {
+        return stuId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getBornDate() {
+        return bornDate;
     }
 
     public int getClassYear() {

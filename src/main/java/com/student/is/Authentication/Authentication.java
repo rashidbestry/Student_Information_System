@@ -62,8 +62,10 @@ public class Authentication {
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
                             currentUser = Database.createPersonalUser(login);
+                            br.close();
                             return true;
                         }
+                        br.close();
                         return false;
                     }
                 }
