@@ -60,7 +60,7 @@ public class GradeListController {
             double makeUpNote=0.0;   // büt notu stunote içinde bulunmuyor
             double averageNote=0.0;
             String lectureStatus="Sonuçlandırıldı";
-            String letterNote="A1";
+            String letterNote;
             String status;
 
             String lectureNote = stuNotes.get(lectureCode);
@@ -72,11 +72,29 @@ public class GradeListController {
 
                 averageNote = ((vizeNote*0.4) + (finalNote*0.6));
             }
-            if(averageNote>=50){
-                status="Geçti";
+            if (averageNote >= 90.0) {
+                letterNote = "AA";
+            } else if (averageNote >= 85.0) {
+                letterNote = "BA";
+            } else if (averageNote >= 80.0) {
+                letterNote = "BB";
+            } else if (averageNote >= 75.0) {
+                letterNote = "CB";
+            } else if (averageNote >= 70.0) {
+                letterNote = "CC";
+            } else if (averageNote >= 60.0) {
+                letterNote = "DC";
+            } else if (averageNote >= 50.0) {
+                letterNote = "DD";
+            } else {
+                letterNote = "FF";
+            }
+
+            if(letterNote.equals("FF")){
+                status="Kaldı";
             }
             else{
-                status="Kaldı";
+                status="Geçti";
             }
             studentGradeList yeni = new studentGradeList(lectureCode,lectureName,lectureStatus,letterNote,status,vizeNote,finalNote,makeUpNote,averageNote);
             Data.add(yeni);

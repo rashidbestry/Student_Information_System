@@ -20,7 +20,7 @@ public class studentGradeList {
         this.letterNote = new SimpleStringProperty(letterNote);
         this.status = new SimpleStringProperty(status);
         this.vizeNote = new SimpleDoubleProperty(vizeNote);
-        this.finalNote = new SimpleDoubleProperty(makeUpNote);
+        this.finalNote = new SimpleDoubleProperty(finalNote);
         this.makeUpNote = new SimpleDoubleProperty(makeUpNote);
         this.averageNote = new SimpleDoubleProperty(averageNote);
     }
