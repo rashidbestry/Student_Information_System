@@ -1,14 +1,24 @@
 package com.student.is.PageControllers;
+
+import com.student.is.DataManagement.Database;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class StartController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+
+        Database.createLectureList();
+        Database.createStudentList();
+        Database.createPersonalList();
+        Database.createTemp();
+
+
 
         //logo ekleme
         Image applicationIcon = new Image(getClass().getResourceAsStream("/com/student/is/images/MainApp_logo.jpeg"));
@@ -20,5 +30,9 @@ public class StartController extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
+
+
+
     }
 }

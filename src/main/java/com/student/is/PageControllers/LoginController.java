@@ -85,7 +85,7 @@ public class  LoginController {
             studentPassword.setDisable(true);
             studentPassword.setVisible(false);
             studentPasswordVisible.setText(studentPassword.getText());
-            studentPassword=studentPasswordVisible;
+            //studentPassword=studentPasswordVisible;
         }
         if(!studentCheckBox.isSelected()){
             studentPassword.setDisable(false);
@@ -98,7 +98,7 @@ public class  LoginController {
             personelPassword.setDisable(true);
             personelPassword.setVisible(false);
             personelPasswordVisible.setText(personelPassword.getText());
-            personelPassword=personelPasswordVisible;
+            //personelPassword=personelPasswordVisible;
         }
         if(!scholarCheckBox.isSelected()){
             personelPassword.setDisable(false);

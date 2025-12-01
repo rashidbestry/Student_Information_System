@@ -3,7 +3,6 @@ package com.student.is.PageControllers.StudentPage;
 import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Lecture;
 import com.student.is.ClassStructure.Student;
-import com.student.is.DataManagement.Database;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -32,7 +31,7 @@ public class GradeListController {
 
         lectureCodeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureCode"));
         lectureNameColumn.setCellValueFactory(new PropertyValueFactory<>("lectureName"));
-        lectureStatusColumn.setCellValueFactory(new PropertyValueFactory<>("lectureCredit"));
+        lectureStatusColumn.setCellValueFactory(new PropertyValueFactory<>("Sonuçlandırıldı"));
         visaGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureAKTS"));
         finalGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureApplication"));
         makeUpGradeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureType"));
@@ -44,10 +43,6 @@ public class GradeListController {
     }
     public void loadData(){
         Student user = Authentication.currentStudentUser;
-        for (int i = 0; i < Database.studentList.size(); i++) {
-            if (Database.studentList.get(i).stuId.equals(user.stuId))
-                user = Database.studentList.get(i);
-        }
 
         ArrayList<Lecture> lectures = user.getLectures();
 
