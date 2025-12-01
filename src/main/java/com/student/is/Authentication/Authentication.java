@@ -104,6 +104,7 @@ public class Authentication {
             f1.delete();
             File f2 = new File("src/main/resources/com/student/is/database/auth_2.bin");
             f2.renameTo(new File("src/main/resources/com/student/is/database/auth.bin"));
+
         } catch (IOException e) {
             System.out.println("Error reading file!" + e);
         } catch (NoSuchAlgorithmException e) {
