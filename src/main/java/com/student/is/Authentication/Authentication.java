@@ -1,15 +1,18 @@
 package com.student.is.Authentication;
+
 import com.student.is.ClassStructure.Admin;
 import com.student.is.DataManagement.Database;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
 public class Authentication {
-    public static Object currentUser;
+    public static Student currentStudentUser;
+    public static Personal currentPersonalUser;
+    public static Admin currentAdminUser;
 
     public static boolean checkStudentAuth(String login , String password) {
         if (login.isEmpty()) {
-            currentUser = new Admin();
+            currentAdminUser = new Admin();
             return true;
         } else if (!login.contains("@")) {
             return false;
@@ -25,7 +28,7 @@ public class Authentication {
                     String loginTemp = line.split(" ")[0];
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
-                            currentUser = Database.createStudentUser(login);
+                            currentStudentUser = Database.createStudentUser(login);
                             br.close();
                             return true;
                         }
@@ -46,7 +49,7 @@ public class Authentication {
     }
     public static boolean checkPersonalAuth(String login , String password) {
         if (login.isEmpty()) {
-            currentUser = new Admin();
+            currentAdminUser = new Admin();
             return true;
         } else if (!login.contains("@")) {
             return false;
@@ -61,7 +64,7 @@ public class Authentication {
                     String loginTemp = line.split(" ")[0];
                     if (loginTemp.equals(login)) {
                         if (line.split(" ")[1].equals(Encryption.encryptString(password))){
-                            currentUser = Database.createPersonalUser(login);
+                            currentPersonalUser = Database.createPersonalUser(login);
                             br.close();
                             return true;
                         }

@@ -20,6 +20,7 @@ public class Database {
         createPersonalList();
         createTemp();
         byte end=0;
+
     }
 
     public static void createTemp() {
@@ -99,7 +100,7 @@ public class Database {
             System.out.println("Error reading file!" + e);
         }
     }
-    public static Object createStudentUser(String login){
+    public static Student createStudentUser(String login){
         for (int i = 0; i < studentList.size();i++){
             if (studentList.get(i).stuId.equals(login.split("@")[0]))
                 return studentList.get(i);
@@ -137,7 +138,7 @@ public class Database {
         }
 
     }
-    public static Object createPersonalUser(String login){
+    public static Personal createPersonalUser(String login){
         for (int i = 0; i < personalList.size();i++){
             if (personalList.get(i).email.equals(login))
                 return personalList.get(i);

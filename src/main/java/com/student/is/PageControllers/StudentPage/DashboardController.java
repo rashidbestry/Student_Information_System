@@ -1,5 +1,6 @@
 package com.student.is.PageControllers.StudentPage;
 
+import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.fxml.FXML;
@@ -19,6 +20,7 @@ public class DashboardController {
 
     public void initialize(){
         Object sessionUser = ContentLoader.getCurrentUserSession();
+        sessionUser=Authentication.currentStudentUser;
 
         if(sessionUser instanceof Student){
             Student student = (Student) sessionUser;

@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -17,8 +18,13 @@ import java.io.IOException;
 public class  LoginController {
     public TextField studentLogin;
     public TextField studentPassword;
+    public TextField studentPasswordVisible;
     public TextField personelLogin;
     public TextField personelPassword;
+    public TextField personelPasswordVisible;
+    public CheckBox studentCheckBox;
+    public CheckBox scholarCheckBox;
+
     //private MediaPlayer errorPlayer;
 
     public void StudentShowErorPopup() throws IOException {
@@ -74,13 +80,41 @@ public class  LoginController {
         stage.show();
     }
 
+    public void passwordShowCheck(ActionEvent event) throws IOException {
+        if(studentCheckBox.isSelected()){
+            studentPassword.setDisable(true);
+            studentPassword.setVisible(false);
+            studentPasswordVisible.setText(studentPassword.getText());
+            studentPassword=studentPasswordVisible;
+        }
+        if(!studentCheckBox.isSelected()){
+            studentPassword.setDisable(false);
+            studentPassword.setVisible(true);
+            studentPassword.setText(studentPasswordVisible.getText());
+        }
+    }
+    public void scholarPasswordShowCheck(ActionEvent event) throws IOException {
+        if(scholarCheckBox.isSelected()){
+            personelPassword.setDisable(true);
+            personelPassword.setVisible(false);
+            personelPasswordVisible.setText(personelPassword.getText());
+            personelPassword=personelPasswordVisible;
+        }
+        if(!scholarCheckBox.isSelected()){
+            personelPassword.setDisable(false);
+            personelPassword.setVisible(true);
+            personelPassword.setText(personelPasswordVisible.getText());
+        }
+    }
+
     public void studentMainPage(ActionEvent event) throws IOException {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
 
+
         if (Authentication.checkStudentAuth(login,password)) {
             //Object loggedInUser = Authentication.currentUser;
-            ContentLoader.setCurrentUserSession(Authentication.currentUser); // kullanıcıyı oturuma kaydet
+            ContentLoader.setCurrentUserSession(Authentication.currentStudentUser); // kullanıcıyı oturuma kaydet
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/StudentBase.fxml"));
             Parent root = loader.load();

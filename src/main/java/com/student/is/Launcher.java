@@ -8,6 +8,7 @@ public class Launcher {
         Database.createStudentList();
         Database.createLectureList();
         Database.createPersonalList();
+
         Database.createTemp();
         Application.launch(StartController.class, args);
         Database.saveTempToData();

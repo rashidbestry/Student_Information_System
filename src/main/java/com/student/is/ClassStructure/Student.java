@@ -19,6 +19,7 @@ public class Student {
     public String section;
 
     public Student(){
+        this.section = "Mühendislik Fakültesi";
     }
 
     public void createLectures(){
