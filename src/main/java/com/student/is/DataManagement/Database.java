@@ -19,8 +19,6 @@ public class Database {
         createStudentList();
         createPersonalList();
         createTemp();
-        studentList.get(0).firstName = "Mehriban";
-        changeObjectData(studentList.get(0));
         byte end=0;
     }
 
@@ -92,6 +90,7 @@ public class Database {
                 stu.LectureNotes(temp[7]);
                 stu.phoneNo = temp[8];
                 stu.calculateGpa();
+                stu.createLectures();
                 Database.studentList.add(stu);
             }
             br.close();

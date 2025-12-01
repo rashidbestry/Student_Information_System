@@ -1,12 +1,12 @@
 package com.student.is.ClassStructure;
-
 import com.student.is.DataManagement.Database;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Student {
     public HashMap<String,String> stuAbsence = new HashMap<>();
     public HashMap<String,String> stuNotes = new HashMap<>();
+    public ArrayList<Lecture> lectures = new ArrayList<>();
     public String stuId;
     public String firstName;
     public String lastName;
@@ -21,37 +21,14 @@ public class Student {
     public Student(){
     }
 
-    public String getStuId() {
-        return stuId;
+    public void createLectures(){
+        for (Lecture object : Database.lectureList){
+            if (stuNotes.containsKey(object.lectureCode)){
+                lectures.add(object);
+            }
+        }
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getBornDate() {
-        return bornDate;
-    }
-
-    public int getClassYear() {
-        return classYear;
-    }
-
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public double getGpa() {
-        return gpa;
-    }
-
-    public String getSection() {
-        return section;
-    }
     public void LectureAbsence(String string){
         String[] lectures = string.split("/");
         for (String lecture : lectures){
@@ -60,6 +37,7 @@ public class Student {
             stuAbsence.put(lec,absence);
         }
     }
+
     public void LectureNotes(String string){
         String[] lectures = string.split("/");
         for (String lecture : lectures){
@@ -114,16 +92,114 @@ public class Student {
                 }
             }
         }
-
-        notes.fall1 = (int) fallvize / fallvizeCount;
-        notes.fall2 = (int) fallfinal / fallfinalCount;
-        notes.spring1 = (int) springvize / springvizeCount;
-        notes.spring1 = (int) springfinal / springfinalCount;
-
-        int end = 0;
+        if (fallvizeCount != 0 && fallfinalCount != 0 && springvizeCount != 0 && springfinalCount != 0) {
+            notes.fall1 = (int) fallvize / fallvizeCount;
+            notes.fall2 = (int) fallfinal / fallfinalCount;
+            notes.spring1 = (int) springvize / springvizeCount;
+            notes.spring1 = (int) springfinal / springfinalCount;
+            double gpa_4 = (double)(((notes.fall1+notes.fall2+notes.spring1+notes.spring1)/4)*4.0)/100;
+            this.gpa = gpa_4;
+        }
     }
 
 
+//  GETTERS /////////////////////////////////////////////////////////
+
+    public HashMap<String, String> getStuAbsence() {
+        return stuAbsence;
+    }
+
+    public HashMap<String, String> getStuNotes() {
+        return stuNotes;
+    }
+
+    public ArrayList<Lecture> getLectures() {
+        return lectures;
+    }
+
+    public String getStuId() {
+        return stuId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getBornDate() {
+        return bornDate;
+    }
+
+    public int getClassYear() {
+        return classYear;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public Notes getNotes() {
+        return notes;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+
+//    SETTERS /// ///////////////////////////////////////////////////
+
+
+    public void setStuId(String stuId) {
+        this.stuId = stuId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setBornDate(String bornDate) {
+        this.bornDate = bornDate;
+    }
+
+    public void setClassYear(int classYear) {
+        this.classYear = classYear;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
 }
 
 

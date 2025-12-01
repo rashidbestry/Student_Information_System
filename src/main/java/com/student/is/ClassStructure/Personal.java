@@ -30,4 +30,73 @@ public class Personal {
         return Database.changeObjectData(object);
     }
 
+//  GETTERS /// ///////////////////////////////////////////////////
+
+
+    public String getPerId() {
+        return perId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getWeb() {
+        return web;
+    }
+
+    public String getOfficehours() {
+        return officehours;
+    }
+
+    public ArrayList<Lecture> getLectures() {
+        return lectures;
+    }
+
+//  SETTERS /// /////////////////////////////////////////////////
+
+
+    public void setPerId(String perId) {
+        this.perId = perId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setWeb(String web) {
+        this.web = web;
+    }
+
+    public void setOfficehours(String officehours) {
+        this.officehours = officehours;
+    }
+
+    public void setLectures(ArrayList<Lecture> lectures) {
+        this.lectures = lectures;
+    }
 }
