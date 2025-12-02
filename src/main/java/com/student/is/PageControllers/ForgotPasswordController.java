@@ -35,7 +35,7 @@ public class ForgotPasswordController {
     }
     public void SendMailShowFailedPopup() throws IOException {
         //  FXML dosyasını yükle
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/LoginErrorPopUp.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/SendMailFailedPopUp.fxml"));
         Parent root = fxmlLoader.load();
         Stage popupStage = new Stage();
 

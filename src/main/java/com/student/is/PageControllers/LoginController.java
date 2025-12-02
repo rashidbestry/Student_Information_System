@@ -137,8 +137,9 @@ public class  LoginController {
     public void personelMainPage(ActionEvent event) throws IOException {
         String login = this.personelLogin.getText();
         String password = this.personelPassword.getText();
-        Boolean status = Authentication.checkPersonalAuth(login, password);
-        if (status) {
+        if (Authentication.checkPersonalAuth(login, password)) {
+            ContentLoader.setCurrentUserSession(Authentication.currentPersonalUser);
+
             Parent root = FXMLLoader.load(getClass().getResource("/com/student/is/fxml/ScholarBase.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

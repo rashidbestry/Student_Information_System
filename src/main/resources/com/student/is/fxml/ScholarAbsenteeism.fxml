@@ -23,7 +23,7 @@
             <Image url="@../images/Scholar_Absentism.jpg" />
          </image>
       </ImageView>
-      <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="193.0" text="Ders Seçiniz">
+      <MenuButton fx:id="absenceMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="112.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="193.0" text="Ders Seçiniz">
         <items>
           <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
           <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
@@ -82,14 +82,14 @@
       </Label>
       <ScrollPane layoutX="60.0" layoutY="237.0" prefHeight="487.0" prefWidth="912.0">
          <content>
-            <TableView prefHeight="500.0" prefWidth="900.0">
+            <TableView fx:id="StudentAbsenceOperationTable" prefHeight="500.0" prefWidth="900.0">
                <columns>
-                  <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Öğrenci Numarası" />
-                  <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Ad" />
-                  <TableColumn editable="false" prefWidth="145.0" sortable="false" text="Soyad" />
-                  <TableColumn editable="false" prefWidth="155.0" sortable="false" text="Teorik Ders Devamsızlığı" />
-                  <TableColumn editable="false" prefWidth="170.0" sortable="false" text="Uygulama Dersi Devamsızlığı" />
-                  <TableColumn editable="false" minWidth="0.0" prefWidth="70.0" sortable="false" text="Durum" />
+                  <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="145.0" sortable="false" text="Öğrenci Numarası" />
+                  <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="145.0" sortable="false" text="Ad" />
+                  <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="145.0" sortable="false" text="Soyad" />
+                  <TableColumn fx:id="teorikAbsenceColumn" editable="false" prefWidth="155.0" sortable="false" text="Teorik Ders Devamsızlığı" />
+                  <TableColumn fx:id="praciteAbsenceColumn" editable="false" prefWidth="170.0" sortable="false" text="Uygulama Dersi Devamsızlığı" />
+                  <TableColumn fx:id="absenceStatusColumn" editable="false" minWidth="0.0" prefWidth="70.0" sortable="false" text="Durum" />
                   <TableColumn editable="false" minWidth="0.0" prefWidth="65.0" sortable="false" text="Düzenle" />
                </columns>
             </TableView>

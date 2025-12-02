@@ -1,13 +1,12 @@
 package com.student.is.PageControllers;
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class ErorPopupController {
 
     @FXML
-    private Button closeButton; // FXML'deki 'X' etiketi
+    private Label closeButton; // FXML'deki 'X' etiketi
 
     @FXML
     public void initialize() {

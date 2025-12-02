@@ -1,19 +1,27 @@
 package com.student.is.PageControllers.ScholarPage;
 
 import com.student.is.Authentication.Authentication;
-import com.student.is.ClassStructure.*;
+import com.student.is.ClassStructure.Lecture;
+import com.student.is.ClassStructure.Personal;
+import com.student.is.ClassStructure.PersonalGradeOperations;
+import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GradeOperationController {
+
+    @FXML private MenuButton lectureMenuButton;
 
     @FXML private TableView<PersonalGradeOperations> StudentNoteOperationTable;
     @FXML private TableColumn<Student, String> studentNumberColumn;
@@ -27,6 +35,12 @@ public class GradeOperationController {
 
     public void initialize(){
 
+        Personal user = Authentication.currentPersonalUser;
+        if(user != null){
+            List<Lecture> personalLectures = user.getLectures();
+            lectureMenuButtonOnAction(personalLectures);
+        }
+
         studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNumber"));
         studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("studentName"));
         studentSurnameColumn.setCellValueFactory(new PropertyValueFactory<>("studentSurname"));
@@ -36,15 +50,26 @@ public class GradeOperationController {
         letterNoteColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        load();
 
     }
-    public void load(){
-        Personal user = Authentication.currentPersonalUser;
+    public void lectureMenuButtonOnAction(List<Lecture> lectures) {
+        lectureMenuButton.getItems().clear();
+        for(Lecture lecture : lectures){
+            MenuItem menuItem = new MenuItem(lecture.getLectureName());
 
-        Lecture lec = user.getLectures().get(0);
+            menuItem.setOnAction(event -> {
+                lectureMenuButton.setText(lecture.getLectureName());
+                load(lecture);
+            });
+            lectureMenuButton.getItems().add(menuItem);
+        }
 
-        ArrayList<Student> student=lec.lectureStudentList;
+    }
+
+    public void load(Lecture lec){
+        //Lecture lec = user.getLectures().get(0);
+
+        ArrayList<Student> student=lec.lectureStudentList;  // dersin öğrencilerini al
         String studentName;
         String studentNumber;
         String studentSurname;
@@ -100,10 +125,6 @@ public class GradeOperationController {
 
 
     }
-
-
-
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
