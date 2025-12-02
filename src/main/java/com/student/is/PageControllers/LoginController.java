@@ -27,9 +27,9 @@ public class  LoginController {
 
     //private MediaPlayer errorPlayer;
 
-    public void StudentShowErorPopup() throws IOException {
+    public void LoginShowErorPopup() throws IOException {
         // 1. FXML dosyasını yükle
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/StudentWrongPasswordPopUp.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/LoginErrorPopUp.fxml"));
         Parent root = fxmlLoader.load();
         Stage popupStage = new Stage();
 
@@ -41,7 +41,7 @@ public class  LoginController {
     }
 
     public void ScholarShowErorPopup() throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/ScholarWrongPasswordPopUp.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/LoginErrorPopUp.fxml"));
         Parent root = fxmlLoader.load();
 
         Stage popupStage = new Stage();
@@ -125,7 +125,7 @@ public class  LoginController {
 
         } else {
             System.out.println("Hatalı öğrenci kullanıcı adı veya şifre!");
-            StudentShowErorPopup();
+            LoginShowErorPopup();
         }
 
         this.studentLogin.clear();
@@ -146,7 +146,7 @@ public class  LoginController {
             stage.show();
         } else {
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
-            ScholarShowErorPopup();
+            LoginShowErorPopup();
             //playErrorSound();
         }
         this.personelLogin.clear();
