@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,9 +17,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.StudentBasePageController">
     <children>
 
-        <AnchorPane fx:id="studentMainPageAnchorPane" layoutX="250.0" prefHeight="768.0" prefWidth="1030.0" />
+        <AnchorPane fx:id="studentMainPageAnchorPane" layoutX="250.0" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/style.css" />
 
-        <GridPane prefHeight="768.0" prefWidth="250.0" style="-fx-background-color: #580519;">
+        <GridPane prefHeight="768.0" prefWidth="250.0" styleClass="studentMenuBackground" stylesheets="@../css/style.css">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="250.0" />
             </columnConstraints>
@@ -29,47 +34,72 @@
                 <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button mnemonicParsing="false" onAction="#ListOfGradesButtonAction" prefHeight="74.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Not Listesi" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#ListOfGradesButtonAction" prefHeight="74.0" prefWidth="250.0" styleClass="studentButton" text="Not Listesi" textFill="WHITE" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
+               </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#AbsenteeismButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AbsenteeismButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="studentButton" text="Devamsızlık Durumu" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="OUTDENT" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#StudentInformationButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Öğrenci Bilgileri" textFill="WHITE" GridPane.rowIndex="2">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#StudentInformationButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="studentButton" text="Öğrenci Bilgileri" textFill="WHITE" GridPane.rowIndex="2">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="USER" nodeOrientation="LEFT_TO_RIGHT" selectionEnd="1" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="fa-user">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#AcademicCalendarButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademik Takvim" textFill="WHITE" GridPane.rowIndex="5">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#AcademicCalendarButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="studentButton" text="Akademik Takvim" textFill="#ff8989" GridPane.rowIndex="5">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="CALENDAR" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
+               </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="studentButton" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="SIGN_OUT" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
+               </graphic>
                 </Button>
-                <Label text="AORA Üniversitesi Öğrenci Bilgi Sistemi" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <Label text="AORA Üniversitesi Öğrenci Bilgi Sistemi" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                     <font>
                         <Font name="Arial Bold" size="22.0" />
                     </font>
@@ -78,15 +108,33 @@
                     <font>
                         <Font name="Arial" size="22.0" />
                     </font>
+               <padding>
+                  <Insets top="70.0" />
+               </padding>
                 </Label>
-                <Button mnemonicParsing="false" onAction="#ScholarsButtonAction" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #580519;" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#ScholarsButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="studentButton" stylesheets="@../css/style.css" text="Akademisyenler" textFill="WHITE" GridPane.rowIndex="6">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
+               <graphic>
+                  <FontAwesomeIcon disable="true" fill="WHITE" glyphName="GROUP" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
+               </graphic>
                 </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="@../../../../../../../../../../../Users/Mengu/Downloads/Gemini_Generated_Image_8neqmz8neqmz8neq.png" />
+               </image>
+            </ImageView>
+            <Separator prefWidth="200.0" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="7" GridPane.valignment="BOTTOM" />
             </children>
         </GridPane>
 
