@@ -91,4 +91,36 @@ public class PersonalGradeOperations {
     public StringProperty statusProperty() {
         return status;
     }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber.set(studentNumber);
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName.set(studentName);
+    }
+
+    public void setStudentSurname(String studentSurname) {
+        this.studentSurname.set(studentSurname);
+    }
+
+    public void setVizeNote(double vizeNote) {
+        this.vizeNote.set(vizeNote);
+    }
+
+    public void setFinalNote(double finalNote) {
+        this.finalNote.set(finalNote);
+    }
+
+    public void setAverageNote(double averageNote) {
+        this.averageNote.set(averageNote);
+    }
+
+    public void setLetterNote(String letterNote) {
+        this.letterNote.set(letterNote);
+    }
+
+    public void setStatus(String status) {
+        this.status.set(status);
+    }
 }

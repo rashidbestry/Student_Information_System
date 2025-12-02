@@ -82,17 +82,16 @@
       </Label>
       <ScrollPane layoutX="60.0" layoutY="237.0" prefHeight="497.0" prefWidth="912.0">
          <content>
-            <TableView fx:id="StudentNoteOperationTable" prefHeight="500.0" prefWidth="900.0">
+            <TableView fx:id="StudentNoteOperationTable" editable="true" prefHeight="500.0" prefWidth="900.0">
               <columns>
-                <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="145.0" sortable="false" text="Öğrenci Numarası" />
-                <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="145.0" sortable="false" text="Ad" />
-                  <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="145.0" sortable="false" text="Soyad" />
-                  <TableColumn fx:id="vizeNoteColumn" editable="false" prefWidth="65.0" sortable="false" text="Vize" />
-                  <TableColumn fx:id="finalNoteColumn" editable="false" prefWidth="65.0" sortable="false" text="Final" />
-                  <TableColumn fx:id="averageNoteColumn" editable="false" prefWidth="65.0" sortable="false" text="Ortalama" />
-                  <TableColumn fx:id="letterNoteColumn" editable="false" prefWidth="65.0" sortable="false" text="Harf Notu" />
-                  <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" prefWidth="70.0" sortable="false" text="Durum" />
-                  <TableColumn editable="false" minWidth="0.0" prefWidth="65.0" sortable="false" text="Düzenle" />
+                <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
+                <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="Ad" />
+                  <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="Soyad" />
+                  <TableColumn fx:id="vizeNoteColumn" text="Vize" />
+                  <TableColumn fx:id="finalNoteColumn" text="Final" />
+                  <TableColumn fx:id="averageNoteColumn" editable="false" text="Ortalama" />
+                  <TableColumn fx:id="letterNoteColumn" editable="false" text="Harf Notu" />
+                  <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" sortable="false" text="Durum" />
               </columns>
             </TableView>
          </content>

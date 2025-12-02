@@ -15,6 +15,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +25,12 @@ public class AbsenteeismOperationController {
     @FXML private MenuButton absenceMenuButton;
 
     @FXML private TableView<PersonalAbsenceOperations> StudentAbsenceOperationTable;
-    @FXML private TableColumn<Student, String> studentNumberColumn;
-    @FXML private TableColumn<Student, String> studentNameColumn;
-    @FXML private TableColumn<Student, String> studentSurnameColumn;
-    @FXML private TableColumn<Student, Double> teorikAbsenceColumn;
-    @FXML private TableColumn<Student, Double> praciteAbsenceColumn;
-    @FXML private TableColumn<Student, Double> absenceStatusColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, String> studentNumberColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, String> studentNameColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, String> studentSurnameColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, Integer> teorikAbsenceColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, Integer> praciteAbsenceColumn;
+    @FXML private TableColumn<PersonalAbsenceOperations, String> absenceStatusColumn;
 
     public void initialize(){
         Personal user = Authentication.currentPersonalUser;
@@ -44,6 +45,12 @@ public class AbsenteeismOperationController {
         teorikAbsenceColumn.setCellValueFactory(new PropertyValueFactory<>("teorikAbsence"));
         praciteAbsenceColumn.setCellValueFactory(new PropertyValueFactory<>("praciteAbsence"));
         absenceStatusColumn.setCellValueFactory(new PropertyValueFactory<>("absenceStatus"));
+
+        StudentAbsenceOperationTable.setEditable(true);
+
+        teorikAbsenceColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        praciteAbsenceColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+
 
     }
     public void absenceMenuButtonOnAction(List<Lecture> personalLectures){

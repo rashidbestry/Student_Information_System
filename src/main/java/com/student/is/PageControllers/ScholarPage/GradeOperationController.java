@@ -15,6 +15,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +25,14 @@ public class GradeOperationController {
     @FXML private MenuButton lectureMenuButton;
 
     @FXML private TableView<PersonalGradeOperations> StudentNoteOperationTable;
-    @FXML private TableColumn<Student, String> studentNumberColumn;
-    @FXML private TableColumn<Student, String> studentNameColumn;
-    @FXML private TableColumn<Student, String> studentSurnameColumn;
-    @FXML private TableColumn<Student, Double> vizeNoteColumn;
-    @FXML private TableColumn<Student, Double> finalNoteColumn;
-    @FXML private TableColumn<Student, Double> averageNoteColumn;
-    @FXML private TableColumn<Student, Double> letterNoteColumn;
-    @FXML private TableColumn<Student, String> statusColumn;
+    @FXML private TableColumn<PersonalGradeOperations, String> studentNumberColumn;
+    @FXML private TableColumn<PersonalGradeOperations, String> studentNameColumn;
+    @FXML private TableColumn<PersonalGradeOperations, String> studentSurnameColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Double> vizeNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Double> finalNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Double> averageNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Double> letterNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, String> statusColumn;
 
     public void initialize(){
 
@@ -40,6 +41,8 @@ public class GradeOperationController {
             List<Lecture> personalLectures = user.getLectures();
             lectureMenuButtonOnAction(personalLectures);
         }
+        StudentNoteOperationTable.setEditable(true);
+
 
         studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNumber"));
         studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("studentName"));
@@ -49,6 +52,9 @@ public class GradeOperationController {
         averageNoteColumn.setCellValueFactory(new PropertyValueFactory<>("averageNote"));
         letterNoteColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        vizeNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DoubleStringConverter()));
+        finalNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DoubleStringConverter()));
 
 
     }
@@ -129,4 +135,8 @@ public class GradeOperationController {
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
     }
+
+
+
+
 }

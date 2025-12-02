@@ -53,7 +53,7 @@ public class Authentication {
 
     }
     public static boolean checkPersonalAuth(String login , String password) {
-        login = "cengiz.hark@inonu.edu.tr";
+        login = "erhan.akkaya@inonu.edu.tr";
         password = "12345";
         if (login.isEmpty()) {
             currentAdminUser = new Admin();
