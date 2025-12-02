@@ -70,7 +70,7 @@ public class GradeListController {
                 vizeNote = Double.parseDouble(lectureNoteArray[0]);
                 finalNote = Double.parseDouble(lectureNoteArray[1]);
 
-                averageNote = ((vizeNote*0.4) + (finalNote*0.6));
+                averageNote = Math.round((vizeNote*0.4) + (finalNote*0.6));
             }
             if (averageNote >= 90.0) {
                 letterNote = "AA";

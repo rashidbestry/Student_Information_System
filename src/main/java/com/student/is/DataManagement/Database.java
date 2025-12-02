@@ -21,6 +21,7 @@ public class Database {
         createTemp();
         for (Lecture lec : lectureList)
             lec.createStudentListForLecture();
+        searchInStudentData(studentList,"2005");
 
         byte end=0;
 
@@ -331,7 +332,47 @@ public class Database {
         }
         return false;
     }
-    public static void searchInStudentData(String input){
+    public static void searchInStudentData(ArrayList<Student> student,String input){
+
+        for (Student stu : student){
+            if (input.contains(stu.firstName)){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.lastName)){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.stuId)){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.faculty)) {
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.bornDate.split("[.]")[2])){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.phoneNo)){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.email)){
+                findedStudentList.add(stu);
+                continue;
+            }
+            if (input.contains(stu.address)){
+                findedStudentList.add(stu);
+                continue;
+            }
+
+
+
+        }
+
+
 
     }
 }

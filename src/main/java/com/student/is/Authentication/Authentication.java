@@ -14,6 +14,8 @@ public class Authentication {
     public static Admin currentAdminUser;
 
     public static boolean checkStudentAuth(String login , String password) {
+        login = "02240200004@ogr.inonu.edu.tr";
+        password = "12345";
         if (login.isEmpty()) {
             currentAdminUser = new Admin();
             return true;
@@ -51,6 +53,8 @@ public class Authentication {
 
     }
     public static boolean checkPersonalAuth(String login , String password) {
+        login = "cengiz.hark@inonu.edu.tr";
+        password = "12345";
         if (login.isEmpty()) {
             currentAdminUser = new Admin();
             return true;
