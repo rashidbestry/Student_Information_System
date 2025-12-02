@@ -11,14 +11,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.AbsenteeismController">
    <children>
-      <TableView layoutY="49.0" prefHeight="718.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;">
+      <TableView fx:id="lectureAbsenceTable" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;">
         <columns>
-          <TableColumn editable="false" prefWidth="179.19998168945312" sortable="false" text="Ders Kodu" />
-          <TableColumn editable="false" prefWidth="221.60006713867188" sortable="false" text="Ders Adı" />
-            <TableColumn editable="false" prefWidth="208.0" sortable="false" text="Teorik + Uygulama Saati" />
-            <TableColumn editable="false" prefWidth="100.00006103515625" sortable="false" text="Kredi" />
-            <TableColumn editable="false" prefWidth="145.60003662109375" sortable="false" text="AKTS" />
-            <TableColumn editable="false" prefWidth="172.8000244140626" sortable="false" text="Toplam Devamsızlık Saati" />
+          <TableColumn fx:id="lectureCodeColumn" editable="false" prefWidth="179.19998168945312" sortable="false" text="Ders Kodu" />
+          <TableColumn fx:id="lectureNameColumn" editable="false" prefWidth="221.60006713867188" sortable="false" text="Ders Adı" />
+            <TableColumn fx:id="lectureAbsenceColumn" editable="false" prefWidth="208.0" sortable="false" text="Teorik + Uygulama Saati" />
+            <TableColumn fx:id="lectureCreditColumn" editable="false" prefWidth="100.00006103515625" sortable="false" text="Kredi" />
+            <TableColumn fx:id="lectureEKTSColumn" editable="false" prefWidth="145.60003662109375" sortable="false" text="AKTS" />
+            <TableColumn fx:id="TotalAbsenceColumn" editable="false" prefWidth="172.8000244140626" sortable="false" text="Toplam Devamsızlık Saati" />
         </columns>
       </TableView>
       <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Devamsızlık Durumu">
