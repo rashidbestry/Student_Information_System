@@ -1,109 +1,10 @@
 package com.student.is.PageControllers.ScholarPage;
 
-import com.student.is.Authentication.Authentication;
-import com.student.is.ClassStructure.*;
 import com.student.is.PageControllers.ContentLoader;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.util.ArrayList;
 
 public class GradeOperationController {
-
-    @FXML private TableView<PersonalGradeOperations> StudentNoteOperationTable;
-    @FXML private TableColumn<Student, String> studentNumberColumn;
-    @FXML private TableColumn<Student, String> studentNameColumn;
-    @FXML private TableColumn<Student, String> studentSurnameColumn;
-    @FXML private TableColumn<Student, Double> vizeNoteColumn;
-    @FXML private TableColumn<Student, Double> finalNoteColumn;
-    @FXML private TableColumn<Student, Double> averageNoteColumn;
-    @FXML private TableColumn<Student, Double> letterNoteColumn;
-    @FXML private TableColumn<Student, String> statusColumn;
-
-    public void initialize(){
-
-        studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNumber"));
-        studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("studentName"));
-        studentSurnameColumn.setCellValueFactory(new PropertyValueFactory<>("studentSurname"));
-        vizeNoteColumn.setCellValueFactory(new PropertyValueFactory<>("vizeNote"));
-        finalNoteColumn.setCellValueFactory(new PropertyValueFactory<>("finalNote"));
-        averageNoteColumn.setCellValueFactory(new PropertyValueFactory<>("averageNote"));
-        letterNoteColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-
-        load();
-
-    }
-    public void load(){
-        Personal user = Authentication.currentPersonalUser;
-
-        Lecture lec = user.getLectures().get(0);
-
-        ArrayList<Student> student=lec.lectureStudentList;
-        String studentName;
-        String studentNumber;
-        String studentSurname;
-        double vizeNote;
-        double finalNote;
-        double averageNote=0.0;
-        String status="";
-        String letterNote="";
-
-        ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
-
-        for (Student stu : student){
-            studentName=stu.getFirstName();
-            studentNumber=stu.getStuId();
-            studentSurname=stu.getLastName();
-
-            // ögrencinin referansını tut
-
-            String Notes =stu.getStuNotes().get(lec.lectureCode);
-            String[] stuNoteArray = Notes.split(",");
-             vizeNote = Double.parseDouble(stuNoteArray[0]);
-             finalNote = Double.parseDouble(stuNoteArray[1]);
-
-            averageNote = Math.round((vizeNote*0.4) + (finalNote*0.6));
-
-            if (averageNote >= 90.0) {
-                letterNote = "AA";
-            } else if (averageNote >= 85.0) {
-                letterNote = "BA";
-            } else if (averageNote >= 80.0) {
-                letterNote = "BB";
-            } else if (averageNote >= 75.0) {
-                letterNote = "CB";
-            } else if (averageNote >= 70.0) {
-                letterNote = "CC";
-            } else if (averageNote >= 60.0) {
-                letterNote = "DC";
-            } else if (averageNote >= 50.0) {
-                letterNote = "DD";
-            } else {
-                letterNote = "FF";
-            }
-            if(letterNote.equals("FF")){
-                status="Kaldı";
-            }
-            else{
-                status="Geçti";
-            }
-            PersonalGradeOperations yeni = new PersonalGradeOperations(studentNumber, studentName, studentSurname,vizeNote,finalNote,averageNote, letterNote, status);
-            Data.add(yeni);
-        }
-        StudentNoteOperationTable.setItems(Data);
-
-
-    }
-
-
-
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
