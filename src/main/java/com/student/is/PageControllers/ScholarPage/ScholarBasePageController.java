@@ -30,6 +30,9 @@ public class ScholarBasePageController {
     public void AbsenteeismOperationsButtonAction(ActionEvent actionEvent) throws IOException {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarAbsenteeism.fxml");
     }
+    public void DashboardOperationsButtonAction(ActionEvent actionEvent) throws IOException {
+        ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
+    }
 
 
     public  void exitButtonAction(ActionEvent event) throws IOException {
