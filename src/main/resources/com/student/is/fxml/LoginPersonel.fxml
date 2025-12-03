@@ -1,87 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" styleClass="loginScholarBackground" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.LoginController">
    <children>
-      <Button layoutX="30.0" layoutY="41.0" mnemonicParsing="false" onAction="#backButtonAction" styleClass="loginScholarButtons" text="Seçim Ekranına Dön" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" />
-         </graphic>
-      </Button>
-      <Label layoutX="582.0" layoutY="532.0" text="AORA Üniversitesi" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="240.0" layoutY="217.0" prefHeight="333.0" prefWidth="800.0" styleClass="loginScholarCard">
+      <ImageView fitHeight="778.0" fitWidth="1287.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Welcome_Background.jpg" />
+         </image>
+      </ImageView>
+      <GridPane blendMode="OVERLAY" layoutX="240.0" layoutY="234.0" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #122a61; -fx-background-radius: 50;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.20001220703125" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.7999755859375" minWidth="10.0" prefWidth="400.7999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.999951171875" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <Label layoutX="284.0" layoutY="14.0" text="AORA Üniversitesi" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="26.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="238.0" layoutY="152.0" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: #f0f9ff; -fx-background-radius: 3;">
-               <children>
-                  <FontAwesomeIcon glyphName="ENVELOPE" layoutX="7.0" layoutY="22.0" size="1.6em" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="238.0" layoutY="186.0" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: #f0f9ff; -fx-background-radius: 3;">
-               <children>
-                  <FontAwesomeIcon glyphName="KEY" layoutX="7.0" layoutY="22.0" size="1.6em" />
-               </children>
-            </AnchorPane>
-            <TextField fx:id="personelLogin" layoutX="271.0" layoutY="151.0" prefHeight="31.0" prefWidth="258.0" promptText="Akademisyen E-Posta">
+            <TextField fx:id="personelPasswordVisible" focusTraversable="false" prefWidth="100.0" promptText="Parola" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <CheckBox fx:id="scholarCheckBox" layoutX="549.0" layoutY="190.0" mnemonicParsing="false" onAction="#scholarPasswordShowCheck" text="Şifreyi Göster" textFill="WHITE">
+            <Label text="AORA Üniversitesi" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <font>
-                  <Font name="Arial Bold" size="16.0" />
-               </font>
-            </CheckBox>
-            <Label layoutX="325.0" layoutY="51.0" text="Akademisyen" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="23.0" />
+                  <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="personelPasswordVisible" focusTraversable="false" layoutX="271.0" layoutY="185.0" prefHeight="31.0" prefWidth="258.0" promptText="Şifre">
+            <TextField fx:id="personelLogin" prefWidth="100.0" promptText="Kullanıcı Adı" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="personelPassword" layoutX="271.0" layoutY="185.0" prefHeight="26.0" prefWidth="257.0" promptText="Şifre">
+            <PasswordField fx:id="personelPassword" prefHeight="26.0" prefWidth="257.0" promptText="Parola" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </PasswordField>
-            <Button layoutX="340.0" layoutY="268.0" mnemonicParsing="false" onAction="#personelMainPage" styleClass="loginScholarButtons" text="Giriş Yap" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#personelMainPage" style="-fx-background-color: white; -fx-background-radius: 30;" text="Giriş Yap" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" size="1.25em" />
-               </graphic>
             </Button>
-            <Button layoutX="619.0" layoutY="269.0" mnemonicParsing="false" onAction="#forgotPasswordButtonAction" styleClass="loginScholarButtons" text="Şifremi Unuttum" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label text="Akademisyen" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#forgotPasswordButtonAction" style="-fx-background-color: white; -fx-background-radius: 15;" text="Şifremi Unuttum" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -89,7 +78,23 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <CheckBox fx:id="scholarCheckBox" mnemonicParsing="false" onAction="#scholarPasswordShowCheck" text="Parolayı Göster" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </CheckBox>
          </children>
-      </AnchorPane>
+      </GridPane>
+      <Button blendMode="OVERLAY" layoutX="30.0" layoutY="41.0" mnemonicParsing="false" onAction="#backButtonAction" style="-fx-background-color: #122a61; -fx-background-radius: 15;" text="Seçim Ekranına Dön" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
