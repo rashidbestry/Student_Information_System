@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.AcademicCalendarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.AcademicCalendarController">
    <children>
       <ScrollPane hbarPolicy="NEVER" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0">
          <content>
@@ -22,7 +22,7 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -55,9 +55,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label prefHeight="352.0" prefWidth="648.0" style="-fx-background-color: #6b686a;" GridPane.columnIndex="2" />
-                  <Label prefHeight="352.0" prefWidth="648.0" style="-fx-background-color: #6b686a;" GridPane.columnIndex="1" />
-                  <Label prefHeight="352.0" prefWidth="648.0" style="-fx-background-color: #6b686a;" />
+                  <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" GridPane.columnIndex="2" />
+                  <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" GridPane.columnIndex="1" />
+                  <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" />
                   <Label text="Ara Sınav Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="15">
                      <GridPane.margin>
                         <Insets left="5.0" />
@@ -817,7 +817,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #580519; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
