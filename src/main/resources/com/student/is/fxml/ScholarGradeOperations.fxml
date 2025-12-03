@@ -43,12 +43,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField fx:id="searchTextField" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="323.0" layoutY="176.0" mnemonicParsing="false" text="Ara">
+      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" onAction="#SearchButtonAction" text="Ara">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

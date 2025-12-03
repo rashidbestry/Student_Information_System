@@ -5,15 +5,13 @@ import com.student.is.ClassStructure.Lecture;
 import com.student.is.ClassStructure.Personal;
 import com.student.is.ClassStructure.PersonalAbsenceOperations;
 import com.student.is.ClassStructure.Student;
+import com.student.is.DataManagement.Database;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 
@@ -23,6 +21,8 @@ import java.util.List;
 public class AbsenteeismOperationController {
 
     @FXML private MenuButton absenceMenuButton;
+    @FXML public TextField searchTextField;
+    @FXML public Button searchButton;
 
     @FXML private TableView<PersonalAbsenceOperations> StudentAbsenceOperationTable;
     @FXML private TableColumn<PersonalAbsenceOperations, String> studentNumberColumn;
@@ -60,14 +60,26 @@ public class AbsenteeismOperationController {
 
            menuItem.setOnAction(event -> {
                absenceMenuButton.setText(lecture.getLectureName());
-               load(lecture);
+               load(lecture,lecture.lectureStudentList);
            });
            absenceMenuButton.getItems().add(menuItem);
        }
     }
-    public void load(Lecture lec){
 
-        ArrayList<Student> student=lec.lectureStudentList;
+
+
+    public void load(Lecture lec,ArrayList<Student> student){
+
+        ObservableList<PersonalAbsenceOperations> Data = FXCollections.observableArrayList();
+
+        searchButton.setOnAction(event -> {
+            Database.searchInStudentData(student,searchTextField.getText());
+            ArrayList<Student> stu = SearchStudentButtonAction();
+            searchTextField.clear();
+            load(lec,stu);
+            stu.clear();  // her aramada bir önceki öğrenci listesi temizlenmeli
+
+        });
 
         String studentNumber;
         String studentName;
@@ -76,7 +88,6 @@ public class AbsenteeismOperationController {
         int praciteAbsence;
         String absenceStatus;
 
-        ObservableList<PersonalAbsenceOperations> Data = FXCollections.observableArrayList();
 
         for  (Student stu : student){
             studentNumber=stu.getStuId();
@@ -102,6 +113,9 @@ public class AbsenteeismOperationController {
 
     }
 
+    @FXML public ArrayList<Student> SearchStudentButtonAction(){
+        return Database.findedStudentList;
+    }
 
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {

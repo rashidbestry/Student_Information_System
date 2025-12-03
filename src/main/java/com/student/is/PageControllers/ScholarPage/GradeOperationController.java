@@ -5,15 +5,13 @@ import com.student.is.ClassStructure.Lecture;
 import com.student.is.ClassStructure.Personal;
 import com.student.is.ClassStructure.PersonalGradeOperations;
 import com.student.is.ClassStructure.Student;
+import com.student.is.DataManagement.Database;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 
@@ -23,6 +21,8 @@ import java.util.List;
 public class GradeOperationController {
 
     @FXML private MenuButton lectureMenuButton;
+    @FXML public TextField searchTextField;
+    @FXML public Button searchButton;
 
     @FXML private TableView<PersonalGradeOperations> StudentNoteOperationTable;
     @FXML private TableColumn<PersonalGradeOperations, String> studentNumberColumn;
@@ -65,17 +65,28 @@ public class GradeOperationController {
 
             menuItem.setOnAction(event -> {
                 lectureMenuButton.setText(lecture.getLectureName());
-                load(lecture);
+                load(lecture,lecture.lectureStudentList);
             });
             lectureMenuButton.getItems().add(menuItem);
         }
 
     }
 
-    public void load(Lecture lec){
+
+    public void load(Lecture lec,ArrayList<Student> student){
         //Lecture lec = user.getLectures().get(0);
 
-        ArrayList<Student> student=lec.lectureStudentList;  // dersin öğrencilerini al
+        ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
+
+        searchButton.setOnAction(event -> {
+            Database.searchInStudentData(student,searchTextField.getText());
+            ArrayList<Student> stu = SearchButtonAction();
+            searchTextField.clear();
+            load(lec,stu);
+            stu.clear();  // her aramada bir önceki öğrenci listesi temizlenmeli
+
+        });
+
         String studentName;
         String studentNumber;
         String studentSurname;
@@ -85,7 +96,7 @@ public class GradeOperationController {
         String status="";
         String letterNote="";
 
-        ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
+
 
         for (Student stu : student){
             studentName=stu.getFirstName();
@@ -130,13 +141,19 @@ public class GradeOperationController {
         StudentNoteOperationTable.setItems(Data);
 
 
+
+
+
     }
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
     }
+    public ArrayList<Student> SearchButtonAction(){
+        return Database.findedStudentList;
 
 
+    }
 
 
 }
