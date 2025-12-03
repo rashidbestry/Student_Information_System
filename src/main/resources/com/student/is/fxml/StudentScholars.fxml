@@ -4,28 +4,23 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.ScholarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.ScholarController">
    <children>
-      <ScrollPane layoutY="49.0" prefHeight="718.0" prefWidth="1030.0">
-         <content>
-            <TableView fx:id="scholarTable" prefHeight="718.0" prefWidth="1030.0">
-              <columns>
-                  <TableColumn fx:id="titleColumn" editable="false" prefWidth="92.800048828125" sortable="false" text="Ünvan" />
-                <TableColumn fx:id="nameColumn" editable="false" prefWidth="162.40002137422562" sortable="false" text="Ad" />
-                <TableColumn fx:id="surnameColumn" editable="false" prefWidth="148.80003356933594" sortable="false" text="Soyad" />
-                  <TableColumn fx:id="emailColumn" editable="false" prefWidth="192.79998779296875" sortable="false" text="E-Posta" />
-                  <TableColumn fx:id="webColumn" minWidth="0.0" prefWidth="228.79998779296875" sortable="false" text="Web Sitesi" />
-                  <TableColumn fx:id="officehoursColumn" editable="false" prefWidth="201.60001220703134" sortable="false" text="Ofis Saatleri" />
-              </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
+      <TableView fx:id="scholarTable" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0">
+        <columns>
+            <TableColumn fx:id="titleColumn" editable="false" prefWidth="92.800048828125" sortable="false" text="Ünvan" />
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="162.40002137422562" sortable="false" text="Ad" />
+          <TableColumn fx:id="surnameColumn" editable="false" prefWidth="148.80003356933594" sortable="false" text="Soyad" />
+            <TableColumn fx:id="emailColumn" editable="false" prefWidth="192.79998779296875" sortable="false" text="E-Posta" />
+            <TableColumn fx:id="webColumn" minWidth="0.0" prefWidth="228.79998779296875" sortable="false" text="Web Sitesi" />
+            <TableColumn fx:id="officehoursColumn" editable="false" prefWidth="201.60001220703134" sortable="false" text="Ofis Saatleri" />
+        </columns>
+      </TableView>
       <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Akademisyenler">
          <font>
             <Font name="Arial Bold" size="22.0" />
@@ -34,7 +29,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" style="-fx-background-color: #580519; -fx-background-radius: 15;" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
