@@ -406,6 +406,7 @@ public class Database {
 
     }
     public static void searchInLectureData(ArrayList<Lecture> lecture,String input){
+
         findedLectureList.clear();
         for (Lecture lec : lecture){
             if (input.toLowerCase().contains(lec.lectureName.toLowerCase())){
