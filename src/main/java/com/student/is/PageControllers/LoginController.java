@@ -9,11 +9,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class  LoginController {
     public TextField studentLogin;
@@ -51,15 +53,18 @@ public class  LoginController {
 
         popupStage.showAndWait();
     }
-    /*
-    private void playErrorSound() {
-        URL resource = getClass().getResource("/sounds/error-126627.wav");
+
+    public void playErrorSound() {
+        URL resource = getClass().getResource("/com/student/is/sounds/error.mp3");
         if (resource != null) {
             AudioClip audioClip = new AudioClip(resource.toExternalForm());
             audioClip.play();
         }
+        else{
+            System.out.println("resource == null");
+        }
     }
-    */
+
 
     @FXML
     public void studentButton(ActionEvent event) throws IOException {
@@ -111,7 +116,6 @@ public class  LoginController {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
 
-
         if (Authentication.checkStudentAuth(login,password)) {
             //Object loggedInUser = Authentication.currentUser;
             ContentLoader.setCurrentUserSession(Authentication.currentStudentUser); // kullanıcıyı oturuma kaydet
@@ -123,15 +127,16 @@ public class  LoginController {
             stage.setScene(new Scene(root));
             stage.show();
 
+
         } else {
             System.out.println("Hatalı öğrenci kullanıcı adı veya şifre!");
+            playErrorSound();
             LoginShowErorPopup();
         }
 
         this.studentLogin.clear();
         this.studentPassword.clear();
     }
-
 
 
     public void personelMainPage(ActionEvent event) throws IOException {
@@ -147,8 +152,8 @@ public class  LoginController {
             stage.show();
         } else {
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
+            playErrorSound();
             LoginShowErorPopup();
-            //playErrorSound();
         }
         this.personelLogin.clear();
         this.personelPassword.clear();
