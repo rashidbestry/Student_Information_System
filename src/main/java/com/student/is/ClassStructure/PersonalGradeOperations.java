@@ -1,31 +1,42 @@
 package com.student.is.ClassStructure;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class PersonalGradeOperations {
 
     public StringProperty  studentNumber ;
     public  StringProperty studentName;
     public  StringProperty studentSurname;
-    public DoubleProperty vizeNote;
-    public DoubleProperty finalNote;
+    public IntegerProperty vizeNote;
+    public IntegerProperty finalNote;
     public DoubleProperty  averageNote;
     public StringProperty letterNote;
     public StringProperty status;
 
+    public Student studentReferans;   // öğrenci için bir referans
+    public Lecture lectureReferans;  // ders için bir referans
 
-    public PersonalGradeOperations(String studentNumber, String studentName, String studentSurname, double vizeNote, double finalNote, double averageNote, String letterNote, String status) {
+    public PersonalGradeOperations(String studentNumber, String studentName, String studentSurname, int vizeNote,  int finalNote, double averageNote, String letterNote, String status, Student studentReferans, Lecture lectureReferans) {
         this.studentNumber = new SimpleStringProperty(studentNumber);
         this.studentName = new SimpleStringProperty(studentName);
         this.studentSurname = new SimpleStringProperty(studentSurname);
-        this.vizeNote = new SimpleDoubleProperty(vizeNote);
-        this.finalNote = new SimpleDoubleProperty(finalNote);
+        this.vizeNote = new SimpleIntegerProperty(vizeNote);
+        this.finalNote = new SimpleIntegerProperty(finalNote);
         this.averageNote = new SimpleDoubleProperty(averageNote);
         this.letterNote = new SimpleStringProperty(letterNote);
         this.status = new SimpleStringProperty(status);
+
+        this.studentReferans = studentReferans;
+        this.lectureReferans = lectureReferans;
+
+    }
+
+    public Student getStudentReferans() {
+        return studentReferans;
+    }
+
+    public Lecture getLectureReferans() {
+        return lectureReferans;
     }
 
     public String getStudentNumber() {
@@ -52,19 +63,19 @@ public class PersonalGradeOperations {
         return studentSurname;
     }
 
-    public double getVizeNote() {
+    public int getVizeNote() {
         return vizeNote.get();
     }
 
-    public DoubleProperty vizeNoteProperty() {
+    public IntegerProperty vizeNoteProperty() {
         return vizeNote;
     }
 
-    public double getFinalNote() {
+    public int getFinalNote() {
         return finalNote.get();
     }
 
-    public DoubleProperty finalNoteProperty() {
+    public IntegerProperty finalNoteProperty() {
         return finalNote;
     }
 
@@ -104,11 +115,11 @@ public class PersonalGradeOperations {
         this.studentSurname.set(studentSurname);
     }
 
-    public void setVizeNote(double vizeNote) {
+    public void setVizeNote(int vizeNote) {
         this.vizeNote.set(vizeNote);
     }
 
-    public void setFinalNote(double finalNote) {
+    public void setFinalNote(int finalNote) {
         this.finalNote.set(finalNote);
     }
 
