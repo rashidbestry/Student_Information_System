@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: linear-gradient(to right bottom, #ffd4d4, #f0f9ff);
+    -fx-background-color: linear-gradient(to left bottom, #ffd4d4, #f0f9ff);
 }
 
 /* Öğrenci menüsü */

@@ -13,10 +13,11 @@ public class StartController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+        Database.createTemp();
         Database.createLectureList();
         Database.createStudentList();
         Database.createPersonalList();
-        Database.createTemp();
+
         for (Lecture lec : Database.lectureList)
             lec.createStudentListForLecture();
 
@@ -31,8 +32,6 @@ public class StartController extends Application {
         stage.setResizable(false);
         stage.show();
 
-        Database.saveTempToData();
-        Database.deleteTemp();
 
 
 

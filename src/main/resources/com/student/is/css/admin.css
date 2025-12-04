@@ -1,0 +1,23 @@
+.root {
+    -fx-background-color: linear-gradient(to left bottom, #e6caff, #f0f9ff);
+}
+
+.adminMenuBackground {
+    -fx-background-color: linear-gradient(to right bottom, #6441A5, #2a0845);
+}
+
+/* Buton stilleri */
+.adminButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 19px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+
+}
+
+/* Buton hover efekti */
+.adminButton:hover {
+    -fx-background-color: #ffbaba;
+    -fx-text-fill: #580519;
+}

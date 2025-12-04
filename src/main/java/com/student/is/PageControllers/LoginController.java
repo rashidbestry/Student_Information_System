@@ -1,6 +1,7 @@
 package com.student.is.PageControllers;
 
 import com.student.is.Authentication.Authentication;
+import com.student.is.DataManagement.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +27,7 @@ public class  LoginController {
     public TextField personelPasswordVisible;
     public CheckBox studentCheckBox;
     public CheckBox scholarCheckBox;
+
 
     //private MediaPlayer errorPlayer;
 
