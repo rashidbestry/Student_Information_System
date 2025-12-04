@@ -97,7 +97,7 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="198.0" text="bilmiyom aklıma gelmedi v2:" textFill="WHITE">
+            <Label layoutX="26.0" layoutY="198.0" text="Danışman Hoca:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -118,7 +118,12 @@
                </font>
             </Label>
             <Separator layoutY="52.0" prefHeight="10.0" prefWidth="400.0" />
-            <Label fx:id="classLabel1" layoutX="223.0" layoutY="168.0" text="6" textFill="WHITE">
+            <Label fx:id="lectureCountLabel" layoutX="223.0" layoutY="168.0" text="6" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="advisorLabel" layoutX="194.0" layoutY="198.0" text="danışman" textFill="WHITE">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>

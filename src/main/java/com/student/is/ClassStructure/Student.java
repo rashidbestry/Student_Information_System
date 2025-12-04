@@ -144,6 +144,14 @@ public class Student {
         return bornDate;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
     public int getClassYear() {
         return classYear;
     }

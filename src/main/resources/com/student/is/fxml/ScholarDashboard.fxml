@@ -27,7 +27,7 @@
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="228.0" layoutY="18.0" text="Abdullah Erhan Akkaya" textFill="WHITE">
+            <Label fx:id="scholarFullNameLabel" layoutX="228.0" layoutY="18.0" text="Abdullah Erhan Akkaya" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -43,12 +43,12 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="228.0" layoutY="88.0" text="5" textFill="WHITE">
+            <Label fx:id="scholarLectureCountLabel" layoutX="228.0" layoutY="88.0" text="5" textFill="WHITE">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="264.0" layoutY="122.0" text="632" textFill="WHITE">
+            <Label fx:id="totalStudentsLabel" layoutX="264.0" layoutY="122.0" text="632" textFill="WHITE">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
