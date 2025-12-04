@@ -28,8 +28,8 @@ public class GradeOperationController {
     @FXML private TableColumn<PersonalGradeOperations, String> studentNumberColumn;
     @FXML private TableColumn<PersonalGradeOperations, String> studentNameColumn;
     @FXML private TableColumn<PersonalGradeOperations, String> studentSurnameColumn;
-    @FXML private TableColumn<PersonalGradeOperations, Double> vizeNoteColumn;
-    @FXML private TableColumn<PersonalGradeOperations, Double> finalNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Integer> vizeNoteColumn;
+    @FXML private TableColumn<PersonalGradeOperations, Integer> finalNoteColumn;
     @FXML private TableColumn<PersonalGradeOperations, Double> averageNoteColumn;
     @FXML private TableColumn<PersonalGradeOperations, Double> letterNoteColumn;
     @FXML private TableColumn<PersonalGradeOperations, String> statusColumn;
@@ -53,9 +53,39 @@ public class GradeOperationController {
         letterNoteColumn.setCellValueFactory(new PropertyValueFactory<>("letterNote"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        vizeNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DoubleStringConverter()));
-        finalNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DoubleStringConverter()));
+        vizeNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        finalNoteColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
 
+        vizeNoteColumn.setOnEditCommit(event -> {
+            PersonalGradeOperations satir = event.getRowValue();
+            int vize =event.getNewValue();  // girilen degeri al
+            satir.setVizeNote(event.getNewValue()); //ve tabloyu güncelle
+
+            Student student =satir.getStudentReferans();
+            Lecture lecture = satir.getLectureReferans();
+
+            // yeni not hashMap ini oluşturulur
+            String yeniNot = String.format("%d,%d",vize,satir.getFinalNote());
+            student.getStuNotes().put(lecture.lectureCode,yeniNot); // öğrencinin o andaki dersinin notunu güncelle
+
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+
+        });
+
+        finalNoteColumn.setOnEditCommit(event -> {
+            PersonalGradeOperations satir = event.getRowValue();
+            int Final =event.getNewValue();
+            satir.setFinalNote(Final);
+
+            Student student =satir.getStudentReferans();
+            Lecture lecture = satir.getLectureReferans();
+
+            String yeniNot = String.format("%d,%d",satir.getVizeNote(),Final); // vize ve finali hashMap yap
+            student.getStuNotes().put(lecture.lectureCode,yeniNot); //öğrencinin o andaki dersinin notunu güncelle
+
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+
+        });
 
     }
     public void lectureMenuButtonOnAction(List<Lecture> lectures) {
@@ -76,8 +106,6 @@ public class GradeOperationController {
     public void load(Lecture lec,ArrayList<Student> student){
         //Lecture lec = user.getLectures().get(0);
 
-
-
         searchButton.setOnAction(event -> {
             Database.searchInStudentData(student,searchTextField.getText());
             ArrayList<Student> stu = SearchButtonAction();
@@ -92,13 +120,11 @@ public class GradeOperationController {
         String studentName;
         String studentNumber;
         String studentSurname;
-        double vizeNote;
-        double finalNote;
+        int vizeNote;
+        int finalNote;
         double averageNote=0.0;
         String status="";
         String letterNote="";
-
-
 
         for (Student stu : student){
             studentName=stu.getFirstName();
@@ -109,8 +135,8 @@ public class GradeOperationController {
 
             String Notes =stu.getStuNotes().get(lec.lectureCode);
             String[] stuNoteArray = Notes.split(",");
-             vizeNote = Double.parseDouble(stuNoteArray[0]);
-             finalNote = Double.parseDouble(stuNoteArray[1]);
+             vizeNote = Integer.parseInt(stuNoteArray[0]);
+             finalNote = Integer.parseInt(stuNoteArray[1]);
 
             averageNote = Math.round((vizeNote*0.4) + (finalNote*0.6));
 
@@ -137,14 +163,10 @@ public class GradeOperationController {
             else{
                 status="Geçti";
             }
-            PersonalGradeOperations yeni = new PersonalGradeOperations(studentNumber, studentName, studentSurname,vizeNote,finalNote,averageNote, letterNote, status);
+            PersonalGradeOperations yeni = new PersonalGradeOperations(studentNumber, studentName, studentSurname,vizeNote,finalNote,averageNote, letterNote, status,stu,lec);
             Data.add(yeni);
         }
         StudentNoteOperationTable.setItems(Data);
-
-
-
-
 
     }
     @FXML
@@ -156,7 +178,5 @@ public class GradeOperationController {
 
 
     }
-
-
 
 }
