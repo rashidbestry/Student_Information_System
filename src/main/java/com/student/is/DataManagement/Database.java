@@ -16,19 +16,6 @@ public class Database {
     public static ArrayList<Personal> findedPersonalList = new ArrayList<>();
     public static ArrayList<Lecture> findedLectureList = new ArrayList<>();
 
-    public static void main(String[] args){
-        createLectureList();
-        createStudentList();
-        createPersonalList();
-        createTemp();
-        for (Lecture lec : lectureList)
-            lec.createStudentListForLecture();
-        searchInStudentData(studentList,"2005");
-
-        byte end=0;
-
-    }
-
     public static void createTemp() {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));
@@ -43,7 +30,6 @@ public class Database {
         catch (IOException e){
             System.out.println("Error reading file!" + e);
         }
-
     }
     public static void saveTempToData() {
         try  {
@@ -270,8 +256,10 @@ public class Database {
                 BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/temp_temp.bin"));
                 String line;
                 while ((line = br.readLine()) != null) {
-                    if (line.split("[*]")[0].equals(((Student) object).stuId))
-                        wr.write(((Student) object).stuId +"*"+((Student) object).firstName+"*"+((Student) object).lastName+"*"+((Student) object).bornDate+"*"+((Student) object).classYear+"*"+((Student) object).faculty+"*"+((Student) object).getStringNotes()+"*"+((Student) object).getLecturesToString()+"*"+((Student) object).phoneNo+"*"+((Student) object).email+"*"+((Student) object).address+"\n");
+                    if (line.split("[*]")[0].equals(((Student) object).stuId)) {
+                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + ((Student) object).classYear + "*" + ((Student) object).faculty + "*" + ((Student) object).getStringNotes() + "*" + ((Student) object).getLecturesToString() + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" + ((Student) object).address + "\n");
+                        continue;
+                    }
                     wr.write(line + "\n");
                 }
                 br.close();
