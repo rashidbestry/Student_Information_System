@@ -50,7 +50,7 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <CheckBox fx:id="scholarCheckBox" layoutX="549.0" layoutY="190.0" mnemonicParsing="false" onAction="#scholarPasswordShowCheck" text="Şifreyi Göster" textFill="WHITE">
+            <CheckBox fx:id="scholarCheckBox" layoutX="549.0" layoutY="190.0" mnemonicParsing="false" onAction="#scholarPasswordShowCheck" styleClass="toggle-switch" text="Şifreyi Göster" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font>
