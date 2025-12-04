@@ -76,16 +76,18 @@ public class GradeOperationController {
     public void load(Lecture lec,ArrayList<Student> student){
         //Lecture lec = user.getLectures().get(0);
 
-        ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
+
 
         searchButton.setOnAction(event -> {
             Database.searchInStudentData(student,searchTextField.getText());
             ArrayList<Student> stu = SearchButtonAction();
             searchTextField.clear();
             load(lec,stu);
-            stu.clear();  // her aramada bir önceki öğrenci listesi temizlenmeli
+            // her aramada bir önceki öğrenci listesi temizlenmeli
 
         });
+
+        ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
 
         String studentName;
         String studentNumber;
@@ -154,6 +156,7 @@ public class GradeOperationController {
 
 
     }
+
 
 
 }

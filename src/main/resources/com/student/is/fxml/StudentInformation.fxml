@@ -32,12 +32,12 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField editable="false" focusTraversable="false" layoutX="134.0" layoutY="84.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="ALİ">
+            <TextField fx:id="nameTextField" editable="false" focusTraversable="false" layoutX="134.0" layoutY="84.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="ALİ">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <TextField editable="false" focusTraversable="false" layoutX="134.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="KARAKURT">
+            <TextField fx:id="surnameTextField" editable="false" focusTraversable="false" layoutX="134.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="KARAKURT">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField editable="false" focusTraversable="false" layoutX="607.0" layoutY="83.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="18.01.2006">
+            <TextField fx:id="birthDateTextField" editable="false" focusTraversable="false" layoutX="607.0" layoutY="83.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="18.01.2006">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField editable="false" focusTraversable="false" layoutX="607.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="02240201202">
+            <TextField fx:id="numberTextField" editable="false" focusTraversable="false" layoutX="607.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="02240201202">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -87,7 +87,7 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField focusTraversable="false" layoutX="160.0" layoutY="123.0" prefHeight="31.0" prefWidth="206.0" promptText="E-Posta">
+            <TextField fx:id="mailTextField" focusTraversable="false" layoutX="160.0" layoutY="123.0" prefHeight="31.0" prefWidth="206.0" promptText="E-Posta">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
@@ -97,7 +97,7 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField focusTraversable="false" layoutX="632.0" layoutY="122.0" prefHeight="34.0" prefWidth="185.0" promptText="Telefon Numarası">
+            <TextField fx:id="phoneTextField" focusTraversable="false" layoutX="632.0" layoutY="122.0" prefHeight="34.0" prefWidth="185.0" promptText="Telefon Numarası">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextArea focusTraversable="false" layoutX="160.0" layoutY="222.0" prefHeight="79.0" prefWidth="603.0">
+            <TextArea fx:id="adressTextArea" focusTraversable="false" layoutX="160.0" layoutY="222.0" prefHeight="79.0" prefWidth="603.0">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>

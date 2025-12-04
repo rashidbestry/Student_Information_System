@@ -17,6 +17,8 @@ public class DashboardController {
     @FXML private Label classLabel;
     @FXML private Label termLabel;
     @FXML private Label agnoLabel;
+    @FXML private Label lectureCountLabel;
+    @FXML private Label advisorLabel;
 
     public void initialize(){
         Object sessionUser = ContentLoader.getCurrentUserSession();
@@ -32,8 +34,18 @@ public class DashboardController {
             sectionLabel.setText(student.getSection());
 
             classLabel.setText(String.valueOf(student.getClassYear())); //stringe dönüştür
-            termLabel.setText("2025-2026 Güz");
+            termLabel.setText("2025-2026 Öğretim Yılı");
             agnoLabel.setText(String.valueOf(student.getGpa())); // stringe dönüştür
+            lectureCountLabel.setText(String.valueOf(student.lectures.size()));
+
+            switch (student.getClassYear()){
+                case 1 -> advisorLabel.setText("Cengiz Hark");
+                case 2 -> advisorLabel.setText("Adnan Fatih Kocamaz");
+                case 3 -> advisorLabel.setText("Barış Baykant Alagöz");
+                case 4 -> advisorLabel.setText("Taha Burak Özdemir");
+            }
+
+
         }
     }
 

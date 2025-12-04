@@ -16,12 +16,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/scholar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.GradeOperationController">
    <children>
-      <TextField focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField fx:id="searchTextField" focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <CheckBox focusTraversable="false" layoutX="707.0" layoutY="178.0" mnemonicParsing="false" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox focusTraversable="false" layoutX="815.0" layoutY="178.0" mnemonicParsing="false" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
+      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -66,17 +66,6 @@
          </cursor>
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
-         </graphic>
-      </Button>
-      <Button layoutX="863.0" layoutY="177.0" mnemonicParsing="false" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="1.1em" />
          </graphic>
       </Button>
       <MenuButton fx:id="lectureMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
