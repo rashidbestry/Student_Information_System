@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -13,15 +14,15 @@
    <children>
       <TableView fx:id="lectureAbsenceTable" layoutY="49.0" prefHeight="718.0" prefWidth="1030.0" style="-fx-background-color: #fff3f2;">
         <columns>
-          <TableColumn fx:id="lectureCodeColumn" editable="false" prefWidth="179.19998168945312" sortable="false" text="Ders Kodu" />
-          <TableColumn fx:id="lectureNameColumn" editable="false" prefWidth="221.60006713867188" sortable="false" text="Ders Adı" />
-            <TableColumn fx:id="lectureAbsenceColumn" editable="false" prefWidth="208.0" sortable="false" text="Teorik + Uygulama Saati" />
-            <TableColumn fx:id="lectureCreditColumn" editable="false" prefWidth="100.00006103515625" sortable="false" text="Kredi" />
-            <TableColumn fx:id="lectureEKTSColumn" editable="false" prefWidth="145.60003662109375" sortable="false" text="AKTS" />
-            <TableColumn fx:id="TotalAbsenceColumn" editable="false" prefWidth="172.8000244140626" sortable="false" text="Toplam Devamsızlık Saati" />
+          <TableColumn fx:id="lectureCodeColumn" editable="false" prefWidth="179.19998168945312" sortable="false" text="%student.tablo.column.code" />
+          <TableColumn fx:id="lectureNameColumn" editable="false" prefWidth="221.60006713867188" sortable="false" text="%student.tablo.column.name" />
+            <TableColumn fx:id="lectureAbsenceColumn" editable="false" prefWidth="208.0" sortable="false" text="%student.absenteeism.column.absence" />
+            <TableColumn fx:id="lectureCreditColumn" editable="false" prefWidth="100.00006103515625" sortable="false" text="%student.absenteeism.column.credit" />
+            <TableColumn fx:id="lectureEKTSColumn" editable="false" prefWidth="145.60003662109375" sortable="false" text="%student.absenteeism.column.ects" />
+            <TableColumn fx:id="TotalAbsenceColumn" editable="false" prefWidth="172.8000244140626" sortable="false" text="%student.absenteeism.column.total_absence" />
         </columns>
       </TableView>
-      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Devamsızlık Durumu">
+      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="%student.absenteeism.title">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
@@ -29,13 +30,16 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
+         </graphic>
       </Button>
    </children>
 </AnchorPane>

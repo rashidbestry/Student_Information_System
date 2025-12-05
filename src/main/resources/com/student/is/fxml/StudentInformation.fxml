@@ -16,18 +16,18 @@
    <children>
       <AnchorPane layoutX="94.0" layoutY="66.0" prefHeight="210.0" prefWidth="842.0">
          <children>
-            <Label layoutX="57.0" layoutY="11.0" text="Kişisel Bilgiler">
+            <Label layoutX="57.0" layoutY="11.0" text="%student.info.personal_title">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
             <Separator layoutY="46.0" prefHeight="7.0" prefWidth="842.0" style="-fx-background-color: black;" />
-            <Label layoutX="30.0" layoutY="87.0" text="Ad">
+            <Label layoutX="30.0" layoutY="87.0" text="%student.info.label.name">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="30.0" layoutY="143.0" text="Soyad">
+            <Label layoutX="30.0" layoutY="143.0" text="%student.info.label.surname">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <Label layoutX="390.0" layoutY="87.0" text="Doğum Tarihi">
+            <Label layoutX="390.0" layoutY="87.0" text="%student.info.label.birth_date">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <Label layoutX="390.0" layoutY="145.0" text="Öğrenci Numarası">
+            <Label layoutX="390.0" layoutY="145.0" text="%student.info.label.number">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -75,14 +75,14 @@
             <String fx:value="shadow" />
          </styleClass>
          <children>
-            <Label layoutX="57.0" layoutY="20.0" text="Adres ve İletişim Bilgileri">
+            <Label layoutX="57.0" layoutY="20.0" text="%student.info.contact_title">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
             <FontAwesomeIcon glyphName="PHONE" layoutX="22.0" layoutY="47.0" size="2.5em" />
             <Separator layoutY="65.0" prefHeight="7.0" prefWidth="842.0" style="-fx-background-color: black;" />
-            <Label layoutX="34.0" layoutY="126.0" text="E-Posta">
+            <Label layoutX="34.0" layoutY="126.0" text="%student.info.label.mail">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -92,7 +92,7 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </TextField>
-            <Label layoutX="421.0" layoutY="126.0" text="Telefon Numarası">
+            <Label layoutX="421.0" layoutY="126.0" text="%student.info.label.phone">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -103,7 +103,7 @@
                </font>
             </TextField>
             <Separator layoutX="5.0" layoutY="200.0" prefHeight="1.0" prefWidth="842.0" style="-fx-background-color: black;" />
-            <Label layoutX="56.0" layoutY="249.0" text="Adres">
+            <Label layoutX="56.0" layoutY="249.0" text="%student.info.label.address">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -113,7 +113,7 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </TextArea>
-            <Button fx:id="applyButton" focusTraversable="false" layoutX="613.0" layoutY="350.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="190.0" styleClass="studentSubmitChanges" text="Değişiklikleri Kaydet" textFill="WHITE">
+            <Button fx:id="applyButton" focusTraversable="false" layoutX="613.0" layoutY="350.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="190.0" styleClass="studentSubmitChanges" text="%student.info.button.submit_changes" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -126,15 +126,18 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
+         </graphic>
       </Button>
-      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Öğrenci Bilgileri">
+      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="%student.dashboard.info_title">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>

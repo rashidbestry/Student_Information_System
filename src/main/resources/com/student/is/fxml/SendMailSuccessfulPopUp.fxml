@@ -15,13 +15,13 @@
             <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="4em" />
          </graphic>
       </Button>
-      <Label layoutX="82.0" layoutY="32.0" text="Başarılı" textFill="WHITE">
+      <Label layoutX="82.0" layoutY="32.0" text="%popup.success.title" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
       <Separator layoutY="82.0" prefHeight="1.0" prefWidth="500.0" />
-      <Label layoutX="40.0" layoutY="140.0" text="Tek kullanımlık şifreniz başarıyla gönderilmiştir." textFill="WHITE">
+      <Label layoutX="40.0" layoutY="140.0" text="%popup.success.message" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

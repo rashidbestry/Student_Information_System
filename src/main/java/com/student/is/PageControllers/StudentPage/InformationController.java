@@ -6,15 +6,10 @@ import com.student.is.DataManagement.Database;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -54,25 +49,14 @@ public class InformationController {
             student.address=adressTextArea.getText();
             Database.changeObjectData(student);
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/ChangesApplied.fxml"));
-            Parent root = null;
             try {
-                root = fxmlLoader.load();
+                Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/ChangesApplied.fxml");
+                popupStage.showAndWait();
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            Stage popupStage = new Stage();
-
-            popupStage.initStyle(StageStyle.UNDECORATED);//pencere ayarlarını ayarla
-            popupStage.initModality(Modality.APPLICATION_MODAL); // popUp kapatılmadan diger işlemler yapılamaz
-            popupStage.setScene(new Scene(root));
-
-            popupStage.showAndWait();
-
-
         });
-
-
 
     }
 

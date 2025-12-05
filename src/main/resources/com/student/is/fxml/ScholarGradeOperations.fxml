@@ -21,7 +21,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="515.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="515.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="%scholar.checkbox.multi_select">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -29,7 +29,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </CheckBox>
-      <Label layoutY="33.0" prefHeight="34.0" prefWidth="250.0" text="Not İşlemleri">
+      <Label layoutY="33.0" prefHeight="34.0" prefWidth="250.0" text="%scholar.grade.title">
          <font>
             <Font name="Arial Bold" size="30.0" />
          </font>
@@ -39,25 +39,28 @@
       </Label>
       <TableView fx:id="StudentNoteOperationTable" editable="true" layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
         <columns>
-          <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
-          <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="Ad" />
-            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="Soyad" />
-            <TableColumn fx:id="vizeNoteColumn" prefWidth="96.79998779296875" text="Vize" />
-            <TableColumn fx:id="finalNoteColumn" text="Final" />
-            <TableColumn fx:id="averageNoteColumn" editable="false" prefWidth="97.60003662109375" text="Ortalama" />
-            <TableColumn fx:id="letterNoteColumn" editable="false" prefWidth="87.99993896484375" text="Harf Notu" />
-            <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" prefWidth="84.800048828125" sortable="false" text="Durum" />
+          <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="%scholar.col.number" />
+          <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="%scholar.col.name" />
+            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="%scholar.col.surname" />
+            <TableColumn fx:id="vizeNoteColumn" prefWidth="96.79998779296875" text="%scholar.grade.col.vize" />
+            <TableColumn fx:id="finalNoteColumn" text="%scholar.grade.col.final" />
+            <TableColumn fx:id="averageNoteColumn" editable="false" prefWidth="97.60003662109375" text="%scholar.grade.col.average" />
+            <TableColumn fx:id="letterNoteColumn" editable="false" prefWidth="87.99993896484375" text="%scholar.grade.col.letter" />
+            <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" prefWidth="84.800048828125" sortable="false" text="%scholar.grade.col.status" />
         </columns>
       </TableView>
-      <Button layoutX="863.0" layoutY="38.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
+         </graphic>
       </Button>
-      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
+      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="%scholar.buton.search" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -68,7 +71,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
          </graphic>
       </Button>
-      <MenuButton fx:id="lectureMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
+      <MenuButton fx:id="lectureMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="%scholar.menu.select_lecture" textFill="WHITE">
          <items>
             <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
             <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
@@ -80,23 +83,26 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </MenuButton>
-      <TextField fx:id="cellVize" alignment="CENTER" disable="true" focusTraversable="false" layoutX="669.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="Vize">
+      <TextField fx:id="cellVize" alignment="CENTER" disable="true" focusTraversable="false" layoutX="669.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="%scholar.grade.texfield.vize">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="cellFinal" alignment="CENTER" disable="true" focusTraversable="false" layoutX="758.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="Final">
+      <TextField fx:id="cellFinal" alignment="CENTER" disable="true" focusTraversable="false" layoutX="758.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="%scholar.grade.textfield.final">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="79.0" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="scholarBackToMenu" text="%scholar.buton.edit" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" />
+         </graphic>
       </Button>
    </children>
 </AnchorPane>
