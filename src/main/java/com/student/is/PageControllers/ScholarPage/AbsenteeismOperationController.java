@@ -53,6 +53,34 @@ public class AbsenteeismOperationController {
         praciteAbsenceColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
 
 
+
+        teorikAbsenceColumn.setOnEditCommit(event -> {
+            PersonalAbsenceOperations satir = event.getRowValue();
+            int theory =event.getNewValue();  // girilen degeri al
+            satir.setTeorikAbsence(event.getNewValue()); //ve tabloyu güncelle
+
+            Student student =satir.getStudentReferans();
+            Lecture lecture = satir.getLectureReferans();
+
+            // yeni not hashMap ini oluşturulur
+            String yeniNot = theory+","+satir.getPraciteAbsence();
+            student.getStuAbsence().put(lecture.lectureCode,yeniNot); // öğrencinin o andaki dersinin notunu güncelle
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+        });
+
+        praciteAbsenceColumn.setOnEditCommit(event -> {
+            PersonalAbsenceOperations satir = event.getRowValue();
+            int application =event.getNewValue();
+            satir.setPraciteAbsence(application);
+
+            Student student =satir.getStudentReferans();
+            Lecture lecture = satir.getLectureReferans();
+
+            String yeniNot = satir.getTeorikAbsence() +","+application; // vize ve finali hashMap yap
+            student.getStuAbsence().put(lecture.lectureCode,yeniNot); //öğrencinin o andaki dersinin notunu güncelle
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+        });
+
     }
     public void absenceMenuButtonOnAction(List<Lecture> personalLectures){
         absenceMenuButton.getItems().clear();
@@ -66,6 +94,9 @@ public class AbsenteeismOperationController {
            absenceMenuButton.getItems().add(menuItem);
        }
     }
+
+
+
 
 
 
@@ -106,7 +137,7 @@ public class AbsenteeismOperationController {
             else{
                 absenceStatus="Geçti";
             }
-            PersonalAbsenceOperations yeni = new PersonalAbsenceOperations(studentNumber,studentName,studentSurname,teorikAbsence,praciteAbsence,absenceStatus);
+            PersonalAbsenceOperations yeni = new PersonalAbsenceOperations(studentNumber,studentName,studentSurname,teorikAbsence,praciteAbsence,absenceStatus,stu,lec);
             Data.add(yeni);
 
         }
@@ -148,12 +179,20 @@ public class AbsenteeismOperationController {
     }
     public void applyButtonAction(ActionEvent actionEvent) {
         for (PersonalAbsenceOperations item : StudentAbsenceOperationTable.getSelectionModel().getSelectedItems()) {
+            Student student =item.getStudentReferans();
+            Lecture lecture = item.getLectureReferans();
             if (!cellTheory.getText().isBlank()){
                 item.setTeorikAbsence(Integer.parseInt(cellTheory.getText()));
+                student.getStuAbsence().put(lecture.lectureCode,cellTheory.getText() +","+String.valueOf(item.getPraciteAbsence()));
+
             }
             if (!cellApplication.getText().isBlank()) {
                 item.setPraciteAbsence(Integer.parseInt(cellApplication.getText()));
+                student.getStuAbsence().put(lecture.lectureCode, String.valueOf(item.getTeorikAbsence()+","+cellApplication.getText())); //öğrencinin o andaki dersinin notunu güncelle
+
             }
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+
         }
     }
 }

@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class studentAbsenceList {
+public class StudentAbsenceList {
 
        public StringProperty lectureCode;
        public StringProperty lectureName;
@@ -14,7 +14,7 @@ public class studentAbsenceList {
        public IntegerProperty lectureEKTS;
        public IntegerProperty totalAbsence;
 
-    public studentAbsenceList(String lectureCode, String lectureName, String lectureAbsence, int lectureCredit, int lectureEKTS, int totalAbsence) {
+    public StudentAbsenceList(String lectureCode, String lectureName, String lectureAbsence, int lectureCredit, int lectureEKTS, int totalAbsence) {
         this.lectureCode  = new SimpleStringProperty(lectureCode);
         this.lectureName = new SimpleStringProperty(lectureName);
         this.lectureAbsence = new SimpleStringProperty(lectureAbsence);

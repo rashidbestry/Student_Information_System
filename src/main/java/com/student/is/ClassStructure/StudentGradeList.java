@@ -1,7 +1,7 @@
 package com.student.is.ClassStructure;
 import javafx.beans.property.*;
 
-public class studentGradeList {
+public class StudentGradeList {
 
     public  StringProperty lectureCode;
     public  StringProperty lectureName;
@@ -12,7 +12,7 @@ public class studentGradeList {
     public  DoubleProperty finalNote;
     public  DoubleProperty averageNote;
 
-    public  studentGradeList(String lectureCode,String lectureName,String lectureStatus,String letterNote,String status,Double vizeNote,Double finalNote ,Double averageNote){
+    public StudentGradeList(String lectureCode, String lectureName, String lectureStatus, String letterNote, String status, Double vizeNote, Double finalNote , Double averageNote){
         this.lectureCode = new SimpleStringProperty(lectureCode);
         this.lectureName = new SimpleStringProperty(lectureName);
         this.lectureStatus = new SimpleStringProperty(lectureStatus);

@@ -49,8 +49,6 @@ public class GradeOperationController {
         StudentNoteOperationTable.setEditable(true);
 
 
-
-
         studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNumber"));
         studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("studentName"));
         studentSurnameColumn.setCellValueFactory(new PropertyValueFactory<>("studentSurname"));
@@ -176,6 +174,7 @@ public class GradeOperationController {
         StudentNoteOperationTable.setItems(Data);
 
     }
+
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
@@ -210,14 +209,24 @@ public class GradeOperationController {
         }
     }
     public void applyButtonAction(ActionEvent actionEvent) {
+
         for (PersonalGradeOperations item : StudentNoteOperationTable.getSelectionModel().getSelectedItems()) {
+            Student student =item.getStudentReferans();
+            Lecture lecture = item.getLectureReferans();
             if (!cellVize.getText().isBlank()){
                 item.setVizeNote(Integer.parseInt(cellVize.getText()));
+                student.getStuNotes().put(lecture.lectureCode,cellVize.getText() +","+String.valueOf(item.getFinalNote()));
             }
             if (!cellFinal.getText().isBlank()) {
                 item.setFinalNote(Integer.parseInt(cellFinal.getText()));
+                student.getStuNotes().put(lecture.lectureCode, String.valueOf(item.getVizeNote()+","+cellFinal.getText())); //öğrencinin o andaki dersinin notunu güncelle
+
+
             }
+            Database.changeObjectData(student); // student objesini veritabanında güncelle
+
         }
+
     }
 
 }

@@ -14,18 +14,35 @@ public class PersonalAbsenceOperations {
     public IntegerProperty praciteAbsence;
     public StringProperty absenceStatus;
 
-    public PersonalAbsenceOperations(String studentNumber, String studentName, String studentSurname, int teorikAbsence, int praciteAbsence, String absenceStatus) {
+    public Student studentReferans;   // öğrenci için bir referans
+    public Lecture lectureReferans;
+
+    public PersonalAbsenceOperations(String studentNumber, String studentName, String studentSurname, int teorikAbsence, int praciteAbsence, String absenceStatus, Student studentReferans, Lecture lectureReferans) {
         this.studentNumber = new SimpleStringProperty(studentNumber);
         this.studentName = new SimpleStringProperty(studentName);
         this.studentSurname = new SimpleStringProperty(studentSurname);
         this.teorikAbsence = new SimpleIntegerProperty(teorikAbsence);
         this.praciteAbsence = new SimpleIntegerProperty(praciteAbsence);
         this.absenceStatus = new SimpleStringProperty(absenceStatus);
+
+        this.studentReferans = studentReferans;
+        this.lectureReferans = lectureReferans;
     }
 
     public String getStudentNumber() {
         return studentNumber.get();
     }
+
+    public Student getStudentReferans() {
+        return studentReferans;
+    }
+
+
+    public Lecture getLectureReferans() {
+        return lectureReferans;
+    }
+
+
     public StringProperty studentNumberProperty() {
         return studentNumber;
     }
