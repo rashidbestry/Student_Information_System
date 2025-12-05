@@ -14,14 +14,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/scholar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.GradeOperationController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <TableView layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
+        <columns>
+          <TableColumn prefWidth="150.0" text="Öğrenci Numarası" />
+          <TableColumn prefWidth="150.0" text="Ad" />
+            <TableColumn prefWidth="150.0" text="Soyad" />
+            <TableColumn prefWidth="90.0" text="Vize" />
+            <TableColumn prefWidth="90.0" text="Final" />
+            <TableColumn prefWidth="90.0" text="Ortalama" />
+            <TableColumn prefWidth="90.0" text="Harf Notu" />
+            <TableColumn prefWidth="90.0" text="Durum" />
+        </columns>
+      </TableView>
       <TextField fx:id="searchTextField" focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="515.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="537.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -37,19 +50,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <TableView fx:id="StudentNoteOperationTable" editable="true" layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
-        <columns>
-          <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
-          <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="150.0" text="Ad" />
-            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="150.0" text="Soyad" />
-            <TableColumn fx:id="vizeNoteColumn" prefWidth="96.79998779296875" text="Vize" />
-            <TableColumn fx:id="finalNoteColumn" text="Final" />
-            <TableColumn fx:id="averageNoteColumn" editable="false" prefWidth="97.60003662109375" text="Ortalama" />
-            <TableColumn fx:id="letterNoteColumn" editable="false" prefWidth="87.99993896484375" text="Harf Notu" />
-            <TableColumn fx:id="statusColumn" editable="false" minWidth="0.0" prefWidth="84.800048828125" sortable="false" text="Durum" />
-        </columns>
-      </TableView>
-      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="adminBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -60,7 +61,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
          </graphic>
       </Button>
-      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
+      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -93,7 +94,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="adminBackToMenu" text="Düzenle" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

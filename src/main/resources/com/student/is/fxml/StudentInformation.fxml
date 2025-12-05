@@ -113,7 +113,7 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </TextArea>
-            <Button fx:id="applyButton" focusTraversable="false" layoutX="613.0" layoutY="350.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="190.0" styleClass="studentSubmitChanges" text="Değişiklikleri Kaydet" textFill="WHITE">
+            <Button fx:id="applyButton" focusTraversable="false" layoutX="613.0" layoutY="350.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="190.0" styleClass="studentSubmitChanges" text="Değişiklikleri Kaydet" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -133,6 +133,9 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
+         </graphic>
       </Button>
       <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Öğrenci Bilgileri">
          <font>

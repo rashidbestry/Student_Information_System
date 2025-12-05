@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -824,6 +825,9 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
+         </graphic>
       </Button>
    </children>
 </AnchorPane>
