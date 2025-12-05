@@ -43,21 +43,24 @@ public class ContentLoader {
             System.out.println("Hata: Ana içerik AnchorPane ayarlanmadı!");
             return;
         }
-        if(resourceBundle == null) {
-            System.out.println("Hata bundle null");
-        }
+
         try {
-            // 1. FXML Dosyasını Yükle
-            FXMLLoader loader = new FXMLLoader(ContentLoader.class.getResource(fxmlAdress));
+            java.net.URL fxmlUrl = ContentLoader.class.getResource(fxmlAdress);
+
+            if (fxmlUrl == null) {
+                System.out.println("Hata: fxml url null -> " + fxmlAdress);
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(fxmlUrl);
 
             if (resourceBundle != null) {
                 loader.setResources(resourceBundle);
             }
+
             Parent newContent = loader.load();
 
-            // Önceki içeriği temizle
             currentMainContentPane.getChildren().clear();
-            // Yeni içeriği ekle
             currentMainContentPane.getChildren().add(newContent);
 
             AnchorPane.setTopAnchor(newContent, 0.0);
@@ -66,8 +69,7 @@ public class ContentLoader {
             AnchorPane.setRightAnchor(newContent, 0.0);
 
         } catch (IOException e) {
-            System.err.println("Hata! FXML Yolu Yanlış veya Dosya Bulunamadı: ");
-
+            System.err.println("Hata! FXML yüklenemedi: " + e.getMessage());
         }
     }
     public static Stage loadPopupStage(String fxmlPath) throws IOException {

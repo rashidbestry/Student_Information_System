@@ -14,12 +14,9 @@ public class Authentication {
     public static Admin currentAdminUser;
 
     public static boolean checkStudentAuth(String login , String password) {
-        login = "02240200004@ogr.inonu.edu.tr";
-        password = "12345";
-        if (login.isEmpty()) {
-            currentAdminUser = new Admin();
-            return true;
-        } else if (!login.contains("@")) {
+        //login = "02240200004@ogr.inonu.edu.tr";
+        //password = "12345";
+        if (!login.contains("@")) {
             return false;
         } else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
             try  {
@@ -48,17 +45,17 @@ public class Authentication {
                 throw new RuntimeException(e);
             }
             return false;
-        }return false;
-
-
+        }
+        return false;
     }
+
+
+
+
     public static boolean checkPersonalAuth(String login , String password) {
-        login = "erhan.akkaya@inonu.edu.tr";
-        password = "12345";
-        if (login.isEmpty()) {
-            currentAdminUser = new Admin();
-            return true;
-        } else if (!login.contains("@")) {
+        //login = "erhan.akkaya@inonu.edu.tr";
+        //password = "12345";
+        if (!login.contains("@")) {
             return false;
         }
         else if (login.split("@")[1].equals("inonu.edu.tr") || login.split("@")[1].equals("ogr.inonu.edu.tr")){
@@ -89,7 +86,6 @@ public class Authentication {
             return false;
         }
         return false;
-
 
     }
     public static boolean changePassword(String login,String password) {

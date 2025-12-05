@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.StudentBasePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.AdminPage.AdminBasePageController">
     <children>
 
         <AnchorPane fx:id="adminMainPageAnchorPane" layoutX="250.0" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/admin.css" />
@@ -77,7 +77,7 @@
                   </FontAwesomeIcon>
                </graphic>
                 </Button>
-                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Not İşlemleri" textFill="WHITE" GridPane.rowIndex="5">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#GradeOperationsActiomButton" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Not İşlemleri" textFill="WHITE" GridPane.rowIndex="5">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
@@ -88,7 +88,9 @@
                   <FontAwesomeIcon disable="true" fill="WHITE" glyphName="CALENDAR" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
                </graphic>
                 </Button>
-                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="7"
+
+                >
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>
@@ -115,7 +117,7 @@
                   <Insets top="-30.0" />
                </padding>
                 </Label>
-                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Devamsızlık İşlemleri" textFill="WHITE" GridPane.rowIndex="6">
+                <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#AbsenceOperationsActionButton" prefHeight="75.0" prefWidth="250.0" styleClass="adminButton" text="Devamsızlık İşlemleri" textFill="WHITE" GridPane.rowIndex="6">
                     <font>
                         <Font name="Arial Bold" size="19.0" />
                     </font>

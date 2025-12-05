@@ -115,8 +115,18 @@ public class  LoginController {
             stage.setScene(new Scene(root));
             stage.show();
 
+        }
+        else if (login.equals("admin") && password.equals("admin")) {
+            ContentLoader.setCurrentUserSession(Authentication.currentAdminUser);
 
-        } else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/AdminBase.fxml"),ContentLoader.getResourceBundle());
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }
+        else {
             System.out.println("Hatalı öğrenci kullanıcı adı veya şifre!");
             playErrorSound();
             LoginShowErorPopup();
@@ -137,7 +147,18 @@ public class  LoginController {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else {
+        }
+        else if (login.equals("admin") && password.equals("admin")) {
+            ContentLoader.setCurrentUserSession(Authentication.currentAdminUser);
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/AdminBase.fxml"),ContentLoader.getResourceBundle());
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }
+        else {
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
             playErrorSound();
             LoginShowErorPopup();
