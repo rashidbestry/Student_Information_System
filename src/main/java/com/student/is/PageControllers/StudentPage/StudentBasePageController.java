@@ -50,7 +50,7 @@ public class StudentBasePageController {
     }
 
     public  void exitButtonAction(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"),ContentLoader.getResourceBundle());
         Parent root = loader.load();
         Scene oncekiSahne = new Scene(root);
 

@@ -7,18 +7,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
 
 public class ForgotPasswordController {
 
+
     public void BackButtonAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"),ContentLoader.getResourceBundle());
             Parent root = loader.load();
             Scene oncekiSahne = new Scene(root);
 
@@ -34,27 +33,11 @@ public class ForgotPasswordController {
 
     }
     public void SendMailShowFailedPopup() throws IOException {
-        //  FXML dosyasını yükle
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/SendMailFailedPopUp.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage popupStage = new Stage();
-
-        popupStage.initStyle(StageStyle.UNDECORATED);
-        popupStage.initModality(Modality.APPLICATION_MODAL);
-        popupStage.setScene(new Scene(root));
-
+        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
     }
     public void SendMailShowSuccessfulPopup() throws IOException {
-        //  FXML dosyasını yükle
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/SendMailSuccessfulPopUp.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage popupStage = new Stage();
-
-        popupStage.initStyle(StageStyle.UNDECORATED);
-        popupStage.initModality(Modality.APPLICATION_MODAL);
-        popupStage.setScene(new Scene(root));
-
+        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
     }
     public TextField mailAdress;

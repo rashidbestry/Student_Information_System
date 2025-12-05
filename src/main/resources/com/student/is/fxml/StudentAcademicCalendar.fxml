@@ -59,7 +59,7 @@
                   <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" GridPane.columnIndex="2" />
                   <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" GridPane.columnIndex="1" />
                   <Label prefHeight="352.0" prefWidth="648.0" styleClass="academicCalendar" />
-                  <Label text="Ara Sınav Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="15">
+                  <Label text="%calendar.act.mid_pub" GridPane.rowIndex="15">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -67,7 +67,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Başlangıç Tarihi" textFill="WHITE" GridPane.columnIndex="1">
+                  <Label text="%calendar.column.start" textFill="WHITE" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -75,7 +75,7 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label text="Bitiş Tarihi" textFill="WHITE" GridPane.columnIndex="2">
+                  <Label text="%calendar.column.end" textFill="WHITE" GridPane.columnIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -83,7 +83,7 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label text="Ara Sınav Not Giriş" GridPane.rowIndex="14">
+                  <Label text="%calendar.act.mid_grade" GridPane.rowIndex="14">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -91,7 +91,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ders Ekle/Bırak Onay" GridPane.rowIndex="13">
+                  <Label text="%calendar.act.add_drop_appr" GridPane.rowIndex="13">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -99,7 +99,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ders Ekle/Bırak" GridPane.rowIndex="12">
+                  <Label text="%calendar.act.add_drop" GridPane.rowIndex="12">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -107,7 +107,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yeni Öğrenci Ders Ekle/Bırak Onay" GridPane.rowIndex="11">
+                  <Label text="%calendar.act.new_add_drop_appr" GridPane.rowIndex="11">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -115,7 +115,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yeni Öğrenci Ders Ekle/Bırak" GridPane.rowIndex="10">
+                  <Label text="%calendar.act.new_add_drop" GridPane.rowIndex="10">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -123,7 +123,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Mazeretli Danışman Onay" GridPane.rowIndex="9">
+                  <Label text="%calendar.act.excused_appr" GridPane.rowIndex="9">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -131,7 +131,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Mazeretli Ders Kayıt" GridPane.rowIndex="8">
+                  <Label text="%calendar.act.excused_reg" GridPane.rowIndex="8">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -139,7 +139,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Danışman Onay" GridPane.rowIndex="7">
+                  <Label text="%calendar.act.appr" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -147,7 +147,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ders Kayıt" GridPane.rowIndex="6">
+                  <Label text="%calendar.act.reg" GridPane.rowIndex="6">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -155,7 +155,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yeni Öğrenci Danışman Onay" GridPane.rowIndex="5">
+                  <Label text="%calendar.act.new_appr" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -163,7 +163,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yeni Öğrenci Ders Kayıt" GridPane.rowIndex="4">
+                  <Label text="%calendar.act.new_reg" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -171,7 +171,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Mazeretli Öğrenci Harç" GridPane.rowIndex="3">
+                  <Label text="%calendar.act.excused_fee" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -179,7 +179,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Öğrenci Ek Harç" GridPane.rowIndex="2">
+                  <Label text="%calendar.act.extra_fee" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -187,7 +187,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Öğrenci Harç" GridPane.rowIndex="1">
+                  <Label text="%calendar.act.fee" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -195,7 +195,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Takvim Adı" textFill="WHITE">
+                  <Label text="%calendar.column.name" textFill="WHITE">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -203,7 +203,7 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label text="Öğrenci Harç İade Başvuru (Genel)" GridPane.rowIndex="30">
+                  <Label text="%calendar.act.fee_refund" GridPane.rowIndex="30">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -211,7 +211,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Öğrenci Bazlı Not Giriş" GridPane.rowIndex="29">
+                  <Label text="%calendar.act.student_grade" GridPane.rowIndex="29">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -219,7 +219,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Danışman Not Giriş / Staj Not Giriş" GridPane.rowIndex="28">
+                  <Label text="%calendar.act.advisor_grade" GridPane.rowIndex="28">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -227,7 +227,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="İkinci Aktif Üniversite Harç Ödemeleri" GridPane.rowIndex="27">
+                  <Label text="%calendar.act.second_fee" GridPane.rowIndex="27">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -235,7 +235,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Bütünleme Harf Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="26">
+                  <Label text="%calendar.act.make_up_letter_pub" GridPane.rowIndex="26">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -243,7 +243,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Harf Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="25">
+                  <Label text="%calendar.act.letter_pub" GridPane.rowIndex="25">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -251,7 +251,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Bütünleme (YYS Mazeret) Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="24">
+                  <Label text="%calendar.act.make_up_exc_pub" GridPane.rowIndex="24">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -259,7 +259,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Bütünleme (YYS Mazeret) Not Giriş" GridPane.rowIndex="23">
+                  <Label text="%calendar.act.make_up_exc_grade" GridPane.rowIndex="23">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -267,7 +267,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yarıyıl Sınavı Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="22">
+                  <Label text="%calendar.act.sem_pub" GridPane.rowIndex="22">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -275,7 +275,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yarıyıl Sınavı Not Giriş" GridPane.rowIndex="21">
+                  <Label text="%calendar.act.sem_grade" GridPane.rowIndex="21">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -283,7 +283,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Bütünleme Sınavı Maddi Hata Düzeltme" GridPane.rowIndex="20">
+                  <Label text="%calendar.act.make_up_err_fix" GridPane.rowIndex="20">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -291,7 +291,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Yarıyıl Sınavı Maddi Hata Düzeltme" GridPane.rowIndex="19">
+                  <Label text="%calendar.act.sem_err_fix" GridPane.rowIndex="19">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -299,7 +299,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ara Sınav Maddi Hata Düzeltme" GridPane.rowIndex="18">
+                  <Label text="%calendar.act.mid_err_fix" GridPane.rowIndex="18">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -307,7 +307,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ara Sınav Mazeret Notlarının Öğrenciye Yayınlanması" GridPane.rowIndex="17">
+                  <Label text="%calendar.act.mid_exc_pub" GridPane.rowIndex="17">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -315,7 +315,7 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Ara Sınav Mazeret Not Giriş" GridPane.rowIndex="16">
+                  <Label text="%calendar.act.mid_exc_grade" GridPane.rowIndex="16">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -810,7 +810,7 @@
             <Insets left="1.0" />
          </padding>
       </ScrollPane>
-      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="Akademik Takvim">
+      <Label layoutY="9.0" prefHeight="34.0" prefWidth="250.0" text="%calendar.title">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>
@@ -818,7 +818,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

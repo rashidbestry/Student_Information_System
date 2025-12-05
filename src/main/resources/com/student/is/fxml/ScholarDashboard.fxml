@@ -22,7 +22,7 @@
                </yAxis>
             </BarChart>
             <FontAwesomeIcon fill="WHITE" glyphName="CHILD" layoutX="30.0" layoutY="44.0" size="3em" />
-            <Label layoutX="67.0" layoutY="18.0" text="Hoş Geldiniz" textFill="WHITE">
+            <Label layoutX="67.0" layoutY="18.0" text="%scholar.welcome" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -33,12 +33,12 @@
                </font>
             </Label>
             <Separator layoutY="62.0" prefHeight="0.0" prefWidth="546.0" />
-            <Label layoutX="30.0" layoutY="87.0" text="Verilen Ders Sayısı :" textFill="WHITE">
+            <Label layoutX="30.0" layoutY="87.0" text="%scholar.label.lecture_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="30.0" layoutY="122.0" text="Toplam Öğrenci Sayısı :" textFill="WHITE">
+            <Label layoutX="30.0" layoutY="122.0" text="%scholar.label.student_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

@@ -15,13 +15,13 @@
             <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="4em" />
          </graphic>
       </Button>
-      <Label layoutX="82.0" layoutY="32.0" text="Hata" textFill="WHITE">
+      <Label layoutX="82.0" layoutY="32.0" text="%popup.error.title" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
       <Separator layoutY="82.0" prefHeight="1.0" prefWidth="500.0" />
-      <Label layoutX="172.0" layoutY="147.0" text="Geçersiz e-posta." textFill="WHITE">
+      <Label layoutX="172.0" layoutY="147.0" text="%popup.error.message.invalid_email" textFill="WHITE">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/scholar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.ScholarPage.AbsenteeismOperationController">
    <children>
-      <MenuButton fx:id="absenceMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
+      <MenuButton fx:id="absenceMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="%scholar.menu.select_lecture" textFill="WHITE">
         <items>
           <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
           <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
@@ -33,7 +33,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="Ara" textFill="WHITE">
+      <Button fx:id="searchButton" layoutX="323.0" layoutY="176.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="scholarBackToMenu" text="%scholar.buton.search" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -44,7 +44,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
          </graphic>
       </Button>
-      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="490.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="490.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="%scholar.checkbox.multi_select">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -52,7 +52,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </CheckBox>
-      <Label layoutY="33.0" prefHeight="38.0" prefWidth="363.0" text="Devamsızlık İşlemleri" textOverrun="CLIP">
+      <Label layoutY="33.0" prefHeight="38.0" prefWidth="363.0" text="%scholar.absence.title" textOverrun="CLIP">
          <font>
             <Font name="Arial Bold" size="30.0" />
          </font>
@@ -62,15 +62,15 @@
       </Label>
       <TableView fx:id="StudentAbsenceOperationTable" layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
          <columns>
-            <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="Öğrenci Numarası" />
-            <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="138.39999389648438" text="Ad" />
-            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="143.20004272460938" text="Soyad" />
-            <TableColumn fx:id="teorikAbsenceColumn" prefWidth="149.59994506835938" text="Teorik Ders Devamsızlığı" />
-            <TableColumn fx:id="praciteAbsenceColumn" prefWidth="170.4000244140625" text="Uygulama Dersi Devamsızlığı" />
-            <TableColumn fx:id="absenceStatusColumn" editable="false" minWidth="0.0" prefWidth="150.0" sortable="false" text="Durum" />
+            <TableColumn fx:id="studentNumberColumn" editable="false" prefWidth="150.0" text="%scholar.col.number" />
+            <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="138.39999389648438" text="%scholar.col.name" />
+            <TableColumn fx:id="studentSurnameColumn" editable="false" prefWidth="143.20004272460938" text="%scholar.col.surname" />
+            <TableColumn fx:id="teorikAbsenceColumn" prefWidth="149.59994506835938" text="%scholar.absence.theory_absence" />
+            <TableColumn fx:id="praciteAbsenceColumn" prefWidth="170.4000244140625" text="%scholar.absence.practice_absence" />
+            <TableColumn fx:id="absenceStatusColumn" editable="false" minWidth="0.0" prefWidth="150.0" sortable="false" text="%scholar.absence.status" />
          </columns>
       </TableView>
-      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -81,17 +81,17 @@
             <FontAwesomeIcon fill="WHITE" glyphName="HOME" />
          </graphic>
       </Button>
-      <TextField fx:id="cellTheory" alignment="CENTER" disable="true" focusTraversable="false" layoutX="648.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Teorik">
+      <TextField fx:id="cellTheory" alignment="CENTER" disable="true" focusTraversable="false" layoutX="648.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="%scholar.absence.textfield.theory">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="cellApplication" alignment="CENTER" disable="true" focusTraversable="false" layoutX="747.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Uygulama">
+      <TextField fx:id="cellApplication" alignment="CENTER" disable="true" focusTraversable="false" layoutX="747.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="%scholar.absence.textfield.application">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="200.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="scholarBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="200.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="scholarBackToMenu" text="%scholar.buton.edit" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

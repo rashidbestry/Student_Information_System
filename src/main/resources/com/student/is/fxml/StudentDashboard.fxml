@@ -21,32 +21,32 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="59.0" layoutY="15.0" text="Öğrenci Bilgileri" textFill="WHITE">
+            <Label layoutX="59.0" layoutY="15.0" text="%student.dashboard.info_title" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="78.0" text="Ad :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.name" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="108.0" text="Soyad :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.surname" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="138.0" text="Doğum Tarihi :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.birth_date" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="168.0" text="Fakülte :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.faculty" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="198.0" text="Bölüm :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="198.0" text="%student.dashboard.label.section" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -72,32 +72,32 @@
       <AnchorPane layoutX="564.0" layoutY="62.0" prefHeight="250.0" prefWidth="400.0" styleClass="studentMainMenuCards">
          <children>
             <FontAwesomeIcon fill="WHITE" glyphName="GRADUATION_CAP" layoutX="23.0" layoutY="39.0" size="2.5em" />
-            <Label layoutX="70.0" layoutY="13.0" text="Dönem Bilgileri" textFill="WHITE">
+            <Label layoutX="70.0" layoutY="13.0" text="%student.dashboard.term_title" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="78.0" text="Sınıf :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.class" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="108.0" text="Dönem :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.term" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="138.0" text="AGNO :" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.gpa" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="168.0" text="Alınan Ders Sayısı : " textFill="WHITE">
+            <Label layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.lecture_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="198.0" text="Danışman Hoca:" textFill="WHITE">
+            <Label layoutX="26.0" layoutY="198.0" text="%student.dashboard.label.advisor" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

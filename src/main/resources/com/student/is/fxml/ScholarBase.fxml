@@ -30,7 +30,7 @@
             <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#GradeOperationsButtonAction" prefHeight="110.0" prefWidth="250.0" styleClass="scholarButton" text="Not İşlemleri" textFill="WHITE" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#GradeOperationsButtonAction" prefHeight="110.0" prefWidth="250.0" styleClass="scholarButton" text="%scholar.menu.btn.grades" textFill="WHITE" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -44,7 +44,7 @@
                   <FontAwesomeIcon disable="true" fill="WHITE" glyphName="BOOK" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#DashboardOperationsButtonAction" prefHeight="105.0" prefWidth="250.0" styleClass="scholarButton" text="Ana Menü" textFill="WHITE" GridPane.rowIndex="2">
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#DashboardOperationsButtonAction" prefHeight="105.0" prefWidth="250.0" styleClass="scholarButton" text="%scholar.menu.btn.dashboard" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -59,7 +59,7 @@
                   </FontAwesomeIcon>
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="110.0" prefWidth="250.0" styleClass="scholarButton" text="Çıkış Yap" textFill="WHITE" GridPane.rowIndex="5">
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="110.0" prefWidth="250.0" styleClass="scholarButton" text="%scholar.menu.btn.exit" textFill="WHITE" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -70,7 +70,7 @@
                   <FontAwesomeIcon disable="true" fill="WHITE" glyphName="SIGN_OUT" nodeOrientation="LEFT_TO_RIGHT" stroke="#a6a2a2" strokeType="OUTSIDE" styleClass="studentMenuIcons" />
                </graphic>
             </Button>
-            <Label fx:id="scholarDashboard" text="AORA Üniversitesi Öğrenci Bilgi Sistemi Personel" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <Label  text="%scholar.menu.title" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font name="Arial Bold" size="22.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Insets top="70.0" />
                </padding>
             </Label>
-            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#AbsenteeismOperationsButtonAction" prefHeight="106.0" prefWidth="250.0" styleClass="scholarButton" text="Devamsızlık İşlemleri" textFill="WHITE" GridPane.rowIndex="4">
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" mnemonicParsing="false" onAction="#AbsenteeismOperationsButtonAction" prefHeight="106.0" prefWidth="250.0" styleClass="scholarButton" text="%scholar.menu.btn.absenteeism" textFill="WHITE" GridPane.rowIndex="4">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
