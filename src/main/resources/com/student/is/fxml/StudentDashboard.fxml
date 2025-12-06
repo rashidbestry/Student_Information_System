@@ -9,15 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.DashboardController">
    <children>
-      <AnchorPane layoutX="65.0" layoutY="62.0" prefHeight="310.0" prefWidth="418.0" styleClass="studentMainMenuCards">
+      <AnchorPane layoutX="44.0" layoutY="61.0" prefHeight="310.0" prefWidth="418.0" styleClass="studentMainMenuCards">
          <children>
-            <Label fx:id="sectionLabel" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="198.0" text="Bilgisayar Mühendisliği" textFill="WHITE">
+            <Label fx:id="sectionLabel" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="198.0" text="Bilgisayar Mühendisliği" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
             <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="25.0" layoutY="40.0" size="2.5em" text="" />
-            <Label fx:id="facultyLabel" layoutX="113.0" layoutY="168.0" text="Mühendislik Fakültesi" textFill="WHITE">
+            <Label fx:id="facultyLabel" layoutX="113.0" layoutY="168.0" text="Mühendislik Fakültesi" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
@@ -27,55 +27,55 @@
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.name" textFill="WHITE">
+            <Label fx:id="nameLabelTitle" layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.name" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.surname" textFill="WHITE">
+            <Label fx:id="lastNameLabelTitle" layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.surname" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.birth_date" textFill="WHITE">
+            <Label fx:id="bornDateLabelTitle" layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.birth_date" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.faculty" textFill="WHITE">
+            <Label fx:id="facultyLabelTitle" layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.faculty" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="198.0" text="%student.dashboard.label.section" textFill="WHITE">
+            <Label fx:id="sectionLabelTitle" layoutX="25.0" layoutY="198.0" text="%student.dashboard.label.section" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
             <Separator layoutX="-1.0" layoutY="49.0" prefHeight="10.0" prefWidth="400.0" />
-            <Label fx:id="bornDateLabel" layoutX="176.0" layoutY="138.0" text="18.01.2006" textFill="WHITE">
+            <Label fx:id="bornDateLabel" layoutX="176.0" layoutY="138.0" text="18.01.2006" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lastNameLabel" layoutX="107.0" layoutY="108.0" text="Karakurt" textFill="WHITE">
+            <Label fx:id="lastNameLabel" layoutX="107.0" layoutY="108.0" text="Karakurt" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="nameLabel" layoutX="75.0" layoutY="78.0" text="Ali" textFill="WHITE">
+            <Label fx:id="nameLabel" layoutX="75.0" layoutY="78.0" text="Ali" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="43.0" layoutY="249.0" mnemonicParsing="false" styleClass="transkript" text="%student.dashboard.button.transkript" textFill="WHITE">
+            <Button layoutX="130.0" layoutY="249.0" mnemonicParsing="false" styleClass="transkript" text="%student.dashboard.button.transkript" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="564.0" layoutY="62.0" prefHeight="310.0" prefWidth="438.0" styleClass="studentMainMenuCards">
+      <AnchorPane layoutX="548.0" layoutY="61.0" prefHeight="310.0" prefWidth="418.0" styleClass="studentMainMenuCards">
          <children>
             <FontAwesomeIcon fill="WHITE" glyphName="GRADUATION_CAP" layoutX="23.0" layoutY="39.0" size="2.5em" />
             <Label layoutX="70.0" layoutY="13.0" text="%student.dashboard.term_title" textFill="WHITE">
@@ -83,53 +83,53 @@
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.class" textFill="WHITE">
+            <Label fx:id="classLabelTitle" layoutX="25.0" layoutY="78.0" text="%student.dashboard.label.class" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.term" textFill="WHITE">
+            <Label fx:id="termLabelTitle" layoutX="25.0" layoutY="108.0" text="%student.dashboard.label.term" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.gpa" textFill="WHITE">
+            <Label fx:id="agnoLabelTitle" layoutX="25.0" layoutY="138.0" text="%student.dashboard.label.gpa" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.lecture_count" textFill="WHITE">
+            <Label fx:id="lectureCountLabelTitle" layoutX="25.0" layoutY="168.0" text="%student.dashboard.label.lecture_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="198.0" text="%student.dashboard.label.advisor" textFill="WHITE">
+            <Label fx:id="advisorLabelTitle" layoutX="26.0" layoutY="198.0" text="%student.dashboard.label.advisor" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="agnoLabel" layoutX="105.0" layoutY="137.0" text="2.98" textFill="WHITE">
+            <Label fx:id="agnoLabel" layoutX="105.0" layoutY="137.0" text="2.98" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="termLabel" layoutX="115.0" layoutY="108.0" text="2025-2026 Güz" textFill="WHITE">
+            <Label fx:id="termLabel" layoutX="115.0" layoutY="108.0" text="2025-2026 Güz" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="classLabel" layoutX="91.0" layoutY="79.0" text="2" textFill="WHITE">
+            <Label fx:id="classLabel" layoutX="91.0" layoutY="79.0" text="2" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
             <Separator layoutY="52.0" prefHeight="10.0" prefWidth="400.0" />
-            <Label fx:id="lectureCountLabel" layoutX="223.0" layoutY="168.0" text="6" textFill="WHITE">
+            <Label fx:id="lectureCountLabel" layoutX="223.0" layoutY="168.0" text="6" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="advisorLabel" layoutX="194.0" layoutY="198.0" text="danışman" textFill="WHITE">
+            <Label fx:id="advisorLabel" layoutX="194.0" layoutY="198.0" text="danışman" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>

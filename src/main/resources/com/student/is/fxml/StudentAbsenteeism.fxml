@@ -30,7 +30,7 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="%student.button.back_to_menu" textFill="WHITE">
+      <Button layoutX="845.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" stylesheets="@../css/style.css" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

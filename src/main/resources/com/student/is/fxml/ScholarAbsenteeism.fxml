@@ -70,7 +70,7 @@
             <TableColumn fx:id="absenceStatusColumn" editable="false" minWidth="0.0" prefWidth="150.0" sortable="false" text="%scholar.absence.status" />
          </columns>
       </TableView>
-      <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="%student.button.back_to_menu" textFill="WHITE">
+      <Button layoutX="836.0" layoutY="39.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="scholarBackToMenu" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

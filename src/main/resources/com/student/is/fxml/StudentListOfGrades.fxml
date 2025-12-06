@@ -24,7 +24,7 @@
             <TableColumn fx:id="statusColumn" editable="false" prefWidth="92.0" resizable="false" sortable="false" text="%student.grades.column.status" />
         </columns>
       </TableView>
-      <Button layoutX="862.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="%student.button.back_to_menu" textFill="WHITE">
+      <Button layoutX="845.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMainButtonAction" styleClass="backToMenu" text="%student.button.back_to_menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

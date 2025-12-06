@@ -19,7 +19,7 @@ public class ContentLoader {
     private static Object currentUserSession; //kullanıcı oturumu
 
     private static final String BUNDLE_NAME = "com.student.is.language.messages";  //güncel bundle ismi
-    private static ResourceBundle resourceBundle;
+    public static ResourceBundle resourceBundle;
 
     public static void initializeLanguage(Locale locale) {
         resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME, locale);

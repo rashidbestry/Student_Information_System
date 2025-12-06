@@ -22,33 +22,33 @@
                </yAxis>
             </BarChart>
             <FontAwesomeIcon fill="WHITE" glyphName="CHILD" layoutX="30.0" layoutY="44.0" size="3em" />
-            <Label layoutX="67.0" layoutY="18.0" text="%scholar.welcome" textFill="WHITE">
+            <Label fx:id="welcomeScholarTitle" layoutX="67.0" layoutY="18.0" text="%scholar.welcome" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Label fx:id="scholarFullNameLabel" layoutX="228.0" layoutY="18.0" text="Abdullah Erhan Akkaya" textFill="WHITE">
+            <Label fx:id="scholarFullNameLabel" layoutX="228.0" layoutY="18.0" text="Abdullah Erhan Akkaya" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
             <Separator layoutY="62.0" prefHeight="0.0" prefWidth="546.0" />
-            <Label layoutX="30.0" layoutY="87.0" text="%scholar.label.lecture_count" textFill="WHITE">
+            <Label fx:id="scholarLectureCountLabel" layoutX="30.0" layoutY="87.0" text="%scholar.label.lecture_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="30.0" layoutY="122.0" text="%scholar.label.student_count" textFill="WHITE">
+            <Label fx:id="totalStudentLabel" layoutX="30.0" layoutY="122.0" text="%scholar.label.student_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="scholarLectureCountLabel" layoutX="228.0" layoutY="88.0" text="5" textFill="WHITE">
+            <Label layoutX="228.0" layoutY="88.0" text="5" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="totalStudentsLabel" layoutX="264.0" layoutY="122.0" text="632" textFill="WHITE">
+            <Label layoutX="264.0" layoutY="122.0" text="632" textFill="WHITE" visible="false">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
