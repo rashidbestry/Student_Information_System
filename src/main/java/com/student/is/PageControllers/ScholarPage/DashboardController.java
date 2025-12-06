@@ -4,8 +4,17 @@ import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Lecture;
 import com.student.is.ClassStructure.Personal;
 import com.student.is.PageControllers.ContentLoader;
+import com.student.is.beans.Transcript;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
+
+import java.io.File;
 
 public class DashboardController {
     @FXML

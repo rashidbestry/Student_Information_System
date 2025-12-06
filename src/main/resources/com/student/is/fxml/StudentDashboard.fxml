@@ -68,7 +68,7 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="43.0" layoutY="249.0" mnemonicParsing="false" styleClass="transkript" text="%student.dashboard.button.transkript" textFill="WHITE">
+            <Button fx:id="saveTranscript" layoutX="43.0" layoutY="249.0" mnemonicParsing="false" styleClass="transkript" text="%student.dashboard.button.transkript" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
