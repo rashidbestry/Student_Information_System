@@ -32,12 +32,12 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <TextField fx:id="nameTextField" editable="false" focusTraversable="false" layoutX="134.0" layoutY="84.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="ALİ">
+            <TextField fx:id="nameTextField" editable="false" focusTraversable="false" layoutX="154.0" layoutY="84.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="ALİ">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </TextField>
-            <TextField fx:id="surnameTextField" editable="false" focusTraversable="false" layoutX="134.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="KARAKURT">
+            <TextField fx:id="surnameTextField" editable="false" focusTraversable="false" layoutX="154.0" layoutY="143.0" opacity="0.5" prefHeight="26.0" prefWidth="205.0" text="KARAKURT">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>

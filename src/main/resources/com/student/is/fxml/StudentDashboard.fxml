@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.StudentPage.DashboardController">
    <children>
-      <AnchorPane layoutX="65.0" layoutY="62.0" prefHeight="250.0" prefWidth="400.0" styleClass="studentMainMenuCards">
+      <AnchorPane layoutX="65.0" layoutY="62.0" prefHeight="310.0" prefWidth="418.0" styleClass="studentMainMenuCards">
          <children>
             <Label fx:id="sectionLabel" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="198.0" text="Bilgisayar Mühendisliği" textFill="WHITE">
                <font>
@@ -67,9 +68,14 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
+            <Button layoutX="43.0" layoutY="249.0" mnemonicParsing="false" styleClass="transkript" text="%student.dashboard.button.transkript" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="564.0" layoutY="62.0" prefHeight="250.0" prefWidth="400.0" styleClass="studentMainMenuCards">
+      <AnchorPane layoutX="564.0" layoutY="62.0" prefHeight="310.0" prefWidth="438.0" styleClass="studentMainMenuCards">
          <children>
             <FontAwesomeIcon fill="WHITE" glyphName="GRADUATION_CAP" layoutX="23.0" layoutY="39.0" size="2.5em" />
             <Label layoutX="70.0" layoutY="13.0" text="%student.dashboard.term_title" textFill="WHITE">
