@@ -21,15 +21,15 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <TableView layoutX="65.0" layoutY="186.0" prefHeight="550.0" prefWidth="900.0">
+      <TableView fx:id="personalTable" layoutX="65.0" layoutY="186.0" prefHeight="550.0" prefWidth="900.0">
          <columns>
-            <TableColumn prefWidth="148.79998779296875" text="Akademisyen Numarası" />
-            <TableColumn prefWidth="119.19999694824219" text="Ad" />
-            <TableColumn prefWidth="131.20001220703125" text="Soyad" />
-            <TableColumn prefWidth="61.5999755859375" text="Ünvan" />
-            <TableColumn prefWidth="128.0" text="E-Posta" />
-            <TableColumn prefWidth="171.199951171875" text="Web Sitesi" />
-            <TableColumn prefWidth="144.800048828125" text="Ofis Saatleri" />
+            <TableColumn fx:id="colPerId" prefWidth="148.79998779296875" text="Akademisyen Numarası" />
+            <TableColumn fx:id="colName" prefWidth="119.19999694824219" text="Ad" />
+            <TableColumn fx:id="colSurname" prefWidth="131.20001220703125" text="Soyad" />
+            <TableColumn fx:id="colTitle" prefWidth="61.5999755859375" text="Ünvan" />
+            <TableColumn fx:id="colEmail" prefWidth="128.0" text="E-Posta" />
+            <TableColumn fx:id="colWeb" prefWidth="171.199951171875" text="Web Sitesi" />
+            <TableColumn fx:id="colOfficehours" prefWidth="144.800048828125" text="Ofis Saatleri" />
          </columns>
       </TableView>
       <Button layoutX="419.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Şifre Değiştir">
@@ -42,17 +42,17 @@
             <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
          </graphic>
       </Button>
-      <Button layoutX="834.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Sil">
+      <Button layoutX="834.0" layoutY="147.0" mnemonicParsing="false" onAction="#deleteScholarActionButton" styleClass="adminBackToMenu" text="Akademisyen Sil">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
          </graphic>
       </Button>
-      <TextField focusTraversable="false" layoutX="45.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField fx:id="searchField" focusTraversable="false" layoutX="45.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="305.0" layoutY="147.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
+      <Button layoutX="305.0" layoutY="147.0" mnemonicParsing="false" onAction="#searchActionButton" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

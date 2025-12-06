@@ -16,22 +16,22 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.AdminPage.AbsenteeismOperationsController">
    <children>
-      <TableView layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
+      <TableView fx:id="AbsenceTable" layoutX="60.0" layoutY="237.0" prefHeight="500.0" prefWidth="900.0">
          <columns>
-            <TableColumn prefWidth="150.0" text="Öğrenci Numarası" />
-            <TableColumn prefWidth="150.0" text="Ad" />
-            <TableColumn prefWidth="150.0" text="Soyad" />
-            <TableColumn prefWidth="170.0" text="Teorik Ders Devamsızlığı" />
-            <TableColumn prefWidth="170.0" text="Uygulama Dersi Devamsızlığı" />
-            <TableColumn prefWidth="107.20001220703125" text="Durum" />
+            <TableColumn fx:id="colStudentNumber" prefWidth="150.0" text="Öğrenci Numarası" />
+            <TableColumn fx:id="colStudentName" prefWidth="150.0" text="Ad" />
+            <TableColumn fx:id="colStudentSurname" prefWidth="150.0" text="Soyad" />
+            <TableColumn fx:id="colTeory" prefWidth="170.0" text="Teorik Ders Devamsızlığı" />
+            <TableColumn fx:id="colPratic" prefWidth="170.0" text="Uygulama Dersi Devamsızlığı" />
+            <TableColumn fx:id="colStatus" prefWidth="107.20001220703125" text="Durum" />
          </columns>
       </TableView>
-      <TextField focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField fx:id="searchTextField" focusTraversable="false" layoutX="63.0" layoutY="176.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <CheckBox focusTraversable="false" layoutX="537.0" layoutY="205.0" mnemonicParsing="false" styleClass="toggle-switch" text="Çoklu Seçim">
+      <CheckBox fx:id="multiChoice" focusTraversable="false" layoutX="537.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiChoiceAction" styleClass="toggle-switch" text="Çoklu Seçim">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -58,7 +58,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
          </graphic>
       </Button>
-      <MenuButton alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
+      <MenuButton fx:id="AbsenceMenuButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="63.0" layoutY="114.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="360.0" text="Ders Seçiniz" textFill="WHITE">
          <items>
             <MenuItem mnemonicParsing="false" text="Lineer Cebir" />
             <MenuItem mnemonicParsing="false" text="Veri Yapıları" />
@@ -70,17 +70,17 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </MenuButton>
-      <TextField alignment="CENTER" disable="true" focusTraversable="false" layoutX="660.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="Teorik">
+      <TextField fx:id="cellTheory" alignment="CENTER" disable="true" focusTraversable="false" layoutX="660.0" layoutY="202.0" prefHeight="26.0" prefWidth="80.0" promptText="Teorik">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField alignment="CENTER" disable="true" focusTraversable="false" layoutX="748.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Uygulama">
+      <TextField fx:id="cellApplication" alignment="CENTER" disable="true" focusTraversable="false" layoutX="748.0" layoutY="202.0" prefHeight="26.0" prefWidth="90.0" promptText="Uygulama">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" styleClass="adminBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="adminBackToMenu" text="Düzenle" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

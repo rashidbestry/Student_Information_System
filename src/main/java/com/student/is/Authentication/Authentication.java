@@ -4,6 +4,7 @@ import com.student.is.ClassStructure.Admin;
 import com.student.is.ClassStructure.Personal;
 import com.student.is.ClassStructure.Student;
 import com.student.is.DataManagement.Database;
+import net.sf.jasperreports.engine.JRException;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
@@ -13,7 +14,7 @@ public class Authentication {
     public static Personal currentPersonalUser;
     public static Admin currentAdminUser;
 
-    public static boolean checkStudentAuth(String login , String password) {
+    public static boolean checkStudentAuth(String login , String password) throws JRException {
         //login = "02240200004@ogr.inonu.edu.tr";
         //password = "12345";
         if (!login.contains("@")) {

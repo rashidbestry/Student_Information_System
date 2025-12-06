@@ -11,6 +11,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
 
 import java.io.IOException;
 import java.net.URL;
@@ -100,7 +101,7 @@ public class  LoginController {
         }
     }
 
-    public void studentMainPage(ActionEvent event) throws IOException {
+    public void studentMainPage(ActionEvent event) throws IOException, JRException {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
 

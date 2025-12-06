@@ -7,8 +7,17 @@ import com.student.is.PageControllers.ContentLoader;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import com.student.is.beans.Transcript;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
+
+import java.io.File;
 
 import static com.student.is.PageControllers.ContentLoader.resourceBundle;
 
