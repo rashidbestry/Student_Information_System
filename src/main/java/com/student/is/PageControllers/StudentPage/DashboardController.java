@@ -36,17 +36,6 @@ public class DashboardController {
     @FXML private Label agnoLabelTitle;
     @FXML private Label lectureCountLabelTitle;
     @FXML private Label advisorLabelTitle;
-    @FXML private Label nameLabel;
-    @FXML private Label lastNameLabel;
-    @FXML private Label bornDateLabel;
-    @FXML private Label facultyLabel;
-    @FXML private Label sectionLabel;
-
-    @FXML private Label classLabel;
-    @FXML private Label termLabel;
-    @FXML private Label agnoLabel;
-    @FXML private Label lectureCountLabel;
-    @FXML private Label advisorLabel;
     @FXML public Button saveTranscript;
 
 
@@ -77,23 +66,6 @@ public class DashboardController {
             };
             advisorLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.advisor"), advisor));
 
-            nameLabel.setText(student.getFirstName());
-            lastNameLabel.setText(student.getLastName());
-            bornDateLabel.setText(student.getBornDate());
-            facultyLabel.setText(student.getFaculty());
-            sectionLabel.setText(student.getSection());
-
-            classLabel.setText(String.valueOf(student.getClassYear())); //stringe dönüştür
-            termLabel.setText("2025-2026 Öğretim Yılı");
-            agnoLabel.setText(String.valueOf(student.getGpa())); // stringe dönüştür
-            lectureCountLabel.setText(String.valueOf(student.lectures.size()));
-
-            switch (student.getClassYear()){
-                case 1 -> advisorLabel.setText("Cengiz Hark");
-                case 2 -> advisorLabel.setText("Adnan Fatih Kocamaz");
-                case 3 -> advisorLabel.setText("Barış Baykant Alagöz");
-                case 4 -> advisorLabel.setText("Taha Burak Özdemir");
-            }
             saveTranscript.setOnAction(ActionEvent -> {
                 try {
                     Transcript.doTranscript();
