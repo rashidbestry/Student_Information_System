@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -16,10 +17,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ScholarOperationsController {
     @FXML
     private TableView<Personal> personalTable;
+    @FXML private TextField searchField;
 
     @FXML private TableColumn<Personal, String> colPerId;
     @FXML private TableColumn<Personal, String> colName;
@@ -46,6 +49,25 @@ public class ScholarOperationsController {
         ObservableList<Personal> list = FXCollections.observableArrayList(Database.personalList);
         personalTable.setItems(list);
     }
+    public void searchActionButton() {
+        String searchText = searchField.getText();
+
+        if (searchText.isEmpty()) {
+            loadTable();
+            return;
+        }
+        try {
+            Database.searchInPersonalData(Database.personalList, searchText);
+            ArrayList<Personal> scholarList = Database.findedPersonalList;
+            ObservableList<Personal> scholar = FXCollections.observableArrayList(scholarList);
+            personalTable.setItems(scholar);
+
+        } catch (Exception e) {
+            System.err.println("Akademisyen arama işlemi sırasında hata oluştu: ");
+        }
+    }
+
+
     public void deleteScholarActionButton() throws IOException {
         Personal scholar = personalTable.getSelectionModel().getSelectedItem();
         if (scholar == null) {
@@ -56,7 +78,7 @@ public class ScholarOperationsController {
             AnchorPane root = loader.load();
 
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("Silme Onayı");
+            dialogStage.initStyle(StageStyle.UNDECORATED);
             dialogStage.initModality(Modality.WINDOW_MODAL);
 
             dialogStage.initOwner(personalTable.getScene().getWindow());  // onay kutusu ortada açılsın

@@ -9,15 +9,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LectureOperationsController {
 
+    @FXML private TextField searchField;
 
     @FXML
     private TableView<Lecture> LectureOperationTable;
@@ -50,6 +54,27 @@ public class LectureOperationsController {
         ObservableList<Lecture> list = FXCollections.observableArrayList(Database.lectureList);
         LectureOperationTable.setItems(list);
     }
+
+    public void searchActionButton() {
+        String searchText = searchField.getText();
+
+        if (searchText.isEmpty()) {
+            loadLectureTable();
+            return;
+        }
+        try {
+            Database.searchInLectureData(Database.lectureList, searchText);
+            ArrayList<Lecture> lectureList = Database.findedLectureList;
+            ObservableList<Lecture> lec = FXCollections.observableArrayList(lectureList);
+            LectureOperationTable.setItems(lec);
+
+        } catch (Exception e) {
+            System.err.println("Ders arama işlemi sırasında hata oluştu: ");
+        }
+    }
+
+
+
     public void deleteLectureActionButton() throws IOException {
         Lecture lec = LectureOperationTable.getSelectionModel().getSelectedItem();
         if (lec == null) {
@@ -60,7 +85,7 @@ public class LectureOperationsController {
             AnchorPane root = loader.load();
 
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("Silme Onayı");
+            dialogStage.initStyle(StageStyle.UNDECORATED);
             dialogStage.initModality(Modality.WINDOW_MODAL);
 
             dialogStage.initOwner(LectureOperationTable.getScene().getWindow());  // onay kutusu ortada açılsın

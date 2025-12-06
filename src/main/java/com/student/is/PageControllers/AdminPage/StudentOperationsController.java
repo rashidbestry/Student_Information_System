@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -16,10 +17,13 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class StudentOperationsController {
     @FXML
     private TableView<Student> studentTable;
+    @FXML private TextField searchField;
+
 
     @FXML
     private TableColumn<Student, String> studentNumberColumn;
@@ -51,6 +55,23 @@ public class StudentOperationsController {
         ObservableList<Student> stu = FXCollections.observableArrayList(Database.studentList);
         studentTable.setItems(stu);
     }
+    public void searchActionButton() {
+        String searchText = searchField.getText();
+
+        if (searchText.isEmpty()) {
+            loadStudentTable();
+            return;
+        }
+        try {
+            Database.searchInStudentData(Database.studentList, searchText);
+            ArrayList<Student> studentList = Database.findedStudentList;
+            ObservableList<Student> stu = FXCollections.observableArrayList(studentList);
+            studentTable.setItems(stu);
+
+        } catch (Exception e) {
+            System.err.println("Öğrenci arama işlemi sırasında hata oluştu: ");
+        }
+    }
 
     public void changePasswordActionButton() throws IOException {
         Student selectedStudent = studentTable.getSelectionModel().getSelectedItem();
@@ -81,7 +102,6 @@ public class StudentOperationsController {
 
         }
 
-
     }
     public void deleteStudentActionButton() throws IOException {
         Student seciliOgrenci = studentTable.getSelectionModel().getSelectedItem();
@@ -93,7 +113,7 @@ public class StudentOperationsController {
             AnchorPane root = loader.load();
 
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("Silme Onayı");
+            dialogStage.initStyle(StageStyle.UNDECORATED);
             dialogStage.initModality(Modality.WINDOW_MODAL);
 
             dialogStage.initOwner(studentTable.getScene().getWindow());  // onay kutusu ortada açılsın

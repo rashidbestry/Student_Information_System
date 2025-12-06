@@ -59,12 +59,12 @@
             <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
          </graphic>
       </Button>
-      <TextField focusTraversable="false" layoutX="75.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">
+      <TextField fx:id="searchField" focusTraversable="false" layoutX="75.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="335.0" layoutY="147.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
+      <Button layoutX="335.0" layoutY="147.0" mnemonicParsing="false" onAction="#searchActionButton" prefHeight="27.0" prefWidth="98.0" styleClass="adminBackToMenu" text="Ara" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
