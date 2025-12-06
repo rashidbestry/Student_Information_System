@@ -37,14 +37,14 @@
             <FontAwesomeIcon fill="WHITE" glyphName="KEY" />
          </graphic>
       </Button>
-      <Button layoutX="659.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Ekle">
+      <Button layoutX="657.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Ekle">
          <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
          </graphic>
       </Button>
       <Button layoutX="834.0" layoutY="147.0" mnemonicParsing="false" onAction="#deleteScholarActionButton" styleClass="adminBackToMenu" text="Akademisyen Sil">
          <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_TIMES" />
          </graphic>
       </Button>
       <TextField fx:id="searchField" focusTraversable="false" layoutX="45.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">

@@ -38,14 +38,14 @@
             <FontAwesomeIcon fill="WHITE" glyphName="KEY" />
          </graphic>
       </Button>
-      <Button layoutX="700.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Öğrenci Ekle">
+      <Button layoutX="697.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Öğrenci Ekle">
          <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
          </graphic>
       </Button>
       <Button layoutX="839.0" layoutY="147.0" mnemonicParsing="false" onAction="#deleteStudentActionButton" styleClass="adminBackToMenu" text="Öğrenci Sil">
          <graphic>
-            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_TIMES" />
          </graphic>
       </Button>
       <TextField fx:id="searchField" focusTraversable="false" layoutX="75.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0">
