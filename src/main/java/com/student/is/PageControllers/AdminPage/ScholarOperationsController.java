@@ -131,4 +131,27 @@ public class ScholarOperationsController {
 
         }
     }
+    public void addScholarActionButton() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/AdminAddScholarPopUp.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.initStyle(StageStyle.UNDECORATED); // İsteğe bağlı
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            // Pencere sahibini (ana pencere) belirle
+            dialogStage.initOwner(personalTable.getScene().getWindow());
+
+            AddScholarController controller = loader.getController();
+            controller.setDialogStage(dialogStage); // Controller'a pencere nesnesini ilet
+
+            dialogStage.setScene(new Scene(root));
+            dialogStage.showAndWait();
+
+            loadTable(); // tabloyu güncelle
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

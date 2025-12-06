@@ -16,6 +16,16 @@ public class Personal {
 
     public Personal(){
     }
+    public Personal(String perId, String name, String surname, String title, String email, String web, String officehours){
+        this.perId = perId;
+        this.name = name;
+        this.surname = surname;
+        this.title = title;
+        this.email = email;
+        this.web = web;
+        this.officehours = officehours;
+        this.lectures = new ArrayList<>();
+    }
     public void createLectures(){
         for (Lecture object : Database.lectureList){
             if (object.lectureTeacher.equals(perId)){

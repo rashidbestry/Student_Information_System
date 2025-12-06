@@ -139,4 +139,30 @@ public class StudentOperationsController {
 
         }
     }
+    public void addStudentActionButton() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/AdminAddStudentPopUp.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.initStyle(StageStyle.UNDECORATED);
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+
+            // Ana pencerenin ortasında açılması için
+            dialogStage.initOwner(studentTable.getScene().getWindow());
+
+            AddStudentController controller = loader.getController();
+            controller.setDialogStage(dialogStage); // Controller'a pencere nesnesini ilet
+
+            dialogStage.setScene(new Scene(root));
+            dialogStage.showAndWait();
+
+            System.out.println("öğrenci eklendi");
+            loadStudentTable(); //tabloyu güncelle
+
+        } catch (IOException e) {
+            System.err.println("Öğrenci Ekle pop-up'ı açılırken hata oluştu: " + e);
+            e.printStackTrace();
+        }
+    }
 }

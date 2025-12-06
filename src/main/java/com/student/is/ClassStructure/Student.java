@@ -20,8 +20,24 @@ public class Student {
     public String email;
     public String address;
 
-    public Student(){
+    public Student(String stuId,String firstName,String lastName,String bornDate,int classYear,String faculty,String phoneNo,String email) {
+        this.stuId = stuId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.bornDate = bornDate;
+        this.classYear = classYear;
+        this.faculty = faculty;
+        this.phoneNo = phoneNo;
+        this.email = email;
+        this.gpa = 0.0;
         this.section = "Mühendislik Fakültesi";
+        this.address="Adres Belirlenmedi";
+        this.stuNotes=new HashMap<>();
+        this.lectures=new ArrayList<>();
+        this.stuAbsence=new HashMap<>();
+    }
+    public Student(){
+
     }
 
     public void createLectures(){

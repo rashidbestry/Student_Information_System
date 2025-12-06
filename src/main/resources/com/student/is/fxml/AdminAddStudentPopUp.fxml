@@ -7,28 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.AdminPage.AddStudentController">
    <children>
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="92.0" prefHeight="35.0" prefWidth="300.0" promptText="Öğrenci Numarası" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="332.0" prefHeight="35.0" prefWidth="300.0" promptText="Telefon Numarası" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="292.0" prefHeight="35.0" prefWidth="300.0" promptText="Fakülte" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="372.0" prefHeight="35.0" prefWidth="300.0" promptText="E-Posta" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="252.0" prefHeight="35.0" prefWidth="300.0" promptText="Sınıf" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="212.0" prefHeight="35.0" prefWidth="300.0" promptText="Doğum Tarihi" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="172.0" prefHeight="35.0" prefWidth="300.0" promptText="Soyad" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="132.0" prefHeight="35.0" prefWidth="300.0" promptText="Ad" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="studentNumberField" focusTraversable="false" layoutX="100.0" layoutY="92.0" prefHeight="35.0" prefWidth="300.0" promptText="Öğrenci Numarası" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="phoneField" focusTraversable="false" layoutX="100.0" layoutY="332.0" prefHeight="35.0" prefWidth="300.0" promptText="Telefon Numarası" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="facultyField" focusTraversable="false" layoutX="100.0" layoutY="292.0" prefHeight="35.0" prefWidth="300.0" promptText="Fakülte" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="emailField" focusTraversable="false" layoutX="100.0" layoutY="372.0" prefHeight="35.0" prefWidth="300.0" promptText="E-Posta" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="classField" focusTraversable="false" layoutX="100.0" layoutY="252.0" prefHeight="35.0" prefWidth="300.0" promptText="Sınıf" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="birthDateField" focusTraversable="false" layoutX="100.0" layoutY="212.0" prefHeight="35.0" prefWidth="300.0" promptText="Doğum Tarihi" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="surnameField" focusTraversable="false" layoutX="100.0" layoutY="172.0" prefHeight="35.0" prefWidth="300.0" promptText="Soyad" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="nameField" focusTraversable="false" layoutX="100.0" layoutY="132.0" prefHeight="35.0" prefWidth="300.0" promptText="Ad" styleClass="adminAddPopUpsTextField" />
       <Label layoutX="180.0" layoutY="34.0" text="Öğrenci Ekle">
          <font>
             <Font name="Arial Bold" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="145.0" layoutY="449.0" mnemonicParsing="false" styleClass="adminAcceptButton" text="Ekle">
+      <Button layoutX="145.0" layoutY="449.0" mnemonicParsing="false" onAction="#addStudentActionButton" styleClass="adminAcceptButton" text="Ekle">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
          </graphic>
       </Button>
-      <Button layoutX="268.0" layoutY="449.0" mnemonicParsing="false" styleClass="adminCancelButton" text="İptal Et">
+      <Button layoutX="268.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelActionButton" styleClass="adminCancelButton" text="İptal Et">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="TIMES" />
          </graphic>

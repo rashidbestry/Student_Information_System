@@ -7,26 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.AdminPage.AddScholarController">
    <children>
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="112.0" prefHeight="35.0" prefWidth="300.0" promptText="Akademisyen Numarası" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="352.0" prefHeight="35.0" prefWidth="300.0" promptText="Ofis Saatleri" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="272.0" prefHeight="35.0" prefWidth="300.0" promptText="Web Sitesi" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="312.0" prefHeight="35.0" prefWidth="300.0" promptText="E-Posta" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="232.0" prefHeight="35.0" prefWidth="300.0" promptText="Ünvan" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="192.0" prefHeight="35.0" prefWidth="300.0" promptText="Soyad" styleClass="adminAddPopUpsTextField" />
-      <TextField focusTraversable="false" layoutX="100.0" layoutY="152.0" prefHeight="35.0" prefWidth="300.0" promptText="Ad" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="academicianNumberField" focusTraversable="false" layoutX="100.0" layoutY="112.0" prefHeight="35.0" prefWidth="300.0" promptText="Akademisyen Numarası" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="officeHoursField" focusTraversable="false" layoutX="100.0" layoutY="352.0" prefHeight="35.0" prefWidth="300.0" promptText="Ofis Saatleri" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="websiteField" focusTraversable="false" layoutX="100.0" layoutY="272.0" prefHeight="35.0" prefWidth="300.0" promptText="Web Sitesi" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="emailField" focusTraversable="false" layoutX="100.0" layoutY="312.0" prefHeight="35.0" prefWidth="300.0" promptText="E-Posta" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="titleField" focusTraversable="false" layoutX="100.0" layoutY="232.0" prefHeight="35.0" prefWidth="300.0" promptText="Ünvan" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="surnameField" focusTraversable="false" layoutX="100.0" layoutY="192.0" prefHeight="35.0" prefWidth="300.0" promptText="Soyad" styleClass="adminAddPopUpsTextField" />
+      <TextField fx:id="nameField" focusTraversable="false" layoutX="100.0" layoutY="152.0" prefHeight="35.0" prefWidth="300.0" promptText="Ad" styleClass="adminAddPopUpsTextField" />
       <Label layoutX="149.0" layoutY="34.0" text="Akademisyen Ekle">
          <font>
             <Font name="Arial Bold" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="145.0" layoutY="451.0" mnemonicParsing="false" styleClass="adminAcceptButton" text="Ekle">
+      <Button layoutX="145.0" layoutY="451.0" mnemonicParsing="false" onAction="#addAcademicianActionButton" styleClass="adminAcceptButton" text="Ekle">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
          </graphic>
       </Button>
-      <Button layoutX="268.0" layoutY="451.0" mnemonicParsing="false" styleClass="adminCancelButton" text="İptal Et">
+      <Button layoutX="268.0" layoutY="451.0" mnemonicParsing="false" onAction="#cancelActionButton" styleClass="adminCancelButton" text="İptal Et">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="TIMES" />
          </graphic>

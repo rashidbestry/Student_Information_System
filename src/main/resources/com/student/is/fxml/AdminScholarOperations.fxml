@@ -37,7 +37,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="KEY" />
          </graphic>
       </Button>
-      <Button layoutX="657.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Akademisyen Ekle">
+      <Button layoutX="657.0" layoutY="147.0" mnemonicParsing="false" onAction="#addScholarActionButton" styleClass="adminBackToMenu" text="Akademisyen Ekle">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" />
          </graphic>

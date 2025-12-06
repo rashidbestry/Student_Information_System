@@ -33,7 +33,7 @@
             <TableColumn fx:id="LectureSeasonColumn" prefWidth="91.9998779296875" text="Dönem" />
          </columns>
       </TableView>
-      <Button layoutX="733.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ders Ekle">
+      <Button layoutX="733.0" layoutY="147.0" mnemonicParsing="false" onAction="#addLectureActionButton" styleClass="adminBackToMenu" text="Ders Ekle">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
          </graphic>

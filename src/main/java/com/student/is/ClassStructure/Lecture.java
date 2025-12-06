@@ -18,6 +18,25 @@ public class Lecture {
     public String lectureSeason;
     public ArrayList<Student> lectureStudentList = new ArrayList<>();
 
+    public Lecture(String lectureCode, String lectureName, int lectureCredit, int lectureAKTS, int lectureClass,  int lectureTheory, int lectureApplication,  String lectureSeason) {
+        this.lectureCode = lectureCode;
+        this.lectureName = lectureName;
+        this.lectureMandatory =true;
+        this.lectureCredit = lectureCredit;
+        this.lectureAKTS = lectureAKTS;
+        this.lectureClass = lectureClass;
+        this.lectureLang = "lang";
+        this.lectureType = "Zorunlu";
+        this.lectureTheory = lectureTheory;
+        this.lectureApplication = lectureApplication;
+        this.lectureTeacher = "Adnan Fatih Kocamaz";
+        this.lectureSeason = lectureSeason;
+        this.lectureStudentList = new ArrayList<>(lectureStudentList);
+    }
+    public Lecture() {
+
+    }
+
     public void createStudentListForLecture(){
         for (Student student : Database.studentList){
             if (student.stuAbsence.containsKey(this.lectureCode)){

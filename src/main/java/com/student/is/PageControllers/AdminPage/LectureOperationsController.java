@@ -111,5 +111,29 @@ public class LectureOperationsController {
 
         }
     }
+    public void addLectureActionButton() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/AdminAddLecturePopUp.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.initStyle(StageStyle.UNDECORATED); //popup ayarla
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+
+            dialogStage.initOwner(LectureOperationTable.getScene().getWindow());
+
+            AddLectureController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+
+            dialogStage.setScene(new Scene(root));
+            dialogStage.showAndWait();
+
+            loadLectureTable(); // Ders tablosunu güncelle
+
+        } catch (IOException e) {
+            System.err.println("Ders Ekle pop-up'ı açılırken hata oluştu: " );
+            e.printStackTrace();
+        }
+    }
 
 }
