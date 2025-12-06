@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1030.0" stylesheets="@../css/admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.is.PageControllers.AdminPage.LectureOperationsController">
    <children>
       <Label layoutY="33.0" prefHeight="36.0" prefWidth="259.0" text="Ders İşlemleri">
@@ -22,19 +21,19 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <TableView layoutX="65.0" layoutY="186.0" prefHeight="550.0" prefWidth="900.0">
+      <TableView fx:id="LectureOperationTable" layoutX="65.0" layoutY="186.0" prefHeight="550.0" prefWidth="900.0">
          <columns>
-            <TableColumn prefWidth="165.5999755859375" text="Ders Kodu" />
-            <TableColumn prefWidth="218.40000915527344" text="Ders Adı" />
-            <TableColumn prefWidth="59.99993896484375" text="Kredi" />
-            <TableColumn prefWidth="54.39996337890625" text="AKTS" />
-            <TableColumn prefWidth="56.79998779296875" text="Sınıf" />
-            <TableColumn prefWidth="120.800048828125" text="Teorik Ders Saati" />
-            <TableColumn prefWidth="142.39996337890625" text="Uygulama Ders Saati" />
-            <TableColumn prefWidth="91.9998779296875" text="Dönem" />
+            <TableColumn fx:id="LectureCodeColumn" prefWidth="165.5999755859375" text="Ders Kodu" />
+            <TableColumn fx:id="LectureNameColumn" prefWidth="218.40000915527344" text="Ders Adı" />
+            <TableColumn fx:id="LectureCreditColumn" prefWidth="59.99993896484375" text="Kredi" />
+            <TableColumn fx:id="LectureAktsColumn" prefWidth="54.39996337890625" text="AKTS" />
+            <TableColumn fx:id="LectureClassColumn" prefWidth="56.79998779296875" text="Sınıf" />
+            <TableColumn fx:id="LectureTeorikColumn" prefWidth="120.800048828125" text="Teorik Ders Saati" />
+            <TableColumn fx:id="LecturePraticColumn" prefWidth="142.39996337890625" text="Uygulama Ders Saati" />
+            <TableColumn fx:id="LectureSeasonColumn" prefWidth="91.9998779296875" text="Dönem" />
          </columns>
       </TableView>
-      <Button layoutX="839.0" layoutY="37.0" mnemonicParsing="false"  styleClass="adminBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
+      <Button layoutX="839.0" layoutY="37.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ana Menüye Dön" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -50,7 +49,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
          </graphic>
       </Button>
-      <Button layoutX="849.0" layoutY="147.0" mnemonicParsing="false" styleClass="adminBackToMenu" text="Ders Sil">
+      <Button layoutX="849.0" layoutY="147.0" mnemonicParsing="false" onAction="#deleteLectureActionButton" styleClass="adminBackToMenu" text="Ders Sil">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
          </graphic>

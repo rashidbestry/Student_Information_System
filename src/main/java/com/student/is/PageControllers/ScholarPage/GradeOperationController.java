@@ -10,7 +10,6 @@ import com.student.is.PageControllers.ContentLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -181,7 +180,6 @@ public class GradeOperationController {
     }
     public ArrayList<Student> SearchButtonAction(){
         return Database.findedStudentList;
-
 
     }
     public void multiChoiceAction(ActionEvent actionEvent) {
