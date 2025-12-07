@@ -6,15 +6,33 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.random.RandomGenerator;
 
 
 public class Database {
+
     public static ArrayList<Personal> personalList = new ArrayList<>();
     public static ArrayList<Lecture> lectureList = new ArrayList<>();
     public static ArrayList<Student> studentList = new ArrayList<>();
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
     public static ArrayList<Personal> findedPersonalList = new ArrayList<>();
     public static ArrayList<Lecture> findedLectureList = new ArrayList<>();
+
+
+    public static void main(String[] args) {
+
+        Database.createLectureList();
+        Database.createStudentList();
+        Database.createPersonalList();
+
+        for (Lecture lec : Database.lectureList)
+            lec.createStudentListForLecture();
+
+        createTemp();
+        createObject(personalList.get(0));
+        int end = 0;
+
+    }
 
     public static void createTemp() {
         try  {
@@ -66,10 +84,7 @@ public class Database {
                         break;
             }
 
-            while ((line = br.readLine()) != null){
-                if (line.equals("")){
-                    break;
-                }
+            while (!(line = br.readLine()).equals("##stuend")){
                 String[] temp = line.split("[*]");
                 Student stu = new Student();
                 stu.stuId = temp[0];
@@ -110,7 +125,7 @@ public class Database {
             }
 
             while ((line = br.readLine()) != null){
-                if (line.equals("")){
+                if (line.equals("&&perend")){
                     break;
                 }
                 String[] temp = line.split("[*]");
@@ -148,7 +163,7 @@ public class Database {
             }
 
             while ((line = br.readLine()) != null){
-                if (line.equals("")){
+                if (line.equals("%%lectureend")){
                     break;
                 }
                 String[] temp = line.split("[*]");
@@ -322,6 +337,81 @@ public class Database {
         }
         return false;
     }
+    public static boolean createObject(Object object){
+        if (object instanceof Student) {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/temp.bin"));
+                BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/temp_temp.bin"));
+                String line;
+                while ((line = br.readLine()) != null) {
+                    if ((line.equals("##stuend"))) {
+                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + String.valueOf(((Student) object).classYear) + "*" + ((Student) object).faculty + "*" + ((Student) object).getStringNotes() + "*" + ((Student) object).getLecturesToString() + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" + ((Student) object).address + "\n");
+                        wr.write("##stuend\n");
+                        break;
+                    }
+                    wr.write(line + "\n");
+                }
+                br.close();
+                wr.close();
+                File f1 = new File("src/main/resources/com/student/is/database/temp.bin");
+                f1.delete();
+                File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
+                f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+            } catch (IOException e) {
+                System.out.println("Error reading file!" + e);
+            }  return true;
+
+        } else if (object instanceof Lecture) {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/temp.bin"));
+                BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/temp_temp.bin"));
+                String line;
+                while ((line = br.readLine()) != null) {
+                    if (line.split("[*]")[0].equals("%%lectureend")) {
+                        wr.write(((Lecture) object).lectureCode + "*" + ((Lecture) object).lectureName + "*" + Boolean.toString(((Lecture) object).lectureMandatory) + "*" + ((Lecture) object).lectureCredit + "*" + ((Lecture) object).lectureAKTS + "*" + ((Lecture) object).lectureClass + "*" + ((Lecture) object).lectureLang + "*" + ((Lecture) object).lectureType + "*" + ((Lecture) object).lectureTheory + "*" + ((Lecture) object).lectureApplication + "*" + ((Lecture) object).lectureTeacher + "*" + ((Lecture) object).lectureSeason + "\n");
+                        wr.write("%%lectureend\n\n");
+                        continue;
+                    }
+                    wr.write(line + "\n");
+                }
+                br.close();
+                wr.close();
+                File f1 = new File("src/main/resources/com/student/is/database/temp.bin");
+                f1.delete();
+                File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
+                f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+
+            } catch (IOException e) {
+                System.out.println("Error reading file!" + e);
+            } return true;
+
+        } else if (object instanceof Personal) {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/temp.bin"));
+                BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/temp_temp.bin"));
+                String line;
+                while ((line = br.readLine()) != null) {
+                    if (line.split("[*]")[0].equals("&&perend")) {
+                        wr.write((((Personal) object).perId + "*" + ((Personal) object).name + "*" + ((Personal) object).surname + "*" + ((Personal) object).title + "*" + ((Personal) object).email + "*" + ((Personal) object).web + "*" + ((Personal) object).officehours + "\n"));
+                        wr.write("&&perend\n\n");
+                        continue;
+                    }
+                    wr.write(line + "\n");
+                }
+                br.close();
+                wr.close();
+                File f1 = new File("src/main/resources/com/student/is/database/temp.bin");
+                f1.delete();
+                File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
+                f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+
+            } catch (IOException e) {
+                System.out.println("Error reading file!" + e);
+            } return true;
+
+        }
+        return false;
+    }
     public static void searchInStudentData(ArrayList<Student> student,String input){
         findedStudentList.clear();
         for (Student stu : student){
@@ -420,6 +510,41 @@ public class Database {
         }
 
     }
+    public static String getNewStudentId(){
+        String result = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/temp.bin"));
+            String line = "";
+            while ((line = br.readLine()) != null) {
+                if (line.split("[*]")[0].equals("##stuId"))
+                    break;
+            }
+            String tempLine = "";
+            while ((line = br.readLine()) != null) {
+                if (line.equals("##stuend")) {
+                    line = tempLine;
+                    break;
+                }
+                tempLine = br.readLine();
+                if (tempLine.equals("##stuend")) {
+                    break;
+                }
+            }
+
+            br.close();
+            result = String.valueOf(Long.parseLong(line.split("[*]")[0])+1);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return "0"+result;
+    }
+    public static String getNewPersonalId(){
+        long randomNumber = RandomGenerator.getDefault().nextLong(24234364355L,84234364355L);
+        return String.valueOf(randomNumber);
+    }
+
 }
 
 
