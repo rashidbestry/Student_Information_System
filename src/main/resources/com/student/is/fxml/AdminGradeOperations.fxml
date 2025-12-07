@@ -82,7 +82,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" styleClass="adminBackToMenu" text="Düzenle" textFill="WHITE">
+      <Button fx:id="applyButton" disable="true" layoutX="849.0" layoutY="202.0" mnemonicParsing="false" onAction="#applyButtonAction" prefHeight="27.0" prefWidth="100.0" styleClass="adminBackToMenu" text="Düzenle" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>

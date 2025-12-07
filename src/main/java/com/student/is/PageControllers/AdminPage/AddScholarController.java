@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 
+import javax.xml.crypto.Data;
+
 
 public class AddScholarController {
     private Stage dialogStage;
@@ -24,13 +26,13 @@ public class AddScholarController {
     }
     @FXML
     private void addAcademicianActionButton() {
-        if (academicianNumberField.getText().isEmpty() || nameField.getText().isEmpty() || emailField.getText().isEmpty()) {
+        if (nameField.getText().isEmpty() || emailField.getText().isEmpty()) {
             System.out.println("Lütfen zorunlu alanları doldurun!");
             return;
         }
 
         try {
-            String academicianNumber = academicianNumberField.getText();
+            String academicianNumber = Database.getNewPersonalId();
             String name = nameField.getText();
             String surname = surnameField.getText();
             String title = titleField.getText();

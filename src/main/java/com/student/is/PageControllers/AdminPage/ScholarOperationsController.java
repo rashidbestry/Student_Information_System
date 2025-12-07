@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -42,6 +43,8 @@ public class ScholarOperationsController {
         colWeb.setCellValueFactory(new PropertyValueFactory<>("web"));
         colOfficehours.setCellValueFactory(new PropertyValueFactory<>("officehours"));
 
+        personalTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
         loadTable();
     }
 
@@ -69,7 +72,7 @@ public class ScholarOperationsController {
 
 
     public void deleteScholarActionButton() throws IOException {
-        Personal scholar = personalTable.getSelectionModel().getSelectedItem();
+        ObservableList<Personal> scholar = personalTable.getSelectionModel().getSelectedItems();
         if (scholar == null) {
             return;
         }
@@ -91,7 +94,9 @@ public class ScholarOperationsController {
             dialogStage.showAndWait();
 
             if (controller.isstatus()) {
-                Database.deleteObject(scholar); // database den sil
+                for (Personal per : scholar){
+                    Database.deleteObject(per); // database den sil
+                }
                 System.out.println("Akademisyen silindi silindi");
                 // silme işlemi başarılı
                 loadTable();

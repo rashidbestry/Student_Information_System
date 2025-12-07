@@ -25,12 +25,12 @@ public class AddStudentController {
     }
     @FXML
     private void addStudentActionButton() {
-        if (studentNumberField.getText().isEmpty() || nameField.getText().isEmpty() || emailField.getText().isEmpty()) {
+        if (nameField.getText().isEmpty() || emailField.getText().isEmpty()) {
             System.out.println("Lütfen zorunlu alanları doldurun!");
             return;
         }
         try {
-            String studentNumber = studentNumberField.getText();
+            String studentNumber = Database.getNewStudentId();
             String name = nameField.getText();
             String surname = surnameField.getText();
             String birthDate = birthDateField.getText();
@@ -43,7 +43,6 @@ public class AddStudentController {
 
             //DtaBase
             Database.studentList.add(newStudent); //database ekle
-
             dialogStage.close();
 
         } catch (Exception e) {

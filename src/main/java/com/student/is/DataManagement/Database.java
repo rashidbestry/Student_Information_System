@@ -206,13 +206,12 @@ public class Database {
                 f1.delete();
                 File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
                 f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+                Database.studentList.remove(object);
             }
             catch (IOException e){
                 System.out.println("Error reading file!" + e);
-            }
-            finally {
-                return true;
-            }
+            } return true;
+
         }
         else if (object instanceof Lecture) {
             try {
@@ -230,13 +229,12 @@ public class Database {
                 f1.delete();
                 File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
                 f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+                Database.lectureList.remove(object);
 
             } catch (IOException e) {
                 System.out.println("Error reading file!" + e);
-            }
-            finally {
-                return true;
-            }
+            }return true;
+
         }
         else if (object instanceof Personal){
             try {
@@ -254,13 +252,12 @@ public class Database {
                 f1.delete();
                 File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
                 f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+                Database.personalList.remove(object);
 
             } catch (IOException e) {
                 System.out.println("Error reading file!" + e);
-            }
-            finally {
-                return true;
-            }
+            } return true;
+
         }
         return false;
     }
@@ -345,7 +342,7 @@ public class Database {
                 String line;
                 while ((line = br.readLine()) != null) {
                     if ((line.equals("##stuend"))) {
-                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + String.valueOf(((Student) object).classYear) + "*" + ((Student) object).faculty + "*" + ((Student) object).getStringNotes() + "*" + ((Student) object).getLecturesToString() + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" + ((Student) object).address + "\n");
+                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + String.valueOf(((Student) object).classYear) + "*" + ((Student) object).faculty + "*" + " " + "*" +  " " + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" + " " + "\n");
                         wr.write("##stuend\n");
                         break;
                     }
@@ -357,6 +354,7 @@ public class Database {
                 f1.delete();
                 File f2 = new File("src/main/resources/com/student/is/database/temp_temp.bin");
                 f2.renameTo(new File("src/main/resources/com/student/is/database/temp.bin"));
+
             } catch (IOException e) {
                 System.out.println("Error reading file!" + e);
             }  return true;

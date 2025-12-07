@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -47,6 +48,9 @@ public class LectureOperationsController {
         LecturePraticColumn.setCellValueFactory(new PropertyValueFactory<>("lectureApplication"));
         LectureSeasonColumn.setCellValueFactory(new PropertyValueFactory<>("lectureSeason"));
 
+        LectureOperationTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+
         loadLectureTable();
     }
 
@@ -76,7 +80,7 @@ public class LectureOperationsController {
 
 
     public void deleteLectureActionButton() throws IOException {
-        Lecture lec = LectureOperationTable.getSelectionModel().getSelectedItem();
+        ObservableList<Lecture> lec = LectureOperationTable.getSelectionModel().getSelectedItems();
         if (lec == null) {
             return;
         }
@@ -97,7 +101,10 @@ public class LectureOperationsController {
             dialogStage.showAndWait();
 
             if (controller.isstatus()) {
-                Database.deleteObject(lec); // database den sil
+                for (Lecture lecture : lec){
+                    Database.deleteObject(lecture); // database den sil
+
+                }
                 System.out.println("ders silindi");
                 // silme işlemi başarılı
                 loadLectureTable();
