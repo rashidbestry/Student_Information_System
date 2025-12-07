@@ -13,14 +13,6 @@
    <children>
       <AnchorPane layoutX="70.0" layoutY="73.0" prefHeight="268.0" prefWidth="890.0" styleClass="scholarMainMenuCards">
          <children>
-            <BarChart layoutX="541.0" layoutY="13.0" prefHeight="242.0" prefWidth="334.0" title="2024-2025 Okul Yılı">
-               <xAxis>
-                  <CategoryAxis label="Dersler" side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis label="Öğrenci" side="LEFT" />
-               </yAxis>
-            </BarChart>
             <FontAwesomeIcon fill="WHITE" glyphName="CHILD" layoutX="30.0" layoutY="44.0" size="3em" />
             <Label fx:id="welcomeScholarTitle" layoutX="67.0" layoutY="18.0" text="%scholar.welcome" textFill="WHITE">
                <font>
@@ -32,7 +24,7 @@
                   <Font name="Arial Bold" size="25.0" />
                </font>
             </Label>
-            <Separator layoutY="62.0" prefHeight="0.0" prefWidth="546.0" />
+            <Separator layoutY="62.0" prefHeight="3.0" prefWidth="359.0" />
             <Label fx:id="scholarLectureCountLabel" layoutX="30.0" layoutY="87.0" text="%scholar.label.lecture_count" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
@@ -53,6 +45,14 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
+            <BarChart fx:id="scholarBarChart" layoutX="476.0" layoutY="5.0" prefHeight="280.0" prefWidth="400.0" title="2024-2025 Okul Yılı">
+               <xAxis>
+                  <CategoryAxis label="Dersler" side="BOTTOM" fx:id="xLecture" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yStudent" label="Öğrenci" side="LEFT" />
+               </yAxis>
+            </BarChart>
          </children>
       </AnchorPane>
    </children>

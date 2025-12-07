@@ -10,6 +10,10 @@ import javafx.beans.property.SimpleIntegerProperty;
 import com.student.is.beans.Transcript;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -27,6 +31,12 @@ public class DashboardController {
     @FXML Label totalStudentLabel;
     private IntegerProperty toplamOgrenciSayisi;
 
+    //Grafik
+    @FXML private BarChart<String, Number> scholarBarChart;
+    @FXML private CategoryAxis xLecture;
+    @FXML private NumberAxis yStudent;
+
+
     public void initialize() {
         Object sessionUser = ContentLoader.getCurrentUserSession();
         sessionUser = Authentication.currentPersonalUser;
@@ -42,6 +52,26 @@ public class DashboardController {
             }
             this.toplamOgrenciSayisi = new SimpleIntegerProperty(toplam);
             totalStudentLabel.textProperty().bind(Bindings.concat(resourceBundle.getString("scholar.label.student_count"), toplamOgrenciSayisi.asString()));
+
+            if(personal.lectures.size()>0){
+                XYChart.Series<String, Number> series = new XYChart.Series<>();
+                series.setName("Dersteki Öğrenci Sayısı");
+
+                for(Lecture lec : personal.lectures) {
+                    int studentCount = lec.getLectureStudentList().size();
+                    String lectureName = lec.getLectureName();
+
+                    series.getData().add(new XYChart.Data<>(lectureName, studentCount));
+
+                }
+                scholarBarChart.setBarGap(1.0);
+                scholarBarChart.setCategoryGap(70.0);
+                scholarBarChart.getData().clear();
+                scholarBarChart.getData().add(series);
+            }
+
+
+
 
         }
     }
