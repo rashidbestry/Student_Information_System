@@ -75,7 +75,7 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 20,0,0,0);
 }
 .adminAddPopUpsBackground {
-    -fx-background-color: linear-gradient(to bottom, #e6caff, #f0f9ff);
+    -fx-background-color: linear-gradient(to bottom, #2a0845, #e6caff);
 }
 
 .adminAddPopUpsTextField {

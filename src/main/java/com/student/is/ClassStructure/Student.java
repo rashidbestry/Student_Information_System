@@ -30,7 +30,7 @@ public class Student {
         this.phoneNo = phoneNo;
         this.email = email;
         this.gpa = 0.0;
-        this.section = "Mühendislik Fakültesi";
+        this.section = "Bilgisayar Mühendisliği";
         this.address="Adres Belirlenmedi";
         this.stuNotes=new HashMap<>();
         this.lectures=new ArrayList<>();
@@ -192,7 +192,7 @@ public class Student {
     }
 
     public String getSection() {
-        return section;
+        return "Bilgisayar Mühendisliği";
     }
 
 
