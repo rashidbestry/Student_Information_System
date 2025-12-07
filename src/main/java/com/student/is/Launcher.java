@@ -15,7 +15,6 @@ public class Launcher {
         Application.launch(StartController.class, args);
         Database.saveTempToData();
         Database.deleteTemp();
-        Files.delete(Path.of("src/main/resources/com/student/is/pdf/transcript.pdf"));
     }
 }
 

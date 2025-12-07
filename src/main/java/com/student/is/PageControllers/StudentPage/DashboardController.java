@@ -49,8 +49,8 @@ public class DashboardController {
             nameLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.name"), student.getFirstName()));
             lastNameLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.surname"), student.getLastName()));
             bornDateLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.birth_date"), student.getBornDate()));
-            facultyLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.faculty"), student.getFaculty()));
-            sectionLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.section"), student.getSection()));
+            facultyLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.faculty"), student.getSection()));
+            sectionLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.section"), student.getFaculty()));
 
             classLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.class"), student.getClassYear()));
             termLabelTitle.textProperty().bind(Bindings.concat(resourceBundle.getString("student.dashboard.label.term"), "2025-2026 Öğretim Yılı"));

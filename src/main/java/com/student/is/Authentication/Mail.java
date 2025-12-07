@@ -3,12 +3,11 @@ import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import java.util.Properties;
-import java.util.Random;
-import java.util.stream.Collectors;
+import java.util.random.RandomGenerator;
 
 public class Mail {
     public static boolean forgotPasswordMail(String login) {
-        String newpassword = new Random().ints(10, 33, 122).mapToObj(i -> String.valueOf((char) i)).collect(Collectors.joining());
+        int newpassword = RandomGenerator.getDefault().nextInt(3333,9999);
         try {
             final String mailServerUsername = "incomservicetm@gmail.com";
             final String mailServerPassword = "nneq byst lpdz tfhx";
@@ -37,7 +36,7 @@ public class Mail {
         } catch(MessagingException e) {
             return false;
         }
-        Authentication.changePassword(login, newpassword);
+        Authentication.changePassword(login, String.valueOf(newpassword));
         return true;
     }
 }

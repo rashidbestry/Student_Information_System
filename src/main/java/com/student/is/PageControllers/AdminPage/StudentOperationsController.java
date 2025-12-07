@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -48,8 +49,12 @@ public class StudentOperationsController {
         phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNo"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
 
+        studentTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
         loadStudentTable();
     }
+
+
 
     private void loadStudentTable() {
         ObservableList<Student> stu = FXCollections.observableArrayList(Database.studentList);
@@ -72,7 +77,6 @@ public class StudentOperationsController {
             System.err.println("Öğrenci arama işlemi sırasında hata oluştu: ");
         }
     }
-
     public void changePasswordActionButton() throws IOException {
         Student selectedStudent = studentTable.getSelectionModel().getSelectedItem();
         if (selectedStudent == null) {
@@ -104,7 +108,7 @@ public class StudentOperationsController {
 
     }
     public void deleteStudentActionButton() throws IOException {
-        Student seciliOgrenci = studentTable.getSelectionModel().getSelectedItem();
+        ObservableList<Student> seciliOgrenci = studentTable.getSelectionModel().getSelectedItems();
         if (seciliOgrenci == null) {
             return;
         }
@@ -125,7 +129,9 @@ public class StudentOperationsController {
             dialogStage.showAndWait();
 
             if (controller.isstatus()) {
-                Database.deleteObject(seciliOgrenci); // database den sil  ve RAM dende silmeli
+                for (Student stu : seciliOgrenci){
+                    Database.deleteObject(stu); // database den sil  ve RAM dende silmeli
+                }
                 System.out.println("Öğrenci silindi");
                 // silme işlemi başarılı
                 loadStudentTable();
@@ -157,6 +163,7 @@ public class StudentOperationsController {
             dialogStage.setScene(new Scene(root));
             dialogStage.showAndWait();
 
+
             System.out.println("öğrenci eklendi");
             loadStudentTable(); //tabloyu güncelle
 
@@ -164,5 +171,9 @@ public class StudentOperationsController {
             System.err.println("Öğrenci Ekle pop-up'ı açılırken hata oluştu: " + e);
             e.printStackTrace();
         }
+    }
+
+    public TableView<Student> getStudentTable() {
+        return studentTable;
     }
 }

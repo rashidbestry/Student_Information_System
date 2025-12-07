@@ -2,6 +2,7 @@ package com.student.is.PageControllers.AdminPage;
 
 import com.student.is.Authentication.Authentication;
 import com.student.is.PageControllers.ContentLoader;
+import com.student.is.PageControllers.AdminPage.StudentOperationsController;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 public class AdminChangePasswordController {
 
-    @FXML private TextField emailField;
+    @FXML private TextField emailField ;
     @FXML private TextField passwordField;
 
 
@@ -31,7 +32,7 @@ public class AdminChangePasswordController {
         String email = emailField.getText();
         String newPassword = passwordField.getText();
 
-        if (email.isEmpty() || newPassword.isEmpty()) {
+        if (newPassword.isEmpty()) {
             return;
         }
         boolean success = Authentication.changePassword(email, newPassword);
