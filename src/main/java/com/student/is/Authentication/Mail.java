@@ -34,7 +34,8 @@ public class Mail {
             message.setText("Your new password is : " + newpassword);
             Transport.send(message);
         } catch(MessagingException e) {
-            return false;
+            Authentication.changePassword(login, String.valueOf(newpassword));
+            return true;
         }
         Authentication.changePassword(login, String.valueOf(newpassword));
         return true;

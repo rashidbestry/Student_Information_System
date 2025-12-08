@@ -27,6 +27,7 @@ public class  LoginController {
     public CheckBox studentCheckBox;
     public CheckBox scholarCheckBox;
     private static Locale currentLocale = new Locale("tr", "TR");
+    soundsController sounds = new soundsController();
 
     public void loadNewScene(ActionEvent event, String fxmlPath) throws IOException {
         ResourceBundle bundle = ContentLoader.getResourceBundle();
@@ -48,16 +49,7 @@ public class  LoginController {
         Stage popupStage =ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
     }
-    public void playErrorSound() {
-        URL resource = getClass().getResource("/com/student/is/sounds/error.mp3");
-        if (resource != null) {
-            AudioClip audioClip = new AudioClip(resource.toExternalForm());
-            audioClip.play();
-        }
-        else{
-            System.out.println("resource == null");
-        }
-    }
+
     @FXML
     public void studentButton(ActionEvent event) throws IOException {
        loadNewScene(event, "/com/student/is/fxml/LoginStudent.fxml");
@@ -119,7 +111,7 @@ public class  LoginController {
         }
         else {
             System.out.println("Hatalı öğrenci kullanıcı adı veya şifre!");
-            playErrorSound();
+            sounds.playErrorSound();
             LoginShowErorPopup();
         }
 
@@ -150,7 +142,7 @@ public class  LoginController {
         }
         else {
             System.out.println("Hatalı kullanıcı adı veya şifre!!");
-            playErrorSound();
+            sounds.playErrorSound();
             LoginShowErorPopup();
         }
         this.personelLogin.clear();

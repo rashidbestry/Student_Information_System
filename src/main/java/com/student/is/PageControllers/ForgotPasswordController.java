@@ -8,10 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
+
 public class ForgotPasswordController {
-    public TextField mailAdress;
+
+    soundsController sounds = new soundsController();
+
 
     public void BackButtonAction(ActionEvent actionEvent) {
         try {
@@ -31,21 +35,25 @@ public class ForgotPasswordController {
 
     }
     public void SendMailShowFailedPopup() throws IOException {
-        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
+        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/SendMailFailedPopUp.fxml");
         popupStage.showAndWait();
     }
     public void SendMailShowSuccessfulPopup() throws IOException {
-        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
+        Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/SendMailSuccessfulPopUp.fxml");
         popupStage.showAndWait();
     }
+    public TextField mailAdress;
     public void SendEmailButtonAction(ActionEvent actionEvent) throws IOException {
         String mail = this.mailAdress.getText();
         // Authentication.forgotPassword(mail) "mail adresi kontrol edilecek ve mail gönderilecek"
         if(Authentication.forgotPassword(mail)){
+            sounds.playErrorSound();
             SendMailShowSuccessfulPopup();
         }
         else{
+            sounds.playErrorSound();
             SendMailShowFailedPopup();
+
         }
 
     }
