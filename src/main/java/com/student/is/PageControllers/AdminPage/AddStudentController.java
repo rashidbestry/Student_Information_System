@@ -17,6 +17,13 @@ public class AddStudentController {
     @FXML private TextField emailField;
 
     private Stage dialogStage;
+
+    public void initialize() {
+        String studentNumber = Database.getNewStudentId();
+        studentNumberField.setText(studentNumber);
+        System.out.println(studentNumber);
+
+    }
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
@@ -26,6 +33,7 @@ public class AddStudentController {
             System.out.println("Lütfen zorunlu alanları doldurun!");
             return;
         }
+
         try {
             String studentNumber = Database.getNewStudentId();
             String name = nameField.getText();

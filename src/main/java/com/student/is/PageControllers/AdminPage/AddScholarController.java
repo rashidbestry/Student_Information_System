@@ -18,6 +18,13 @@ public class AddScholarController {
     @FXML private TextField emailField;
     @FXML private TextField officeHoursField;
 
+
+    public void initialize (){
+        String academicianNumber =Database.getNewPersonalId();
+        academicianNumberField.setText(academicianNumber);
+    }
+
+
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }

@@ -45,9 +45,7 @@ BİLM008-2023*Teknik Secmeli Dersler(5)*false*15*25*4*Türkçe*Yüz Yüze*3*0*64
 BİLM088-2023*Zorunlu Dersler(2)*false*3*5*4*Türkçe*Yüz Yüze*0*0*75464563454*Bahar
 BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283*Bahar
 %%lectureend
-
 ---------------------------------------------------------------------------------------------------------------
-
 &&perId*firstName*lastName*title*email*web*office-hours
 34554334555*Adnan Fatih*Kocamaz*Doç*fatih.kocamaz@inonu.edu.tr*http://inonu.edu.tr/akademik/fatih.kocamaz*Salı, 13.30 - 15.00
 24234364355*Cengiz*Hark*Dr*cengiz.hark@inonu.edu.tr*http://inonu.edu.tr/akademik/cengiz.hark*Salı, 16.00 - 17.00
@@ -76,7 +74,6 @@ BİLM888-2023*UME(1)*false*5*30*4*Türkçe*Yüz Yüze*0*0*88237684283*Bahar
 77776735467*Celaleddin*Yeroğlu*Prof*c.yeroglu@inonu.edu.tr*http://avesis.inonu.edu.tr/c.yeroglu*Pazartesi, 10:00 - 12:00
 &&perend
 ---------------------------------------------------------------------------------------------------------------
-
 ##stuId*firstName*lastName*borndate*classYear*faculty*notes*lectures*phoneNum*email*address
 02240200001*Merve*Şahin*22.08.2005*3*Bilgisayar Mühendisligi*(65,73)(65,73)*BİLM301-2019(9,8)(10)(20)/BİLM311-2019(0,0)(59)(65)/BİLM335-2019(3,4)(59)(64)/BİLM337-2019(0,3)(73)(94)/BİLM365-2022(2,2)(97)(97)/BİLM005-2021(4,3)(93)(58)/BİLM302-2011(3,3)(75)(59)/BİLM306-2019(2,3)(75)(87)/BİLM374-2022(3,4)(61)(64)/BİLM376-2022(1,4)(74)(93)/BİLM378-2022(0,0)(99)(85)/BİLM006-2021(0,2)(54)(50)*+905550450001*merve.sahin560@icloud.com*İstanbul/Çankaya/Fatih Cd. No:119, Building:5, Apt:2, Postcode:57414
 02240200002*Tolga*Koç*28.07.2003*1*Bilgisayar Mühendisligi*(92,57)(99,85)*BİLM101-2019(1,1)(67)(54)/BİLM103-2022(4,1)(84)(86)/BİLM105-2021(3,4)(88)(51)/BİLM111-2021(0,3)(93)(79)/BİLM181-2009(1,4)(61)(53)/BİLM191-2009(0,1)(52)(71)/BİLM193-2019(4,2)(65)(73)/BİLM197-2009(3,1)(86)(59)/BİLM104-2022(4,3)(65)(65)/BİLM106-2022(0,1)(51)(96)/BİLM182-2009(3,1)(75)(84)/BİLM186-2022(3,4)(54)(54)/BİLM192-2009(4,1)(87)(98)/BİLM194-2019(3,3)(87)(55)/BİLM198-2009(4,2)(99)(74)*+905550450002*tolga.koc778@gmail.com*İstanbul/Merkez/Atatürk Cd. No:45, Building:9, Apt:34, Postcode:61629
