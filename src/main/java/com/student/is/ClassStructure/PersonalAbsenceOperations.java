@@ -13,7 +13,6 @@ public class PersonalAbsenceOperations {
     public IntegerProperty teorikAbsence;
     public IntegerProperty praciteAbsence;
     public StringProperty absenceStatus;
-
     public Student studentReferans;   // öğrenci için bir referans
     public Lecture lectureReferans;
 
@@ -24,7 +23,6 @@ public class PersonalAbsenceOperations {
         this.teorikAbsence = new SimpleIntegerProperty(teorikAbsence);
         this.praciteAbsence = new SimpleIntegerProperty(praciteAbsence);
         this.absenceStatus = new SimpleStringProperty(absenceStatus);
-
         this.studentReferans = studentReferans;
         this.lectureReferans = lectureReferans;
     }

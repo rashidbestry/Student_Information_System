@@ -16,14 +16,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class LectureOperationsController {
 
     @FXML private TextField searchField;
-
     @FXML
     private TableView<Lecture> LectureOperationTable;
     @FXML private TableColumn<Lecture, String> LectureCodeColumn;
@@ -34,8 +32,6 @@ public class LectureOperationsController {
     @FXML private TableColumn<Lecture, String> LectureTeorikColumn;
     @FXML private TableColumn<Lecture, String> LecturePraticColumn;
     @FXML private TableColumn<Lecture, String> LectureSeasonColumn;
-
-
 
     public void initialize(){
 
@@ -53,12 +49,10 @@ public class LectureOperationsController {
 
         loadLectureTable();
     }
-
     public void loadLectureTable(){
         ObservableList<Lecture> list = FXCollections.observableArrayList(Database.lectureList);
         LectureOperationTable.setItems(list);
     }
-
     public void searchActionButton() {
         String searchText = searchField.getText();
 
@@ -76,9 +70,6 @@ public class LectureOperationsController {
             System.err.println("Ders arama işlemi sırasında hata oluştu: ");
         }
     }
-
-
-
     public void deleteLectureActionButton() throws IOException {
         ObservableList<Lecture> lec = LectureOperationTable.getSelectionModel().getSelectedItems();
         if (lec == null) {

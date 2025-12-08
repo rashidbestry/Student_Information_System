@@ -1,7 +1,6 @@
 package com.student.is.ClassStructure;
 
 import com.student.is.DataManagement.Database;
-
 import java.util.ArrayList;
 
 public class Personal {

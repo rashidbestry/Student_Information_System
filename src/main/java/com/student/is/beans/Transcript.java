@@ -2,8 +2,6 @@ package com.student.is.beans;
 
 import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Lecture;
-import com.student.is.ClassStructure.Student;
-import com.student.is.DataManagement.Database;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JRDesignExpression;
 import net.sf.jasperreports.engine.design.JRDesignImage;
@@ -45,13 +43,11 @@ public class Transcript {
 
         System.out.println("PDF Created");
     }
-
     private static void fixImagePaths(JasperDesign design) {
         // Check common bands for the logo image
         fixBand(design.getTitle());
         fixBand(design.getPageHeader());
     }
-
     private static void fixBand(JRBand band) {
         if (band == null) return;
         for (JRElement element : band.getElements()) {

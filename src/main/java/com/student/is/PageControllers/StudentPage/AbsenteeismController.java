@@ -12,7 +12,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -70,7 +69,6 @@ public class AbsenteeismController {
         }
         lectureAbsenceTable.setItems(Data);
     }
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/StudentDashboard.fxml");

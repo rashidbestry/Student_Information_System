@@ -5,7 +5,6 @@ import com.student.is.ClassStructure.Personal;
 import com.student.is.ClassStructure.Student;
 import com.student.is.DataManagement.Database;
 import net.sf.jasperreports.engine.JRException;
-
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
@@ -129,7 +128,6 @@ public class Authentication {
                         br.close();
                         return Mail.forgotPasswordMail(login);
                     }
-
                 }
                 br.close();
             }
@@ -139,7 +137,5 @@ public class Authentication {
         }
         return false;
     }
-
-
 }
 

@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class InformationController {
@@ -19,7 +18,6 @@ public class InformationController {
     @FXML TextField surnameTextField;
     @FXML TextField birthDateTextField;
     @FXML TextField numberTextField;
-
     @FXML TextField mailTextField;
     @FXML TextField phoneTextField;
     @FXML TextArea adressTextArea;
@@ -59,19 +57,6 @@ public class InformationController {
         });
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/StudentDashboard.fxml");

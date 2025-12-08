@@ -19,21 +19,6 @@ public class Database {
     public static ArrayList<Lecture> findedLectureList = new ArrayList<>();
 
 
-    public static void main(String[] args) {
-
-        Database.createLectureList();
-        Database.createStudentList();
-        Database.createPersonalList();
-
-        for (Lecture lec : Database.lectureList)
-            lec.createStudentListForLecture();
-
-        createTemp();
-        createObject(personalList.get(0));
-        int end = 0;
-
-    }
-
     public static void createTemp() {
         try  {
             BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/data.bin"));

@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class ScholarBasePageController {
@@ -19,8 +18,6 @@ public class ScholarBasePageController {
     @FXML
     public AnchorPane scholarMainPageAnchorPane;
     public Label scholarNameLabel;
-
-
     @FXML
     public void initialize() {
         ContentLoader.setMainContentPane(scholarMainPageAnchorPane);
@@ -33,7 +30,6 @@ public class ScholarBasePageController {
             scholarNameLabel.setText(currentPersonal.getName() + " " + currentPersonal.getSurname());
         }
     }
-
     public void GradeOperationsButtonAction(ActionEvent actionEvent) throws IOException {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarGradeOperations.fxml");
     }
@@ -43,8 +39,6 @@ public class ScholarBasePageController {
     public void DashboardOperationsButtonAction(ActionEvent actionEvent) throws IOException {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
     }
-
-
     public  void exitButtonAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/student/is/fxml/Welcome.fxml"),ContentLoader.getResourceBundle());
         Parent root = loader.load();

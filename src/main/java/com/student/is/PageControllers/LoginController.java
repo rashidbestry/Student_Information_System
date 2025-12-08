@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
@@ -27,9 +26,7 @@ public class  LoginController {
     public TextField personelPasswordVisible;
     public CheckBox studentCheckBox;
     public CheckBox scholarCheckBox;
-
     private static Locale currentLocale = new Locale("tr", "TR");
-
 
     public void loadNewScene(ActionEvent event, String fxmlPath) throws IOException {
         ResourceBundle bundle = ContentLoader.getResourceBundle();
@@ -43,8 +40,6 @@ public class  LoginController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-
     public void LoginShowErorPopup() throws IOException {
         Stage popupStage =ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
@@ -53,7 +48,6 @@ public class  LoginController {
         Stage popupStage =ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
     }
-
     public void playErrorSound() {
         URL resource = getClass().getResource("/com/student/is/sounds/error.mp3");
         if (resource != null) {
@@ -64,16 +58,13 @@ public class  LoginController {
             System.out.println("resource == null");
         }
     }
-
     @FXML
     public void studentButton(ActionEvent event) throws IOException {
        loadNewScene(event, "/com/student/is/fxml/LoginStudent.fxml");
     }
-
     public void personnelButton(ActionEvent event) throws IOException {
         loadNewScene(event, "/com/student/is/fxml/LoginPersonel.fxml");
     }
-
     public void passwordShowCheck(ActionEvent event) throws IOException {
         if(studentCheckBox.isSelected()){
             studentPassword.setDisable(true);
@@ -100,7 +91,6 @@ public class  LoginController {
             personelPassword.setText(personelPasswordVisible.getText());
         }
     }
-
     public void studentMainPage(ActionEvent event) throws IOException, JRException {
         String login = this.studentLogin.getText();
         String password = this.studentPassword.getText();
@@ -136,7 +126,6 @@ public class  LoginController {
         this.studentLogin.clear();
         this.studentPassword.clear();
     }
-
     public void personelMainPage(ActionEvent event) throws IOException {
         String login = this.personelLogin.getText();
         String password = this.personelPassword.getText();
@@ -167,11 +156,9 @@ public class  LoginController {
         this.personelLogin.clear();
         this.personelPassword.clear();
     }
-
     @FXML
     public void backButtonAction(ActionEvent event) throws IOException {
         loadNewScene(event, "/com/student/is/fxml/Welcome.fxml");
-
     }
     @FXML
     public void forgotPasswordButtonAction(ActionEvent event) throws IOException,IOException{

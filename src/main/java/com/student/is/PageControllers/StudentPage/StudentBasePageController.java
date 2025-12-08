@@ -2,7 +2,6 @@ package com.student.is.PageControllers.StudentPage;
 
 import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
-import com.student.is.beans.Transcript;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,11 +15,8 @@ import net.sf.jasperreports.engine.JRException;
 
 import java.io.IOException;
 public class StudentBasePageController {
-
-
     @FXML public AnchorPane studentMainPageAnchorPane;
     @FXML private Label studentNameLabel;
-
     @FXML
     public void initialize() throws JRException {
         ContentLoader.setMainContentPane(studentMainPageAnchorPane);

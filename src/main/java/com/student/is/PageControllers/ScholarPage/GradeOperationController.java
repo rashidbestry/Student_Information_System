@@ -14,7 +14,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,8 +104,6 @@ public class GradeOperationController {
         }
 
     }
-
-
     public void load(Lecture lec,ArrayList<Student> student){
         //Lecture lec = user.getLectures().get(0);
 
@@ -173,7 +170,6 @@ public class GradeOperationController {
         StudentNoteOperationTable.setItems(Data);
 
     }
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");
@@ -226,5 +222,4 @@ public class GradeOperationController {
         }
 
     }
-
 }

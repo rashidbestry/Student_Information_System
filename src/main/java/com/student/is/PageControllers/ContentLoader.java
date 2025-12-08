@@ -1,6 +1,5 @@
 package com.student.is.PageControllers;
 
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,16 +7,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class ContentLoader {
-
     private static AnchorPane currentMainContentPane; //içerik Alanı
     private static Object currentUserSession; //kullanıcı oturumu
-
     private static final String BUNDLE_NAME = "com.student.is.language.messages";  //güncel bundle ismi
     public static ResourceBundle resourceBundle;
 
@@ -27,7 +23,6 @@ public class ContentLoader {
     public static ResourceBundle getResourceBundle() {
         return resourceBundle;
     }
-
     public static void setMainContentPane(AnchorPane pane) {
         currentMainContentPane = pane;
     }
@@ -37,7 +32,6 @@ public class ContentLoader {
     public static Object getCurrentUserSession() {  //kullanıcıyı çeker
         return currentUserSession;
     }
-
     public static void loadPage(String fxmlAdress) {
         if (currentMainContentPane == null) {
             System.out.println("Hata: Ana içerik AnchorPane ayarlanmadı!");

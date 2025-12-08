@@ -5,8 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import javafx.fxml.FXML;
-
 public class AddStudentController {
 
     @FXML private TextField studentNumberField;
@@ -19,7 +17,6 @@ public class AddStudentController {
     @FXML private TextField emailField;
 
     private Stage dialogStage;
-
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }

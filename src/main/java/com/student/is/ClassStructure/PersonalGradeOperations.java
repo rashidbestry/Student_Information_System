@@ -12,7 +12,6 @@ public class PersonalGradeOperations {
     public DoubleProperty  averageNote;
     public StringProperty letterNote;
     public StringProperty status;
-
     public Student studentReferans;   // öğrenci için bir referans
     public Lecture lectureReferans;  // ders için bir referans
 

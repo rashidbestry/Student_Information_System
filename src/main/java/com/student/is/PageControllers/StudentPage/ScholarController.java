@@ -10,7 +10,6 @@ import javafx.scene.control.TableView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.util.ArrayList;
 
 public class ScholarController {
@@ -34,14 +33,12 @@ public class ScholarController {
 
         loadScholarData();
     }
-
     public void loadScholarData(){
         ArrayList<Personal> dataList = Database.personalList;
 
         ObservableList<Personal> observableData = FXCollections.observableArrayList(dataList);
         scholarTable.setItems(observableData);
     }
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/StudentDashboard.fxml");

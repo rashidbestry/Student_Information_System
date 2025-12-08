@@ -2,7 +2,6 @@ package com.student.is.beans;
 
 import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Lecture;
-
 import java.time.LocalDate;
 
 public class StudentDetails {
@@ -35,19 +34,15 @@ public class StudentDetails {
         int sum = 0;
         for (Lecture lec : Authentication.currentStudentUser.lectures)
             sum += lec.lectureAKTS;
-
         this.sumAKTS = String.valueOf(sum);
-
     }
 
     public String getNameSurname() {
         return nameSurname;
     }
-
     public String getSumAKTS() {
         return sumAKTS;
     }
-
     public void setSumAKTS(String sumAKTS) {
         this.sumAKTS = sumAKTS;
     }

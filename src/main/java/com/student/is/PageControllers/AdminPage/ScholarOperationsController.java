@@ -16,7 +16,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -47,7 +46,6 @@ public class ScholarOperationsController {
 
         loadTable();
     }
-
     public void loadTable() {
         ObservableList<Personal> list = FXCollections.observableArrayList(Database.personalList);
         personalTable.setItems(list);
@@ -69,8 +67,6 @@ public class ScholarOperationsController {
             System.err.println("Akademisyen arama işlemi sırasında hata oluştu: ");
         }
     }
-
-
     public void deleteScholarActionButton() throws IOException {
         ObservableList<Personal> scholar = personalTable.getSelectionModel().getSelectedItems();
         if (scholar == null) {

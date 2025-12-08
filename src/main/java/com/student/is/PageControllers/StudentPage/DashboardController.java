@@ -4,10 +4,6 @@ import com.student.is.Authentication.Authentication;
 import com.student.is.ClassStructure.Student;
 import com.student.is.PageControllers.ContentLoader;
 import javafx.beans.binding.Bindings;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import com.student.is.beans.Transcript;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,11 +15,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.nio.channels.FileChannel;
-
 import static com.student.is.PageControllers.ContentLoader.resourceBundle;
 
 public class DashboardController {
-
 
     @FXML private Label nameLabelTitle;
     @FXML private Label lastNameLabelTitle;

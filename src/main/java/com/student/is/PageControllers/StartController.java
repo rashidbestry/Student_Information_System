@@ -7,14 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.Locale;
 
 public class StartController extends Application {
-
     private static final Locale DEFAULT_LOCALE = new Locale("tr", "TR"); //varsayılan dil türkçe
-
     @Override
     public void start(Stage stage) throws IOException {
 

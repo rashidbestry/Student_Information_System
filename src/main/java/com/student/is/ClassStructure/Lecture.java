@@ -36,7 +36,6 @@ public class Lecture {
     public Lecture() {
 
     }
-
     public void createStudentListForLecture(){
         for (Student student : Database.studentList){
             if (student.stuAbsence.containsKey(this.lectureCode)){

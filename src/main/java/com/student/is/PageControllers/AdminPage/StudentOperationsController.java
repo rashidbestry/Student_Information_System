@@ -16,7 +16,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -24,8 +23,6 @@ public class StudentOperationsController {
     @FXML
     private TableView<Student> studentTable;
     @FXML private TextField searchField;
-
-
     @FXML
     private TableColumn<Student, String> studentNumberColumn;
     @FXML private TableColumn<Student, String> nameColumn;
@@ -53,9 +50,6 @@ public class StudentOperationsController {
 
         loadStudentTable();
     }
-
-
-
     private void loadStudentTable() {
         ObservableList<Student> stu = FXCollections.observableArrayList(Database.studentList);
         studentTable.setItems(stu);
@@ -173,7 +167,4 @@ public class StudentOperationsController {
         }
     }
 
-    public TableView<Student> getStudentTable() {
-        return studentTable;
-    }
 }

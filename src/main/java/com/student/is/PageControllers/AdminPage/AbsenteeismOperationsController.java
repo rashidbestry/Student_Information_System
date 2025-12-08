@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,14 +25,12 @@ public class AbsenteeismOperationsController {
     @FXML public Button applyButton;
     @FXML
     private TableView<PersonalAbsenceOperations> AbsenceTable;
-
     @FXML private TableColumn<PersonalAbsenceOperations, String> colStudentNumber;
     @FXML private TableColumn<PersonalAbsenceOperations, String> colStudentName;
     @FXML private TableColumn<PersonalAbsenceOperations, String> colStudentSurname;
     @FXML private TableColumn<PersonalAbsenceOperations, Integer> colTeory;
     @FXML private TableColumn<PersonalAbsenceOperations, Integer> colPratic;
     @FXML private TableColumn<PersonalAbsenceOperations, Double> colStatus;
-
 
     public void initialize(){
         AbsenceMenuButtonOnAction(Database.lectureList);
@@ -78,8 +75,6 @@ public class AbsenteeismOperationsController {
             Database.changeObjectData(student); // student objesini veritabanında güncelle
         });
 
-
-
     }
     public void loadTable(Lecture lec, ArrayList<Student> student){
         ObservableList<PersonalAbsenceOperations> Data = FXCollections.observableArrayList();
@@ -93,15 +88,12 @@ public class AbsenteeismOperationsController {
 
         });
 
-
         String studentNumber;
         String studentName;
         String studentSurname;
         int teorikAbsence;
         int praciteAbsence;
         String absenceStatus;
-
-
 
         for  (Student stu : student){
             studentNumber=stu.getStuId();
@@ -121,11 +113,9 @@ public class AbsenteeismOperationsController {
             }
             PersonalAbsenceOperations yeni = new PersonalAbsenceOperations(studentNumber,studentName,studentSurname,teorikAbsence,praciteAbsence,absenceStatus,stu,lec);
             Data.add(yeni);
-
         }
         AbsenceTable.setItems(Data);
     }
-
     public void AbsenceMenuButtonOnAction(List<Lecture> lectures) {
         AbsenceMenuButton.getItems().clear();
         for(Lecture lecture : lectures){
@@ -137,7 +127,6 @@ public class AbsenteeismOperationsController {
             });
             AbsenceMenuButton.getItems().add(menuItem);
         }
-
     }
     @FXML
     public ArrayList<Student> SearchStudentButtonAction(){
@@ -182,8 +171,6 @@ public class AbsenteeismOperationsController {
 
             }
             Database.changeObjectData(student); // student objesini veritabanında güncelle
-
         }
     }
-
 }

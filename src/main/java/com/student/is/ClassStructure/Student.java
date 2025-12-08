@@ -121,7 +121,6 @@ public class Student {
         }
     }
 
-
 //  GETTERS /////////////////////////////////////////////////////////
 
     public HashMap<String, String> getStuAbsence() {

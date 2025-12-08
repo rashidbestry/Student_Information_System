@@ -8,12 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
-
 public class ForgotPasswordController {
-
+    public TextField mailAdress;
 
     public void BackButtonAction(ActionEvent actionEvent) {
         try {
@@ -40,7 +38,6 @@ public class ForgotPasswordController {
         Stage popupStage = ContentLoader.loadPopupStage("/com/student/is/fxml/LoginErrorPopUp.fxml");
         popupStage.showAndWait();
     }
-    public TextField mailAdress;
     public void SendEmailButtonAction(ActionEvent actionEvent) throws IOException {
         String mail = this.mailAdress.getText();
         // Authentication.forgotPassword(mail) "mail adresi kontrol edilecek ve mail gönderilecek"

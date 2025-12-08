@@ -6,9 +6,6 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 
-import javax.xml.crypto.Data;
-
-
 public class AddScholarController {
     private Stage dialogStage;
 

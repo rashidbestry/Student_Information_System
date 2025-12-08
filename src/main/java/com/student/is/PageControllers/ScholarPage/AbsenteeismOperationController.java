@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,12 +93,6 @@ public class AbsenteeismOperationController {
            absenceMenuButton.getItems().add(menuItem);
        }
     }
-
-
-
-
-
-
     public void load(Lecture lec,ArrayList<Student> student){
 
         ObservableList<PersonalAbsenceOperations> Data = FXCollections.observableArrayList();
@@ -144,11 +137,9 @@ public class AbsenteeismOperationController {
         StudentAbsenceOperationTable.setItems(Data);
 
     }
-
     @FXML public ArrayList<Student> SearchStudentButtonAction(){
         return Database.findedStudentList;
     }
-
     @FXML
     public void BackToMainButtonAction(ActionEvent event) {
         ContentLoader.loadPage("/com/student/is/fxml/ScholarDashboard.fxml");

@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,6 @@ public class GradeOperationsController {
 
     @FXML
     private TableView<PersonalGradeOperations> noteTable;
-
     @FXML private TableColumn<PersonalGradeOperations, String> colStudentNumber;
     @FXML private TableColumn<PersonalGradeOperations, String> colStudentName;
     @FXML private TableColumn<PersonalGradeOperations, String> colStudentSurname;
@@ -35,7 +33,6 @@ public class GradeOperationsController {
     @FXML private TableColumn<PersonalGradeOperations, Double> colAverage;
     @FXML private TableColumn<PersonalGradeOperations, String> colLetter;
     @FXML private TableColumn<PersonalGradeOperations, String> colStatus;
-
 
     public void initialize() {
 
@@ -87,7 +84,6 @@ public class GradeOperationsController {
         });
 
     }
-
     public void loadTable(Lecture lec, ArrayList<Student> student) {
         ObservableList<PersonalGradeOperations> Data = FXCollections.observableArrayList();
 
