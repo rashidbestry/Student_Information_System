@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -34,6 +35,8 @@ public class ScholarOperationsController {
 
     public void initialize() {
 
+        personalTable.setEditable(true);
+
         colPerId.setCellValueFactory(new PropertyValueFactory<>("perId"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colSurname.setCellValueFactory(new PropertyValueFactory<>("surname"));
@@ -43,6 +46,16 @@ public class ScholarOperationsController {
         colOfficehours.setCellValueFactory(new PropertyValueFactory<>("officehours"));
 
         personalTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        colPerId.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colName.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colSurname.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colTitle.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colEmail.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colWeb.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        colOfficehours.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+
+
 
         loadTable();
     }

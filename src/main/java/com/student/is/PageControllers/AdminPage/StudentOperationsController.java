@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -28,7 +29,7 @@ public class StudentOperationsController {
     @FXML private TableColumn<Student, String> nameColumn;
     @FXML private TableColumn<Student, String> surnameColumn;
     @FXML private TableColumn<Student, String> birthDateColumn;
-    @FXML private TableColumn<Student, String> studentClassColumn;
+    @FXML private TableColumn<Student, Integer> studentClassColumn;
     @FXML private TableColumn<Student, String> facultyColumn;
     @FXML private TableColumn<Student, String> phoneNumberColumn;
     @FXML private TableColumn<Student, String> emailColumn;
@@ -36,6 +37,7 @@ public class StudentOperationsController {
 
     public void initialize() {
 
+        studentTable.setEditable(true);
         // 1) Kolonları Student modeline bağlama
         studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("stuId"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
@@ -47,6 +49,17 @@ public class StudentOperationsController {
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         studentTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        studentNumberColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        surnameColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        birthDateColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        studentClassColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        facultyColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        phoneNumberColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        emailColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+
+
 
         loadStudentTable();
     }

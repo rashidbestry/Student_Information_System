@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -26,14 +27,16 @@ public class LectureOperationsController {
     private TableView<Lecture> LectureOperationTable;
     @FXML private TableColumn<Lecture, String> LectureCodeColumn;
     @FXML private TableColumn<Lecture, String> LectureNameColumn;
-    @FXML private TableColumn<Lecture, String> LectureCreditColumn;
-    @FXML private TableColumn<Lecture, String> LectureAktsColumn;
-    @FXML private TableColumn<Lecture, String> LectureClassColumn;
-    @FXML private TableColumn<Lecture, String> LectureTeorikColumn;
-    @FXML private TableColumn<Lecture, String> LecturePraticColumn;
+    @FXML private TableColumn<Lecture, Integer> LectureCreditColumn;
+    @FXML private TableColumn<Lecture, Integer> LectureAktsColumn;
+    @FXML private TableColumn<Lecture, Integer> LectureClassColumn;
+    @FXML private TableColumn<Lecture, Integer> LectureTeorikColumn;
+    @FXML private TableColumn<Lecture, Integer> LecturePraticColumn;
     @FXML private TableColumn<Lecture, String> LectureSeasonColumn;
 
     public void initialize(){
+
+        LectureOperationTable.setEditable(true);
 
         LectureCodeColumn.setCellValueFactory(new PropertyValueFactory<>("lectureCode"));
         LectureNameColumn.setCellValueFactory(new PropertyValueFactory<>("lectureName"));
@@ -46,6 +49,14 @@ public class LectureOperationsController {
 
         LectureOperationTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
+        LectureCodeColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        LectureNameColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
+        LectureCreditColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        LectureAktsColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        LectureClassColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        LectureTeorikColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        LecturePraticColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.IntegerStringConverter()));
+        LectureSeasonColumn.setCellFactory(TextFieldTableCell.forTableColumn( new javafx.util.converter.DefaultStringConverter()));
 
         loadLectureTable();
     }
