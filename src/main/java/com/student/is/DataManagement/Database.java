@@ -17,7 +17,12 @@ public class Database {
     public static ArrayList<Student> findedStudentList = new ArrayList<>();
     public static ArrayList<Personal> findedPersonalList = new ArrayList<>();
     public static ArrayList<Lecture> findedLectureList = new ArrayList<>();
-
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        createStudentList();
+        createLectureList();
+        createPersonalList();
+        int b=0;
+    }
 
     public static void createTemp() {
         try  {

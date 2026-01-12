@@ -171,7 +171,6 @@ public class StudentOperationsController {
             dialogStage.showAndWait();
 
 
-            System.out.println("öğrenci eklendi");
             loadStudentTable(); //tabloyu güncelle
 
         } catch (IOException e) {
