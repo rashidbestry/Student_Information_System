@@ -327,12 +327,30 @@ public class Database {
     public static boolean createObject(Object object){
         if (object instanceof Student) {
             try {
+                ////------------------LECTUREINFO----------------------////
+                StringBuilder sb =new StringBuilder();
+
+                for(Lecture lecture:((Student) object).lectures){
+                    String code = lecture.getLectureCode();
+                    String absence = ((Student) object).getStuAbsence().get(code);
+                    String notes = ((Student) object).getStuNotes().get(code);
+                    String[] note =notes.split(",");
+
+                    sb.append(code).append("(").append(absence).append(")")
+                            .append("(").append(note[0]).append(")")
+                            .append("(").append(note[1]).append(")")
+                            .append("/");
+                }
+                sb.deleteCharAt(sb.length()-1); // sondaki '/' sil
+                String lectureInfo = sb.toString();
+                ////-------------------------------------------------------------------/////
+
                 BufferedReader br = new BufferedReader(new FileReader("src/main/resources/com/student/is/database/temp.bin"));
                 BufferedWriter wr = new BufferedWriter(new FileWriter("src/main/resources/com/student/is/database/temp_temp.bin"));
                 String line;
                 while ((line = br.readLine()) != null) {
                     if ((line.equals("##stuend"))) {
-                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + String.valueOf(((Student) object).classYear) + "*" + ((Student) object).faculty + "*" + " " + "*" +  " " + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" + " " + "\n");
+                        wr.write(((Student) object).stuId + "*" + ((Student) object).firstName + "*" + ((Student) object).lastName + "*" + ((Student) object).bornDate + "*" + String.valueOf(((Student) object).classYear) + "*" + ((Student) object).faculty + "*" + ((Student) object).notes.toString() + "*" +  lectureInfo + "*" + ((Student) object).phoneNo + "*" + ((Student) object).email + "*" +((Student) object).address + " "+ "\n");
                         wr.write("##stuend\n");
                         break;
                     }

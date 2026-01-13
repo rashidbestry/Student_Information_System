@@ -32,7 +32,7 @@ public class Student {
         this.gpa = 0.0;
         this.section = "Mühendislik Fakültesi";
         this.address="Adres Belirlenmedi";
-        this.notes=new Notes("(00,00)(00,00)");
+        this.notes=new Notes();
         this.lectures = new ArrayList<>();
         this.stuNotes=new HashMap<>();
         this.stuAbsence=new HashMap<>();

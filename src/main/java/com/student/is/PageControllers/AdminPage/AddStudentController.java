@@ -23,7 +23,7 @@ public class AddStudentController {
     private Stage dialogStage;
 
     public void initialize() {
-        String studentNumber ="02240201199";
+        String studentNumber =Database.getNewStudentId();
         studentNumberField.setText(studentNumber);
 
 
@@ -48,7 +48,7 @@ public class AddStudentController {
         }
 
         try {
-            String studentNumber ="02240201199";
+            String studentNumber =studentNumberField.getText();
             String name = nameField.getText();
             String surname = surnameField.getText();
             String birthDate = birthDateField.getText();
@@ -66,7 +66,7 @@ public class AddStudentController {
                 if((name.length()<=25) || (name.length()>=2) || (surname.length()<=25) || (surname.length()>=2) || (birthDate.length()==10) || (classYear>=1) || (classYear<=6) || (faculty.contains("Fakültesi")) || (phone.length()==13) || (email.length()<=50) || (email.contains("@"))){
                     Student newStudent = new Student(studentNumber, name, surname, birthDate, classYear, faculty, phone, email);
                     Database.studentList.add(newStudent); //database ekle
-                    //Database.createObject(newStudent);
+                    Database.createObject(newStudent);
                     dialogStage.close();
                 }
 
