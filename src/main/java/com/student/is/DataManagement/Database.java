@@ -1,4 +1,6 @@
 package com.student.is.DataManagement;
+import com.student.is.Authentication.Authentication;
+import com.student.is.Authentication.Encryption;
 import com.student.is.ClassStructure.*;
 
 import java.io.*;
@@ -6,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.random.RandomGenerator;
 
 
@@ -324,9 +327,65 @@ public class Database {
         }
         return false;
     }
+    public static boolean createAuth(Object object) {
+
+        String DEFAULT_PASSWORD = "827ccb0eea8a706c4c34a16891f84e7b";
+
+        File file = new File("src/main/resources/com/student/is/database/auth.bin");
+        List<String> lines = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                lines.add(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Dosya okuma hatası: " + e.getMessage());
+            return false;
+        }
+
+        String newLine;
+
+        if (object instanceof Personal) {
+            Personal p = (Personal) object;
+            newLine = p.getEmail() + " " +DEFAULT_PASSWORD;
+
+            // personnelend ÜSTÜNE ekle
+            int index = lines.indexOf("personnelend");
+            if (index == -1) return false;
+
+            lines.add(index, newLine);
+
+        } else if (object instanceof Student) {
+            Student s = (Student) object;
+            newLine = s.getStuId() + "@ogr.inonu.edu.tr " + DEFAULT_PASSWORD;
+
+            // personnelend ALTINA ekle
+            int index = lines.indexOf("personnelend");
+            if (index == -1) return false;
+
+            lines.add(newLine);
+
+        } else {
+            return false;
+        }
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+            for (String l : lines) {
+                bw.write(l);
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Dosya yazma hatası: " + e.getMessage());
+            return false;
+        }
+
+        return true;
+    }
     public static boolean createObject(Object object){
         if (object instanceof Student) {
             try {
+                createAuth((Student) object);
                 ////------------------LECTUREINFO----------------------////
                 StringBuilder sb =new StringBuilder();
 
