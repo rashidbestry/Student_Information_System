@@ -12,6 +12,11 @@ public class AdminChangePasswordController {
     @FXML private TextField emailField ;
     @FXML private TextField passwordField;
 
+    public void setEmail(String email) {
+        emailField.setText(email);
+        emailField.setEditable(false); // admin değiştirmesin
+    }
+
     private Stage dialogStage; // Pop-up penceresini kapatmak için
 
     // Ana Controller'dan çağrılır
