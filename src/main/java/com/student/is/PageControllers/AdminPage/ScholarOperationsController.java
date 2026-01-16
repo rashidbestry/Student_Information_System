@@ -63,6 +63,7 @@ public class ScholarOperationsController {
         ObservableList<Personal> list = FXCollections.observableArrayList(Database.personalList);
         personalTable.setItems(list);
     }
+
     public void searchActionButton() {
         String searchText = searchField.getText();
 
@@ -136,6 +137,7 @@ public class ScholarOperationsController {
 
             AdminChangePasswordController controller = loader.getController();
             controller.setDialogStage(dialogStage);
+            controller.setEmail(scholar.getEmail());
 
             dialogStage.setScene(new Scene(root));
             dialogStage.showAndWait();

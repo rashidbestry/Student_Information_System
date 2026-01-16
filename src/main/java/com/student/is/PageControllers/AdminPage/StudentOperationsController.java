@@ -102,6 +102,8 @@ public class StudentOperationsController {
 
             AdminChangePasswordController controller = loader.getController();
             controller.setDialogStage(dialogStage);
+            String st =selectedStudent.getStuId()+"@ogr.inonu.edu.tr";
+            controller.setEmail(st);
 
             dialogStage.setScene(new Scene(root));
             dialogStage.showAndWait();
