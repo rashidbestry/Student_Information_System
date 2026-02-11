@@ -1,4 +1,4 @@
-<img width="3712" height="2794" alt="AORA drawio" src="https://github.com/user-attachments/assets/7a64de75-b90f-42de-9985-07c29e6a1c0c" /># Öğrenci Bilgi Sistemi
+# Öğrenci Bilgi Sistemi
 Bu proje, üniversite düzeyindeki öğrencilerin akademik süreçlerini etkin bir şekilde takip edebilmelerini ve yönetebilmelerini sağlamak amacıyla geliştirilmiş bir yönetim sistemidir. Sistem, akademik işlemleri daha düzenli, erişilebilir ve verimli hale getirmeyi hedeflemektedir. 
 
 ---
