@@ -1,4 +1,4 @@
-# Öğrenci Bilgi Sistemi
+<img width="3712" height="2794" alt="AORA drawio" src="https://github.com/user-attachments/assets/7a64de75-b90f-42de-9985-07c29e6a1c0c" /># Öğrenci Bilgi Sistemi
 Bu proje, üniversite düzeyindeki öğrencilerin akademik süreçlerini etkin bir şekilde takip edebilmelerini ve yönetebilmelerini sağlamak amacıyla geliştirilmiş bir yönetim sistemidir. Sistem, akademik işlemleri daha düzenli, erişilebilir ve verimli hale getirmeyi hedeflemektedir. 
 
 ---
@@ -34,6 +34,12 @@ Her aktör, yetkileri doğrultusunda sistem üzerinde farklı işlemler
 gerçekleştirebilmektedir.
 
 <img width="711" height="956" alt="use-case drawio" src="https://github.com/user-attachments/assets/421f9bec-536f-4f4f-a4b0-ad870ad77c58" />
+
+---
+## 📌 UML Diyagramı
+
+<img width="3712" height="2794" alt="AORA drawio" src="https://github.com/user-attachments/assets/bde6916e-cc67-4936-902b-a242f795bf18" />
+
 
 ---
 
